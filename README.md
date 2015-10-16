@@ -18,7 +18,3 @@ pip install -r requirements.txt
 ./manage.py loaddata sites conference proposal_base sitetree sponsor_benefits sponsor_levels
 ./manage.py runserver
 ```
-
-
-pinax-boxes
-pinax-pages

@@ -1,0 +1,5 @@
+site: eldarion-conferences/pinaxcon
+exec:
+  web: gunicorn --bind=0.0.0.0 --log-file - --workers=4 pinaxcon.wsgi
+branches:
+  master: primary

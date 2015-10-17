@@ -18,9 +18,10 @@ urlpatterns = patterns(
     url(r"^dashboard/", symposion.views.dashboard, name="dashboard"),
 
     url(r"^speaker/", include("symposion.speakers.urls")),
-    url(r"^proposals/", include("symposion.proposals.urls")),
+    # url(r"^proposals/", include("symposion.proposals.urls")),
+    # url(r"^reviews/", include("symposion.reviews.urls")),
+    url(r"^submissions/", include("pinax.submissions.urls")),
     url(r"^sponsors/", include("symposion.sponsorship.urls")),
-    url(r"^reviews/", include("symposion.reviews.urls")),
     url(r"^schedule/", include("symposion.schedule.urls")),
 
     url(r"^teams/", include("symposion.teams.urls")),

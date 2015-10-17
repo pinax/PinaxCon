@@ -13,3 +13,4 @@ pinax-boxes==2.1.0
 
 # run off of master for now
 git+https://github.com/pinax/symposion.git
+git+https://github.com/pinax/pinax-submissions.git

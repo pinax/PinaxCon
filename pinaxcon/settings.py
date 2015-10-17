@@ -142,12 +142,13 @@ INSTALLED_APPS = [
     "pinax.boxes",
     "pinax.eventlog",
     "pinax.pages",
+    "pinax.submissions",
 
     # symposion
     "symposion",
     "symposion.conference",
-    "symposion.proposals",
-    "symposion.reviews",
+    # "symposion.proposals",
+    # "symposion.reviews",
     "symposion.schedule",
     "symposion.speakers",
     "symposion.sponsorship",

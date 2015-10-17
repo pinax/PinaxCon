@@ -8,7 +8,7 @@ dj-static==0.0.6
 dj-database-url==0.3.0
 gunicorn==19.3.0
 psycopg2==2.6.1
-pinax-pages==0.3.0
+pinax-pages==0.3.1
 pinax-boxes==2.1.0
 
 # run off of master for now

@@ -8,8 +8,7 @@ from django.contrib import admin
 import symposion.views
 
 
-urlpatterns = patterns(
-    "",
+urlpatterns = [
     url(r"^$", TemplateView.as_view(template_name="homepage.html"), name="home"),
     url(r"^admin/", include(admin.site.urls)),
 
@@ -27,6 +26,6 @@ urlpatterns = patterns(
 
     url(r"^boxes/", include("pinax.boxes.urls")),
     url(r"^", include("pinax.pages.urls")),
-)
+]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -14,7 +14,7 @@ PinaxCon
 ---------
 `PinaxCon` is a working demo of Symposion and the Symposion Starter Project.  Online at:
 
-http://conference.pinaxproject.com/
+http://conference.pinaxproject.com/ (https://ky395.us2.gondor.io/ until DNS is configured)
 
 
 
@@ -59,4 +59,3 @@ Pinax Project Blog and Twitter
 -------------------------------
 
 For updates and news regarding the Pinax Project, please follow us on Twitter at [@pinaxproject](https://twitter.com/pinaxproject) and check out our blog http://blog.pinaxproject.com.
-

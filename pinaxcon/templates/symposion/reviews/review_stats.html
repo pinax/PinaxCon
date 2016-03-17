@@ -1,5 +1,7 @@
 {% extends "symposion/reviews/base.html" %}
 
+{% block body_class %}{{ block.super }} voting-status{% endblock %}
+
 {% block body %}
     <h1>Voting Status ({{ section_slug }})</h1>
 

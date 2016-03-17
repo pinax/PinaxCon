@@ -2,6 +2,9 @@
 
 {% load i18n %}
 
+
+{% block body_class %}{{ block.super }} review-results{% endblock %}
+
 {% block extra_style %}
     <style type="text/css">
         .table-striped tbody tr.selected td {

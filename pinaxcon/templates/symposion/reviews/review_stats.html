@@ -1,17 +1,18 @@
 {% extends "symposion/reviews/base.html" %}
 
-{% block body_class %}{{ block.super }} voting-status{% endblock %}
+{% block body_class %}{{ block.super }} voting-status {{ key }}{% endblock %}
 
 {% block body %}
     <h1>Voting Status ({{ section_slug }})</h1>
 
     {% if key %}
-        <div class="breadcrumbs">
-            <a href="{% url "review_status" section_slug "positive" %}">Positive</a> |
-            <a href="{% url "review_status" section_slug "negative" %}">Negative</a> |
-            <a href="{% url "review_status" section_slug "indifferent" %}">Indifferent</a> |
-            <a href="{% url "review_status" section_slug "controversial" %}">Controversial</a>  |
-            <a href="{% url "review_status" section_slug "too_few" %}">Too Few</a>
+        <br />
+        <div class="btn-group">
+            <a class="btn btn-default positive" href="{% url "review_status" section_slug "positive" %}">Positive</a>
+            <a class="btn btn-default negative" href="{% url "review_status" section_slug "negative" %}">Negative</a>
+            <a class="btn btn-default indifferent" href="{% url "review_status" section_slug "indifferent" %}">Indifferent</a>
+            <a class="btn btn-default controversial" href="{% url "review_status" section_slug "controversial" %}">Controversial</a>
+            <a class="btn btn-default too_few" href="{% url "review_status" section_slug "too_few" %}">Too Few</a>
         </div>
 
         <div>

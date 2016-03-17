@@ -36,3 +36,19 @@ body.reviews.review-results .review-results {
     background-color: @list-group-active-bg;
     border-color: @list-group-active-border;
 }
+
+body.reviews.voting-status {
+    &.positive a.positive,
+    &.negative a.negative,
+    &.indifferent a.indifferent,
+    &.controversial a.controversial,
+    &.too_few a.too_few {
+        z-index: 2;
+        color: #333;
+        background-color: #e6e6e6;
+        border-color: #adadad;
+        outline: 0;
+        background-image: none;
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    }
+}

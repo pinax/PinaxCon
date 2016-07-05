@@ -9,6 +9,6 @@ gunicorn==19.4.5
 psycopg2==2.6.1
 pinax-pages==0.4.2
 pinax-boxes==2.1.2
-
+uwsgi
 # run off of master for now
 git+https://github.com/pinax/symposion.git

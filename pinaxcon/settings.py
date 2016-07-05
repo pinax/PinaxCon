@@ -6,13 +6,25 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir
 PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 BASE_DIR = PACKAGE_ROOT
 
-DEBUG = bool(int(os.environ.get("DEBUG", "1")))
+DEBUG = False #bool(int(os.environ.get("DEBUG", "1")))
+
 
 DATABASES = {
-    "default": dj_database_url.config(default="postgres://localhost/pinaxcon")
-}
+    'default': {
+          'ENGINE': 'django.db.backends.postgresql_psycopg2',
+          'NAME': os.environ.get("POSTGRES_ENV_POSTGRES_USER"),       
+          'USER': os.environ.get("POSTGRES_ENV_POSTGRES_USER"),
+          'PASSWORD': os.environ.get("POSTGRES_ENV_POSTGRES_PASSWORD"),
+          'HOST': os.environ.get("POSTGRES_PORT_5432_TCP_ADDR"),
+          'PORT': os.environ.get("POSTGRES_PORT_5432_TCP_PORT"),
+    }
+} 
+
+
+
 
 ALLOWED_HOSTS = [
+    "*",
     os.environ.get("GONDOR_INSTANCE_DOMAIN"),
     "conference.pinaxproject.com"
 ]

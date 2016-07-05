@@ -4,7 +4,7 @@
         "model": "sites.site",
         "fields": {
             "domain": "localhost:8000",
-            "name": "PinaxCon"
+            "name": "PyconAR 2016"
         }
     },
     {
@@ -12,7 +12,7 @@
         "model": "sites.site",
         "fields": {
             "domain": "conference.pinaxproject.com",
-            "name": "PinaxCon"
+            "name": "PyconAR 2016"
         }
     }
 ]

@@ -9,6 +9,7 @@ BASE_DIR = PACKAGE_ROOT
 DEBUG = False #bool(int(os.environ.get("DEBUG", "1")))
 
 
+
 DATABASES = {
     'default': {
           'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -25,8 +26,6 @@ DATABASES = {
 
 ALLOWED_HOSTS = [
     "*",
-    os.environ.get("GONDOR_INSTANCE_DOMAIN"),
-    "conference.pinaxproject.com"
 ]
 
 # Local time zone for this installation. Choices can be found here:
@@ -36,11 +35,11 @@ ALLOWED_HOSTS = [
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Argentina/Buenos_Aires"
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "es-AR"
 
 SITE_ID = int(os.environ.get("SITE_ID", 1))
 

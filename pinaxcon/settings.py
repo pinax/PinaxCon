@@ -166,7 +166,9 @@ INSTALLED_APPS = [
 
     # project
     "pinaxcon",
-    "pinaxcon.proposals"
+    "pinaxcon.proposals",
+    #extra
+    "django_extensions"
 ]
 
 # A sample logging configuration. The only tangible logging

@@ -12,3 +12,4 @@ pinax-boxes==2.1.2
 uwsgi
 # run off of master for now
 git+https://github.com/pinax/symposion.git
+django-extensions==1.7.3

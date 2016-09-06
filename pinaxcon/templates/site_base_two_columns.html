@@ -19,15 +19,18 @@
     {% sitetree_menu from "main" include "trunk" template "sitetree/menu_bootstrap3.html" %}
 {% endblock %}
 
-
 {% block body_base %}
-    {% include "_header.html" %}
     <section id="content_body">
         <div class="container">
             {% include "_messages.html" %}
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-9">
                     {% block body %}
+                    {% endblock %}
+                </div>
+                <div class="col-md-3">
+                    {% block sidebar %}
+                        {% include "_default_sidebar.html" %}
                     {% endblock %}
                 </div>
             </div>

@@ -1,16 +1,147 @@
+// fonts
+@import "https://fonts.googleapis.com/css?family=Bungee";
+
+@font-face {
+   font-family: 'Bariol';
+    src: url('../fonts/bariol/bariol_regular-webfont.eot');
+    src: url('../fonts/bariol/bariol_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bariol/bariol_regular-webfont.woff2') format('woff2'),
+         url('../fonts/bariol/bariol_regular-webfont.woff') format('woff'),
+         url('../fonts/bariol/bariol_regular-webfont.ttf') format('truetype'),
+         url('../fonts/bariol/bariol_regular-webfont.svg#bariol_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-  padding-top: 50px;
-  position: relative;
+  font-family: 'Bariol';
+  padding: 0;
+  color: #fff;
 }
-section {
-  padding: 20px 0px;
+
+.center-block {
+	text-align: center
 }
-.modal form {
-  margin-bottom: 0px;
+
+h2, h3 {
+	font-family: 'Bungee', cursive;
+  color: #fff;
 }
+
+header, section {
+	.container {
+		padding: 30px 0 50px 0;
+	}
+}
+header {
+	h1 img {
+		max-width: 100%;
+	}
+	.lead {
+		color: #201815;
+		margin-bottom: 0;
+		font-size: 18px;
+	}
+}
+.navbar-header .icon-bar {
+	background: #201815;
+}
+nav.navbar {
+	li {
+		a {
+			color: #201815;
+			cursor: pointer;
+			&:after {
+				width: 1px;
+				height: 15px;
+				background: @brand-primary;
+				content: '';
+				display: block;
+		    position: absolute;
+		    right: 0;
+		    top: 17px;
+			}
+			&:hover {
+				color: #4a72b1;
+			}
+		}
+		&:last-child a:after {
+			display: none;
+		}
+	}
+	li.active a {
+		text-decoration: underline;
+		color: #4a72b1;
+	}
+	.navbar-nav {
+		float: right;
+	}
+}
+
+.primary {
+	background: #265890;
+	@media (min-width: 1200px) {
+		.container {
+		  width: 750px;
+		}
+	}
+	p {
+		font-size: 18px;
+	}
+	.btn {
+		font-size: 18px;
+		color: #201815;
+    background: #e3c501;
+		border:none;
+		&:hover {
+			background: #ffe74c;
+		}
+	}
+	.center {
+		text-align: center;
+	}
+}
+.secondary {
+	background: #00456e;
+	p {
+		font-size: 18px;
+	}
+	a {
+		display: block;
+		color: #e3c501;
+		&:hover {
+			color: #ffe74c;
+			text-decoration: none;
+		}
+	}
+}
+.enfasis {
+	color: #e3c501;
+}
+.terciary {
+	background: #003551;
+	p {
+		font-size: 16px;
+	}
+}
+.fourth {
+	background: #002839;
+	p {
+		font-size: 16px;
+	}
+}
+
 footer {
-    padding-bottom: 20px;
+	color: #201815;
+	padding: 50px 0 30px 0;
+	.nav {
+		li a {
+			color: #201815;
+		}
+	}
 }
+
+/* Esto es lo "nativo" de pinax */
 p.login-signup {
     margin-top: 20px;
 }

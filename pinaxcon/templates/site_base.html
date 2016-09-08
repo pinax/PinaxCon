@@ -5,23 +5,38 @@
 {% load i18n %}
 {% load sitetree %}
 
-
 {% block styles %}
     {% include "_styles.html" %}
 {% endblock %}
-
 
 {% block extra_head_base %}
     {% block extra_head %}{% endblock %}
 {% endblock %}
 
-{% block nav %}
-    {% sitetree_menu from "main" include "trunk" template "sitetree/menu_bootstrap3.html" %}
+{% block topbar_base %}
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          {% block nav %}
+            {% sitetree_menu from "main" include "trunk" template "sitetree/menu_bootstrap3.html" %}
+          {% endblock %}
+          <!-- {% block account_bar %}{% include "_account_bar.html" %}{% endblock %} -->
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    {% include "_header.html" %}
 {% endblock %}
 
-
 {% block body_base %}
-    {% include "_header.html" %}
     <section id="content_body">
         <div class="container">
             {% include "_messages.html" %}
@@ -36,7 +51,7 @@
 {% endblock %}
 
 
-{% block footer %}
+{% block footer_base %}
     {% include "_footer.html" %}
 {% endblock %}
 

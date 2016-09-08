@@ -31,6 +31,7 @@ exports = module.exports = {
         sources: [
             npmRoot + 'font-awesome/fonts/**.*',
             npmRoot + 'bootstrap/fonts/**.*',
+            staticSource + 'fonts/**/*',
         ],
         dist: staticDist + 'fonts/'
     },

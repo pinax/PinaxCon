@@ -7,25 +7,27 @@
 
 {% block body_class %}home{% endblock %}
 
-{% block body_base %}
+{% block body %}
 
-<section class="container-fluid primary">
+{% if ACCOUNT_OPEN_SIGNUP %}
+<section class="container-fluid primary block">
   <div class="container">
     <h2>Inscripciones abiertas!</h2>
     <p>“Durante todas las jornadas, podrás elegir entre 2 charlas que se darán al
     mismo tiempo. Qué tenemos preparado para que vengas? Un pybus que
     viaja de CABA a Bahía Blanca , convenios con hostels, premios y mucho
     más..te mantenemos al tanto!”</p>
-    <p class="center"><a href="#" class="btn btn-warning">Inscribite!</a></p>
+    <p class="center"><a href="{% url 'account_signup' %}" class="btn btn-warning">Inscribite!</a></p>
   </div>
 </section>
+{% endif %}
 
-<section class="container-fluid secondary">
+<section class="container-fluid secondary block">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">IMAGEN</div>
+      <div class="col-md-6"><img src="http://lorempixel.com/800/600/technics/pyconar2016/" class="img-responsive" /></div>
       <div class="col-md-6">
-        <h2>sOBRE EL EVENTO</h2>
+        <h2>SOBRE EL EVENTO</h2>
         <p>MPyCon es una conferencia comunitaria organizada
         y llevada a cabo por voluntarios de la
         comunidad Python (PyAr), dura varios días donde
@@ -35,13 +37,13 @@
         MTenemos como intención hacer un espacio
         en donde cualquier persona interesada pueda
         acercarse para preguntar, aprender y experimentar con estas herramientas.
-        <a href="#">Leer más ></a></p>
+        <a href="/about">Leer más ></a></p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="container-fluid terciary">
+<section class="container-fluid terciary block">
   <div class="container">
     <div class="row">
       <h2>¿Qué es Python?</h2>
@@ -77,7 +79,7 @@ Foundation. La última versiónestable del lenguaje es la 2.7.3 (marzo de 2012)<
   </div>
 </section>
 
-<section class="container-fluid fourth">
+<section class="container-fluid fourth block">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
@@ -91,7 +93,18 @@ Foundation. La última versiónestable del lenguaje es la 2.7.3 (marzo de 2012)<
         </p>
       </div>
       <div class="col-md-6">
-        IMAGEN
+        <img src="http://lorempixel.com/800/600/technics/pyconar2016/" class="img-responsive" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid primary block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Sponsors</h2>
+        {% box "sponsors" %}
       </div>
     </div>
   </div>

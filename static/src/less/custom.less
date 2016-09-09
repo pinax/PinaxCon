@@ -19,6 +19,14 @@ body {
   color: #fff;
 }
 
+body.home {
+  background: #FFF;
+}
+
+body.about {
+  background: #e3c501;
+}
+
 .center-block {
 	text-align: center
 }
@@ -28,15 +36,21 @@ h2, h3 {
   color: #fff;
 }
 
-p {
-  text-align: justify;
+header {
+  .container {
+		padding: 30px 0 50px 0;
+  }
 }
 
-header, section {
-	.container {
+section {
+  .container {
 		padding: 30px 0 50px 0;
+    p {
+      text-align: justify;
+    }
 	}
 }
+
 header {
 	h1 img {
 		max-width: 100%;
@@ -83,15 +97,27 @@ nav.navbar {
 	}
 }
 
+section.block {
+  &:nth-of-type(4n+1) {
+    background: #265890;
+  }
+  &:nth-of-type(4n+2) {
+    background: #00456e;
+  }
+  &:nth-of-type(4n+3) {
+    background: #003551;
+  }
+  &:nth-of-type(4n+4) {
+    background: #002839;
+  }
+}
+
 .primary {
-	background: #265890;
+	/* background: #265890; */
 	@media (min-width: 1200px) {
 		.container {
 		  width: 750px;
 		}
-	}
-	p {
-		font-size: 18px;
 	}
 	.btn {
 		font-size: 18px;
@@ -107,10 +133,7 @@ nav.navbar {
 	}
 }
 .secondary {
-	background: #00456e;
-	p {
-		font-size: 18px;
-	}
+	/* background: #00456e; */
 	a {
 		display: block;
 		color: #e3c501;
@@ -124,13 +147,13 @@ nav.navbar {
 	color: #e3c501;
 }
 .terciary {
-	background: #003551;
+	/* background: #003551; */
 	p {
 		font-size: 16px;
 	}
 }
 .fourth {
-	background: #002839;
+	/* background: #002839; */
 	p {
 		font-size: 16px;
 	}
@@ -140,9 +163,17 @@ footer {
 	color: #201815;
 	padding: 50px 0 30px 0;
 	.nav {
-		li a {
-			color: #201815;
-		}
+		li {
+      a {
+			  color: #201815;
+        &:hover {
+  				color: #4a72b1;
+  			}
+		  }
+      &:first-child a {
+  			padding-left: 0;
+  		}
+    }
 	}
 }
 

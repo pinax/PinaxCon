@@ -1,8 +1,14 @@
 <header>
   <div class="container">
 
-    <div class="center-block">
-      <h1><img src="/site_media/static/images/logo.png"></h1>
+    <div class="center">
+      <h1>
+        {% if request.path == '/about/' %}
+        <img src="/site_media/static/images/logoblanco.png">
+        {% else %}
+        <img src="/site_media/static/images/logo.png">
+        {% endif %}
+      </h1>
       <p class="lead">8va Conferencia Argentina en Python</p>
       <p class="lead">25, 26 y 27 de Noviembre - Bahía Blanca</p>
     </div>

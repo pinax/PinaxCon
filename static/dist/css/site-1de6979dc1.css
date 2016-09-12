@@ -6440,7 +6440,6 @@ button.close {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
 }
 .pull-right {
   float: right !important;
@@ -9079,12 +9078,9 @@ body {
   color: #fff;
 }
 body.home {
-  background: #FFF;
+  background: #fff;
 }
-body.about {
-  background: #e3c501;
-}
-.center-block {
+.center {
   text-align: center;
 }
 h2,
@@ -9092,11 +9088,12 @@ h3 {
   font-family: 'Bungee', cursive;
   color: #fff;
 }
-header .container,
-section .container {
+header .container {
   padding: 30px 0 50px 0;
 }
-header .container p,
+section .container {
+  padding: 30px 0 30px 0;
+}
 section .container p {
   text-align: justify;
 }
@@ -9119,7 +9116,7 @@ nav.navbar li a {
 nav.navbar li a:after {
   width: 1px;
   height: 15px;
-  background: #337ab7;
+  background: #201815;
   content: '';
   display: block;
   position: absolute;
@@ -9139,66 +9136,81 @@ nav.navbar li.active a {
 nav.navbar .navbar-nav {
   float: right;
 }
-section.block p {
-  text-align: justify;
-}
-section.block:nth-of-type(4n+1) {
+section.block-blue:nth-of-type(4n+1) {
   background: #265890;
 }
-section.block:nth-of-type(4n+2) {
+section.block-blue:nth-of-type(4n+2) {
   background: #00456e;
 }
-section.block:nth-of-type(4n+3) {
+section.block-blue:nth-of-type(4n+3) {
   background: #003551;
 }
-section.block:nth-of-type(4n+4) {
+section.block-blue:nth-of-type(4n+4) {
   background: #002839;
 }
-.primary {
-  /* background: #265890; */
+section.block-blue p {
+  font-size: 18px;
 }
-@media (min-width: 1200px) {
-  .primary .container {
-    width: 750px;
-  }
-}
-.primary .btn {
+section.block-blue .btn {
   font-size: 18px;
   color: #201815;
   background: #e3c501;
   border: none;
+  display: inline-block;
 }
-.primary .btn:hover {
+section.block-blue .btn:hover {
+  color: #201815;
   background: #ffe74c;
 }
-.primary .center {
-  text-align: center;
-}
-.secondary {
-  /* background: #00456e; */
-}
-.secondary a {
+section.block-blue a {
   display: block;
   color: #e3c501;
 }
-.secondary a:hover {
+section.block-blue a:hover {
   color: #ffe74c;
   text-decoration: none;
 }
-.enfasis {
+section.block-yellow {
+  background: #fff;
+}
+section.block-yellow p {
+  color: #201815;
+  font-size: 18px;
+}
+section.block-yellow h2 {
   color: #e3c501;
 }
-.terciary {
-  /* background: #003551; */
+@media (min-width: 1200px) {
+  section.block.primary .container {
+    width: 750px;
+  }
 }
-.terciary p {
+section.block.terciary p {
   font-size: 16px;
 }
-.fourth {
-  /* background: #002839; */
-}
-.fourth p {
+section.block.fourth p {
   font-size: 16px;
+}
+section.sponsors #content_sponsors {
+  text-align: center;
+}
+section.sponsors ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 50px;
+}
+section.sponsors ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+section.sponsors a {
+  background: #fff;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 3px;
+}
+.enfasis {
+  color: #e3c501;
 }
 footer {
   color: #201815;
@@ -9212,6 +9224,13 @@ footer .nav li a:hover {
 }
 footer .nav li:first-child a {
   padding-left: 0;
+}
+body.about {
+  background: #e3c501;
+}
+body.about nav.navbar li a:hover,
+body.about nav.navbar li.active a {
+  color: #fff;
 }
 /* Esto es lo "nativo" de pinax */
 p.login-signup {

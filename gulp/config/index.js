@@ -53,7 +53,7 @@ exports = module.exports = {
     },
     images: {
         sources: [
-            staticSource + 'images/**.*'
+            staticSource + 'images/**/*'
         ],
         dist: staticDist + 'images/'
     },

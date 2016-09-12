@@ -20,14 +20,10 @@ body {
 }
 
 body.home {
-  background: #FFF;
+  background: #fff;
 }
 
-body.about {
-  background: #e3c501;
-}
-
-.center-block {
+.center {
 	text-align: center
 }
 
@@ -44,7 +40,7 @@ header {
 
 section {
   .container {
-		padding: 30px 0 50px 0;
+		padding: 30px 0 30px 0;
     p {
       text-align: justify;
     }
@@ -73,7 +69,7 @@ nav.navbar {
 			&:after {
 				width: 1px;
 				height: 15px;
-				background: @brand-primary;
+				background: #201815;
 				content: '';
 				display: block;
 		    position: absolute;
@@ -97,7 +93,7 @@ nav.navbar {
 	}
 }
 
-section.block {
+section.block-blue {
   &:nth-of-type(4n+1) {
     background: #265890;
   }
@@ -110,31 +106,21 @@ section.block {
   &:nth-of-type(4n+4) {
     background: #002839;
   }
-}
-
-.primary {
-	/* background: #265890; */
-	@media (min-width: 1200px) {
-		.container {
-		  width: 750px;
-		}
-	}
-	.btn {
+  p {
+    font-size: 18px;
+  }
+  .btn {
 		font-size: 18px;
 		color: #201815;
     background: #e3c501;
 		border:none;
+    display: inline-block;
 		&:hover {
+      color: #201815;
 			background: #ffe74c;
 		}
 	}
-	.center {
-		text-align: center;
-	}
-}
-.secondary {
-	/* background: #00456e; */
-	a {
+  a {
 		display: block;
 		color: #e3c501;
 		&:hover {
@@ -143,23 +129,62 @@ section.block {
 		}
 	}
 }
-.enfasis {
-	color: #e3c501;
+
+section.block-yellow {
+  background: #fff;
+  p {
+    color: #201815;
+    font-size: 18px;
+  }
+  h2 {
+    color: #e3c501;
+  }
 }
-.terciary {
-	/* background: #003551; */
+
+section.primary {
+	@media (min-width: 1200px) {
+		.container {
+		  width: 750px;
+		}
+	}
+}
+section.terciary {
 	p {
 		font-size: 16px;
 	}
 }
-.fourth {
-	/* background: #002839; */
+section.fourth {
 	p {
 		font-size: 16px;
 	}
 }
 
+section.sponsors {
+  #content_sponsors {
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 50px;
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+  a {
+    background: #fff;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 3px;
+  }
+}
+
+.enfasis {
+	color: #e3c501;
+}
 footer {
+  background: #fff;
 	color: #201815;
 	padding: 50px 0 30px 0;
 	.nav {
@@ -176,6 +201,16 @@ footer {
     }
 	}
 }
+
+body.about {
+  background: #e3c501;
+  nav.navbar {
+    li a:hover, li.active a {
+      color: #fff;
+    }
+  }
+}
+
 
 /* Esto es lo "nativo" de pinax */
 p.login-signup {

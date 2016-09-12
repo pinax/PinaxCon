@@ -9,19 +9,19 @@
 
 {% block body %}
 
-<section class="container-fluid secondary">
+<section class="container-fluid secondary block-yellow">
   <div class="container">
     <div class="row">
-      <div class="col-md-6"><img src="http://lorempixel.com/800/600/technics/pyconar2016/" class="img-responsive" /></div>
+      <div class="col-md-6"><img src="http://lorempixel.com/800/400/technics/pyconar2016/" class="img-responsive" /></div>
       <div class="col-md-6">
         <h2>SOBRE EL EVENTO</h2>
-        <p>MPyCon es una conferencia comunitaria organizada
+        <p>PyCon es una conferencia comunitaria organizada
         y llevada a cabo por voluntarios de la
         comunidad Python (PyAr), dura varios días donde
         se darán pequeños cursos y charlas relacionadas
         a este lenguaje que de a poco va a
         haciendo su lugar entre los desarrolladores.
-        MTenemos como intención hacer un espacio
+        Tenemos como intención hacer un espacio
         en donde cualquier persona interesada pueda
         acercarse para preguntar, aprender y experimentar con estas herramientas.
         </p>
@@ -30,5 +30,41 @@
   </div>
 </section>
 
+<section class="container-fluid secondary block-yellow">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>EDICIONES ANTERIORES</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer
+            adipiscing elit. Aenean commodo ligula eget
+            dolor. Aenean massa. Cum sociis natoque
+            penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Donec quam felis,
+            ultricies nec, pellentesque eu, pretium quis,
+            sem. Nulla consequat massa quis enim.
+            Donec pede justo, fringilla vel, aliquet nec,
+            vulputate eget, arcu. In enim justo, rhoncus
+            ut, imperdiet a, venenatis vitae, justo. Nullam
+            dictum felis eu pede mollis pretium. Integer
+            tincidunt. Cras dapibus.
+        </p>
+      </div>
+      <div class="col-md-6"><img src="http://lorempixel.com/800/400/technics/pyconar2016/" class="img-responsive" /></div>
+    </div>
+  </div>
+</section>
+
+{% if ACCOUNT_OPEN_SIGNUP %}
+{% endif %}
+<section class="container-fluid primary block-blue">
+  <div class="container">
+    <h2>Inscripciones abiertas!</h2>
+    <p>Durante todas las jornadas, podrás elegir entre 2 charlas que se darán al
+    mismo tiempo. Qué tenemos preparado para que vengas? Un pybus que
+    viaja de CABA a Bahía Blanca , convenios con hostels, premios y mucho
+    más..te mantenemos al tanto!</p>
+    <div class="center"><a href="{% url 'account_signup' %}" class="btn btn-warning">Inscribite!</a></div>
+  </div>
+</section>
 
 {% endblock %}

@@ -35,13 +35,17 @@
     </nav>
 
     {% include "_header.html" %}
+
+    {% include "_messages.html" %}
 {% endblock %}
 
 {% block body_base %}
-  {% include "_messages.html" %}
-
-  {% block body %}
-  {% endblock %}
+  <section class="container-fluid">
+    <div class="container">
+      {% block body %}
+      {% endblock %}
+    </div>
+  </section>
 {% endblock %}
 
 
@@ -56,6 +60,6 @@
 {% endblock %}
 
 {% block extra_body_base %}
-    {% analytics %}
+    {% include "_analytics.html" %}
     {% block extra_body %}{% endblock %}
 {% endblock %}

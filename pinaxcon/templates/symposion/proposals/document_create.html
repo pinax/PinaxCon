@@ -3,12 +3,20 @@
 {% load bootstrap %}
 
 {% block page_title %}Upload Document to '{{ proposal.title }}'{% endblock %}
-
+{% block extra_head %}
+<style>
+form #id_description{
+ display: block !important;
+ height: 200px;
+ width: 100%;
+}
+</style>
+{% endblock %}
 {% block body %}
     <form method="POST" action="" enctype="multipart/form-data" class="form form-horizontal">
         {% csrf_token %}
+            {{ form.as_p }}
         <fieldset>
-            {{ form|bootstrap_horizontal }}
         </fieldset>
         <div class="form-actions">
             <input class="btn btn-primary" type="submit" value="Upload" />

@@ -57,6 +57,17 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
+          <h2>Ubicación</h2>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid secondary block-yellow">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
           <h2>CÓDIGO DE CONDUCTA</h2>
         </div>
       </div>
@@ -172,4 +183,26 @@
     </div>
   </section>
   {% endif %}
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyG0dHUK_9vhz5neVjdUriBQm91eQppdQ&callback=initMap" async defer></script>
+    <script>
+    function initMap() {
+      var myLatLng = {lat: -38.695164, lng: -62.253801};
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: myLatLng,
+        scrollwheel: false,
+        zoom: 17
+      });
+
+      var marker = new google.maps.Marker({
+        map: map,
+        position: myLatLng,
+        title: 'UNS Campus Palihue'
+      });
+    }
+    </script>
 {% endblock %}

@@ -5,10 +5,46 @@
 
 {% block head_title %}{% trans "Welcome" %}{% endblock %}
 
-{% block body_class %}home{% endblock %}
+{% block body_class %}organizadores{% endblock %}
 
-{% block body %}
+{% block body_base %}
+<section class="block-blue"></section>
+<section class="container-fluid secondary block-blue">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="/site_media/static/images/pyar-logo.jpg" class="img-responsive" />
+      </div>
+      <div class="col-md-6">
+        <h2>PyAr</h2>
+        <p>
+          Pyar es la comunidad local de usuarios del lenguaje Python, que nuclea a todos los interesados en la Argentina. Pretende llegar a usuarios y empresas, promover el uso del lenguaje, intercambiar información, compartir experiencias y, en general, ser el marco de referencia local en el uso y difusión de esta tecnología.
+        </p>
+        <p>
+          <a href="http://www.python.org.ar" target="_blank">Más info sobre PyAr</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h1>ORGANIZADORES</h1>
+<section class="container-fluid secondary block-blue">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>FACTTIC</h2>
+        <p>
+          La Federación Argentina de Cooperativas de Trabajo de Tecnología, Innovación y Conocimiento (FACTTIC) es un espacio para que las cooperativas de Trabajo del sector intercambien y construyan en conjunto. El objetivo principal de la Federación es ser un espacio de fortalecimiento de sus miembros y de difusión de esta forma de entender el trabajo y las tecnologías. Somos grandes usuarios y contribuyentes del software libre y Python.
+        </p>
+        <p>
+          <a href="http://www.facttic.org.ar" target="_blank">Más info sobre FACTTIC</a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="/site_media/static/images/facttic-todos.jpg" class="img-responsive" />
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}

@@ -13,3 +13,4 @@ uwsgi
 # run off of master for now
 git+https://github.com/pinax/symposion.git
 django-extensions==1.7.3
+django-simple-captcha==0.5.2

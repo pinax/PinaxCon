@@ -1,4 +1,4 @@
-# make sure this is at the top if it isn't already
+# -*- coding: utf-8 -*-
 from django import forms
 from captcha.fields import CaptchaField
 # our new form
@@ -7,6 +7,7 @@ class BecasForm(forms.Form):
     email = forms.EmailField(required=True)
     que_necesitas = forms.CharField(
         required=True,
-        widget=forms.Textarea
+        widget=forms.Textarea,
+        label="¿Qué necesitás?"
     )
     ingresa_el_texto = CaptchaField()

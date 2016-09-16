@@ -29,8 +29,21 @@ body.pages {
   }
   nav.navbar {
     margin-bottom: 20px;
-    background: #0065b5 url('../images/back.png') no-repeat center top;
+    background: #0065b5 url('../images/back.png') no-repeat left top;
     height: 106px;
+
+    ul.dropdown-menu {
+      li.active a {
+        color: #fff;
+      }
+      li a {
+        color: #0065b5;
+        &:hover {
+          color: #fff;
+          background: #0065b5;
+        }
+      }
+    }
   }
   nav.navbar li a {
       color: #fff;
@@ -157,6 +170,20 @@ nav.navbar {
 	.navbar-nav {
 		float: right;
 	}
+  ul.dropdown-menu {
+    padding: 0;
+    border-radius: 4px;
+    li.active a {
+      color: #fff;
+      text-decoration: none;
+    }
+    li a {
+      &:hover {
+        color: #fff;
+        background: #0065b5;
+      }
+    }
+  }
 }
 
 section.block-blue {

@@ -1,0 +1,25 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load pinax_boxes_tags %}
+
+{% block head_title %}{% trans "Welcome" %}{% endblock %}
+
+{% block body_class %}about{% endblock %}
+
+{% block body_base %}
+  <section class="container-fluid secondary block-yellow">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Alojamiento</h2>
+          <p>Próximamente estaremos publicando más información de los distintos establecimientos gastronómicos y hoteleros, para que tu estadía durante el evento sea lo más amena posible. </p>
+        </div>
+        <div class="col-md-6"><img src="/site_media/static/images/facttic.jpg" class="img-responsive" /></div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

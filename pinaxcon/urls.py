@@ -33,6 +33,7 @@ urlpatterns = [
     url(r"^teams/", include("symposion.teams.urls")),
 
     url(r"^boxes/", include("pinax.boxes.urls")),
+    url(r'^captcha/', include('captcha.urls')),
     url(r"^", include("pinax.pages.urls")),
 ]
 

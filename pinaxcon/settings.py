@@ -166,7 +166,8 @@ INSTALLED_APPS = [
     "pinaxcon",
     "pinaxcon.proposals",
     #extra
-    "django_extensions"
+    "django_extensions",
+    "captcha",
 ]
 
 # A sample logging configuration. The only tangible logging

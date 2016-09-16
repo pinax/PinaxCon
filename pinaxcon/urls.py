@@ -11,6 +11,7 @@ import symposion.views
 urlpatterns = [
     url(r"^$", TemplateView.as_view(template_name="homepage.html"), name="home"),
     url(r"^agenda/$", TemplateView.as_view(template_name="agenda.html"), name="agenda"),
+    url(r"^diversidad/$", TemplateView.as_view(template_name="declaracion_diversidad.html"), name="diversidad"),
     url(r"^codigo-conducta/$", TemplateView.as_view(template_name="codigo_conducta.html"), name="codigo-de-conducta"),
     url(r"^forma-parte/$", TemplateView.as_view(template_name="forma_parte.html"), name="forma-parte"),
     url(r"^alojamiento/$", TemplateView.as_view(template_name="alojamiento.html"), name="alojamiento"),

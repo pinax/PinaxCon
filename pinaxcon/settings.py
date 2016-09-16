@@ -6,20 +6,18 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir
 PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 BASE_DIR = PACKAGE_ROOT
 
-DEBUG = False #bool(int(os.environ.get("DEBUG", "1")))
-
-
+DEBUG = True #bool(int(os.environ.get("DEBUG", "1")))
 
 DATABASES = {
     'default': {
           'ENGINE': 'django.db.backends.postgresql_psycopg2',
-          'NAME': os.environ.get("POSTGRES_ENV_POSTGRES_USER"),       
+          'NAME': os.environ.get("POSTGRES_ENV_POSTGRES_USER"),
           'USER': os.environ.get("POSTGRES_ENV_POSTGRES_USER"),
           'PASSWORD': os.environ.get("POSTGRES_ENV_POSTGRES_PASSWORD"),
           'HOST': os.environ.get("POSTGRES_PORT_5432_TCP_ADDR"),
           'PORT': os.environ.get("POSTGRES_PORT_5432_TCP_PORT"),
     }
-} 
+}
 
 
 
@@ -211,7 +209,7 @@ DEFAULT_FROM_EMAIL = 'no-reply@python.org.ar'
 
 
 
-ACCOUNT_OPEN_SIGNUP = True
+ACCOUNT_OPEN_SIGNUP = False
 ACCOUNT_EMAIL_UNIQUE = True
 ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = False
 ACCOUNT_LOGIN_REDIRECT_URL = "home"

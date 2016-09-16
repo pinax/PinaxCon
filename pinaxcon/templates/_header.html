@@ -1,13 +1,10 @@
+{% if request.path == '/' %}
 <header>
   <div class="container">
 
     <div class="center">
       <h1>
-        {% if request.path == '/' %}
         <img src="/site_media/static/images/logo.png">
-        {% else %}
-        <img src="/site_media/static/images/logoblanco.png">
-        {% endif %}
       </h1>
       <p class="lead">8va Conferencia Argentina de Python</p>
       <p class="lead">25, 26 y 27 de Noviembre - Bahía Blanca</p>
@@ -15,3 +12,4 @@
 
   </div><!-- /.container -->
 </header>
+{% endif %}

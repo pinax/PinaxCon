@@ -23,6 +23,35 @@ body.home {
   color: #fff;
 }
 
+body.pages {
+  nav.navbar .navbar-nav {
+    margin-top: 50px;
+  }
+  nav.navbar {
+    margin-bottom: 20px;
+    background: #0065b5 url('../images/back.png') no-repeat center top;
+    height: 106px;
+  }
+  nav.navbar li a {
+      color: #fff;
+  }
+  nav.navbar li a:after {
+      background: #fff;
+  }
+  nav.navbar li a:hover {
+    background: none;
+    color: #201815;
+  }
+  nav.navbar li.active a {
+      color: #201815;
+      text-decoration: underline;
+  }
+
+  .nav > li > a:hover, .nav > li > a:focus {
+    background: none;
+     border:none;
+  }
+}
 
 body.about {
   background: #e3c501;
@@ -97,7 +126,9 @@ header {
 	background: #201815;
 }
 nav.navbar {
+  border-radius: 0;
 	li {
+    font-size: 16px;
 		a {
 			color: #201815;
 			cursor: pointer;
@@ -214,6 +245,14 @@ section.sponsors {
     padding: 15px 30px;
     border-radius: 3px;
   }
+}
+
+input.newsletter {
+  color: #201815;
+  border-radius: 4px;
+  border: solid 2px #00456e;;
+  padding: 5px;
+  width: 300px;
 }
 
 div.codigo-conducta {

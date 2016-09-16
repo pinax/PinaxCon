@@ -1,0 +1,42 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load pinax_boxes_tags %}
+
+{% block head_title %}{% trans "Welcome" %}{% endblock %}
+
+{% block body_class %}about{% endblock %}
+
+{% block body_base %}
+<section class="container-fluid secondary block-yellow">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <h2>Solicitud de becas</h2>
+                <p> Queremos que la Pycon sea un evento donde todos puedan participar sin
+                sentirse excluidos. Si necesitas de ayuda económica para pasaje o estadía, podés solicitar una beca</p>
+                <p>Hay un número limitado de becas, que podemos ofrecer, por eso te pedimos que
+                sólo la solicites en caso de realmente requerila</p>
+                <p>Por favor te pedimos que llenes todos tus datos y nos cuentes con que parte
+                de tu viaje podemos ayudarte</p>
+            </div>
+        </div>
+
+
+        <form role="form" action="" method="post">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="row">
+                <div class="col-md-12">
+                    {{ field.errors }}
+                    {{ field.label_tag }} {{ field }}
+                </div>
+            </div>
+            {% endfor %}
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

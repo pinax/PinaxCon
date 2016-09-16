@@ -1,0 +1,8 @@
+Nombre y apellido:
+{{ contact_name }}
+
+Email:
+{{ contact_email }}
+
+Que necesito:
+{{ form_content|safe|striptags }}

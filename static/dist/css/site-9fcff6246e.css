@@ -9269,6 +9269,16 @@ section.block-yellow p {
 section.block-yellow h2 {
   color: #e3c501;
 }
+section.block-yellow .btn {
+  font-size: 18px;
+  color: #fff;
+  background: #e3c501;
+  border: none;
+  display: inline-block;
+}
+section.block-yellow .btn:hover {
+  background: #ffe74c;
+}
 @media (min-width: 1200px) {
   section.primary .container {
     width: 750px;

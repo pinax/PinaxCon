@@ -9,4 +9,4 @@ class BecasForm(forms.Form):
         required=True,
         widget=forms.Textarea
     )
-    captcha = CaptchaField()
+    ingresa_el_texto = CaptchaField()

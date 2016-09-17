@@ -93,47 +93,6 @@
         {% endif %}
     </div>
 
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="pull-right header-actions">
-                {% if not user.sponsorships.exists %}
-                    <a href="{% url "sponsor_apply" %}" class="btn btn-xs btn-default">
-                        <i class="fa fa-plus-sign"></i>
-                        Apply to be a sponsor
-                    </a>
-                {% endif %}
-            </div>
-            <h3 class="panel-title">
-                <i class="fa fa-briefcase"></i>
-                {% trans "Sponsorship" %}
-            </h3>
-        </div>
-
-        <div class="panel-body">
-            {% if not user.sponsorships.exists %}
-                <p>If you or your organization would be interested in sponsorship opportunities, <a href="{% url "sponsor_apply" %}">use our online form to apply to be a sponsor</a>.
-            {% else %}
-                <h4>Your Sponsorship</h4>
-                <ul class="list-group">
-                    {% for sponsorship in user.sponsorships.all %}
-                        <li class="list-group-item">
-                            <a href="{% url "sponsor_detail" sponsorship.pk %}"><b>{{ sponsorship.name }}</b></a>
-                            ({{ sponsorship.level }})
-                            {% if not sponsorship.active %}
-                                <span class="label label-warning">awaiting approval</span>
-                            {% endif %}
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-            {% if user.is_staff %}
-                <p>
-                    As staff, you can directly <a href="{% url "sponsor_add" %}">add a sponsor</a> if the organization isn't
-                    applying themselves.
-                </p>
-            {% endif %}
-        </div>
-    </div>
 
     {% if review_sections %}
         <div class="panel panel-default">

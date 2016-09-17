@@ -20,29 +20,29 @@ msgstr ""
 
 #: templates/_account_bar.html:11
 msgid "Dashboard"
-msgstr ""
+msgstr "Panel de control"
 
 #: templates/_account_bar.html:14
 msgid "Settings"
-msgstr ""
+msgstr "Ajustes"
 
 #: templates/_account_bar.html:17
 msgid "Log out"
-msgstr ""
+msgstr "Cerrar sesión"
 
 #: templates/_account_bar.html:20 templates/account/login.html.py:21
 #: templates/account/signup.html:25
 msgid "Log in"
-msgstr ""
+msgstr "Iniciar sesión"
 
 #: templates/_account_bar.html:22 templates/account/login.html.py:27
 #: templates/account/signup.html:15 templates/account/signup.html.py:21
 msgid "Sign up"
-msgstr ""
+msgstr "Registrate"
 
 #: templates/about.html:6
 msgid "Welcome"
-msgstr ""
+msgstr "Bienvenid@"
 
 #: templates/account/login.html:15
 msgid "Log in to an existing account"
@@ -50,7 +50,7 @@ msgstr ""
 
 #: templates/account/login.html:22
 msgid "Forgot your password?"
-msgstr ""
+msgstr "Recuperar contraseña"
 
 #: templates/account/login.html:27
 msgid "Don't have an account?"
@@ -66,41 +66,41 @@ msgstr ""
 
 #: templates/dashboard.html:108 templates/symposion/sponsorship/detail.html:8
 msgid "Sponsorship"
-msgstr ""
+msgstr "Sponsoreso"
 
 #: templates/dashboard.html:143
 #: templates/symposion/reviews/review_detail.html:65
 msgid "Reviews"
-msgstr ""
+msgstr "Revisiones"
 
 #: templates/dashboard.html:188
 msgid "Teams"
-msgstr ""
+msgstr "Equipos"
 
 #: templates/pinax/boxes/_box_body.html:10
 msgid "Editing content:"
-msgstr ""
+msgstr "Edición de contenido"
 
 #: templates/pinax/pages/page_edit.html:11
 msgid "Edit page at:"
-msgstr ""
+msgstr "Editar página a:"
 
 #: templates/symposion/conference/user_list.html:50
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: templates/symposion/conference/user_list.html:51
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #: templates/symposion/conference/user_list.html:52
 msgid "Speaker Profile?"
-msgstr ""
+msgstr "Perfil del orador"
 
 #: templates/symposion/emails/proposal_new_message/message.html:5
 #, python-format
 msgid "<b>%(user)s</b> has added a message on <b>%(title)s</b>."
-msgstr ""
+msgstr "<b>%(user)s</b> agregó un mensaje en <b>%(title)s</b>."
 
 #: templates/symposion/emails/proposal_new_message/message.html:12
 #, python-format
@@ -250,35 +250,35 @@ msgstr ""
 
 #: templates/symposion/proposals/_pending_proposal_row.html:12
 msgid "Cancelled"
-msgstr ""
+msgstr "Cancelado"
 
 #: templates/symposion/proposals/_pending_proposal_row.html:16
 msgid "Accepted"
-msgstr ""
+msgstr "Aceptado"
 
 #: templates/symposion/proposals/_pending_proposal_row.html:18
 msgid "Submitted"
-msgstr ""
+msgstr "Enviado"
 
 #: templates/symposion/proposals/_pending_proposal_row.html:21
 msgid "Invited"
-msgstr ""
+msgstr "Invitado"
 
 #: templates/symposion/proposals/_pending_proposal_row.html:30
 msgid "Choose Response"
-msgstr ""
+msgstr "Elegija la respuesta"
 
 #: templates/symposion/proposals/_pending_proposal_row.html:35
 msgid "Accept invitation"
-msgstr ""
+msgstr "Aceptar invitación"
 
 #: templates/symposion/proposals/_pending_proposal_row.html:37
 msgid "Decline invitation"
-msgstr ""
+msgstr "Declinar invitación"
 
 #: templates/symposion/proposals/_proposal_fields.html:4
 msgid "Submitted by"
-msgstr ""
+msgstr "Enviado por"
 
 #: templates/symposion/proposals/_proposal_fields.html:7
 msgid "Track"
@@ -298,93 +298,93 @@ msgstr ""
 
 #: templates/symposion/proposals/_proposal_fields.html:28
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #: templates/symposion/proposals/_proposal_fields.html:31
 msgid "Abstract"
-msgstr ""
+msgstr "Resumen"
 
 #: templates/symposion/proposals/_proposal_fields.html:34
 msgid "Notes"
-msgstr ""
+msgstr "Notas"
 
 #: templates/symposion/proposals/_proposal_fields.html:37
 msgid "Speaker Bio"
-msgstr ""
+msgstr "Biografía del Orador"
 
 #: templates/symposion/proposals/_proposal_fields.html:40
 msgid "Documents"
-msgstr ""
+msgstr "Documentos"
 
 #: templates/symposion/proposals/proposal_cancel.html:5
 msgid "Cancel Proposal"
-msgstr ""
+msgstr "Cancelar Propuesta"
 
 #: templates/symposion/proposals/proposal_cancel.html:14
 msgid "No, keep it for now"
-msgstr ""
+msgstr "No, mantenerlo por ahora"
 
 #: templates/symposion/proposals/proposal_detail.html:14
 msgid "Edit this proposal"
-msgstr ""
+msgstr "Editar esta propuesta"
 
 #: templates/symposion/proposals/proposal_detail.html:17
 msgid "Cancel this proposal"
-msgstr ""
+msgstr "Cancelar esta propuesta"
 
 #: templates/symposion/proposals/proposal_detail.html:21
 msgid "Remove me from this proposal"
-msgstr ""
+msgstr "Removerme de esta propuesta"
 
 #: templates/symposion/proposals/proposal_detail.html:33
 #: templates/symposion/reviews/review_detail.html:64
 msgid "Proposal Details"
-msgstr ""
+msgstr "Detalles de propuesta"
 
 #: templates/symposion/proposals/proposal_detail.html:35
 #: templates/symposion/proposals/proposal_detail.html:47
 msgid "Supporting Documents"
-msgstr ""
+msgstr "Documentos respaldatorios"
 
 #: templates/symposion/proposals/proposal_detail.html:38
 msgid "Reviewer Feedback"
-msgstr ""
+msgstr "Comentarios recibidos"
 
 #: templates/symposion/proposals/proposal_detail.html:57
 msgid "delete"
-msgstr ""
+msgstr "elimiar"
 
 #: templates/symposion/proposals/proposal_detail.html:64
 msgid "No supporting documents attached to this proposal."
-msgstr ""
+msgstr "No se adjuntaron documentos respaldatorios"
 
 #: templates/symposion/proposals/proposal_detail.html:66
 msgid "Add Document"
-msgstr ""
+msgstr "Agregar documento"
 
 #: templates/symposion/proposals/proposal_detail.html:73
 msgid "Conversation with Reviewers"
-msgstr ""
+msgstr "Conversación con evaluadores"
 
 #: templates/symposion/proposals/proposal_detail.html:83
 msgid "Leave a Message"
-msgstr ""
+msgstr "Dejar mensaje"
 
 #: templates/symposion/proposals/proposal_detail.html:85
 msgid "You can leave a message for the reviewers here."
-msgstr ""
+msgstr "Puede dejar un mensaje a los evaluadores aqui:"
 
 #: templates/symposion/proposals/proposal_detail.html:93
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 #: templates/symposion/proposals/proposal_speaker_manage.html:7
 msgid "Proposal:"
-msgstr ""
+msgstr "Propuesta"
 
 #: templates/symposion/proposals/proposal_speaker_manage.html:10
 msgid "Edit proposal"
-msgstr ""
+msgstr "Editar propuesta"
 
 #: templates/symposion/proposals/proposal_speaker_manage.html:14
 msgid "Current Speakers"
@@ -410,7 +410,7 @@ msgstr ""
 #: templates/symposion/reviews/_review_table.html:7
 #: templates/symposion/reviews/result_notification.html:49
 msgid "Category"
-msgstr ""
+msgstr "Categoría"
 
 #: templates/symposion/reviews/_review_table.html:9
 msgid "+1"
@@ -470,7 +470,7 @@ msgstr ""
 
 #: templates/symposion/reviews/review_detail.html:150
 msgid "Send a message"
-msgstr ""
+msgstr "Enviar un mensaje"
 
 #: templates/symposion/reviews/review_detail.html:152
 msgid ""
@@ -483,7 +483,7 @@ msgstr ""
 
 #: templates/symposion/schedule/_slot_edit.html:5
 msgid "Edit Slot"
-msgstr ""
+msgstr "Editar espacio"
 
 #: templates/symposion/speakers/speaker_create.html:7
 #: templates/symposion/speakers/speaker_create.html:14
@@ -498,17 +498,17 @@ msgstr "Editar perfil de orador"
 #: templates/symposion/sponsorship/add.html:7
 #: templates/symposion/sponsorship/add.html:14
 msgid "Add a Sponsor"
-msgstr ""
+msgstr "Agregar sponsor"
 
 #: templates/symposion/sponsorship/apply.html:7
 msgid "Apply to be a Sponsor"
-msgstr ""
+msgstr "Aplicar para ser Sponsor"
 
 #: templates/symposion/sponsorship/apply.html:17
 msgid "Apply to Be a Sponsor"
-msgstr ""
+msgstr "Aplicar para ser Sponsor"
 
 #: templates/symposion/sponsorship/list.html:7
 #: templates/symposion/sponsorship/list.html:12
 msgid "About Our Sponsors"
-msgstr ""
+msgstr "Acerca de nuestros sponsors"

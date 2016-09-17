@@ -9079,73 +9079,94 @@ body {
 li {
   font-size: 16px;
 }
-body.home {
-  background: #fff;
-  color: #fff;
-}
-body.pages nav.navbar .navbar-nav {
-  margin-top: 0;
-}
-body.pages nav.navbar {
+nav.navbar {
   margin-bottom: 0;
   background: #073755 url('../images/back2.png') no-repeat center top;
   height: 200px;
 }
-body.pages nav.navbar ul.dropdown-menu li.active a {
+nav.navbar .navbar-nav {
+  float: right;
+  margin-top: 0;
+  border-radius: 0;
+}
+nav.navbar ul.dropdown-menu li.active a {
   color: #fff;
 }
-body.pages nav.navbar ul.dropdown-menu li a {
+nav.navbar ul.dropdown-menu li a {
   padding: 7px 15px;
   color: #e3c501;
 }
-body.pages nav.navbar ul.dropdown-menu li a:hover {
+nav.navbar ul.dropdown-menu li a:hover {
   color: #fff;
   background: #0065b5;
 }
-body.pages nav.navbar li a {
+nav.navbar li {
+  font-size: 16px;
+}
+nav.navbar li a {
+  cursor: pointer;
   color: #e3c501;
 }
-body.pages nav.navbar li a:after {
+nav.navbar li a:after {
+  width: 1px;
+  height: 15px;
   background: #e3c501;
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 17px;
 }
-body.pages nav.navbar li a:hover {
+nav.navbar li a:hover {
   background: none;
   color: #fff;
 }
-body.pages nav.navbar li.active a {
+nav.navbar li:last-child a:after {
+  display: none;
+}
+nav.navbar li.active a {
   color: #fff;
   text-decoration: underline;
 }
-body.pages .nav > li > a:hover,
-body.pages .nav > li > a:focus {
+.nav > li > a:hover,
+.nav > li > a:focus {
   background: none;
   border: none;
 }
-body.about {
-  background: #e3c501;
-}
-body.about nav.navbar li a:hover,
-body.about nav.navbar li.active a {
+body.home {
+  background: #fff;
   color: #fff;
 }
-/*
-body.organizadores {
-  background: #265890;
-  nav.navbar {
-    li a {
-      color: #e3c501;
-    }
-    li a:hover, li.active a {
-      color: #fff;
-    }
-  }
-  header {
-    .lead {
-    	color: #e3c501;
-    }
-  }
+body.home nav.navbar {
+  background: none;
+  height: inherit;
+  margin-bottom: 20px;
 }
-*/
+body.home nav.navbar li a {
+  color: #201815;
+}
+body.home nav.navbar li a:after {
+  background: #201815;
+}
+body.home nav.navbar li a:hover {
+  color: #4a72b1;
+}
+body.home nav.navbar li.active a {
+  text-decoration: underline;
+  color: #4a72b1;
+}
+body.home nav.navbar ul.dropdown-menu {
+  padding: 0;
+  border-radius: 4px;
+}
+body.home nav.navbar ul.dropdown-menu li.active a {
+  color: #fff;
+  text-decoration: none;
+}
+body.home nav.navbar ul.dropdown-menu li a:hover {
+  color: #fff;
+  background: #0065b5;
+}
 #map {
   width: 100%;
   height: 321px;
@@ -9181,51 +9202,6 @@ header .lead {
 }
 .navbar-header .icon-bar {
   background: #201815;
-}
-nav.navbar {
-  border-radius: 0;
-}
-nav.navbar li {
-  font-size: 16px;
-}
-nav.navbar li a {
-  color: #201815;
-  cursor: pointer;
-}
-nav.navbar li a:after {
-  width: 1px;
-  height: 15px;
-  background: #201815;
-  content: '';
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 17px;
-}
-nav.navbar li a:hover {
-  color: #4a72b1;
-}
-nav.navbar li:last-child a:after {
-  display: none;
-}
-nav.navbar li.active a {
-  text-decoration: underline;
-  color: #4a72b1;
-}
-nav.navbar .navbar-nav {
-  float: right;
-}
-nav.navbar ul.dropdown-menu {
-  padding: 0;
-  border-radius: 4px;
-}
-nav.navbar ul.dropdown-menu li.active a {
-  color: #fff;
-  text-decoration: none;
-}
-nav.navbar ul.dropdown-menu li a:hover {
-  color: #fff;
-  background: #0065b5;
 }
 section {
   background: #fff;

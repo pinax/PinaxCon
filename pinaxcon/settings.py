@@ -229,3 +229,6 @@ PROPOSAL_FORMS = {
 }
 PINAX_PAGES_HOOKSET = "pinaxcon.hooks.PinaxPagesHookSet"
 PINAX_BOXES_HOOKSET = "pinaxcon.hooks.PinaxBoxesHookSet"
+
+LOCALE_PATHS = (
+            PROJECT_ROOT + '/website/locale', )

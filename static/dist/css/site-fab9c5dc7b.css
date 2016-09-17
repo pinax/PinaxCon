@@ -9076,6 +9076,9 @@ body {
   font-family: 'Bariol';
   padding: 0;
 }
+li {
+  font-size: 16px;
+}
 body.home {
   background: #fff;
   color: #fff;
@@ -9356,9 +9359,6 @@ section.invitados .container img {
 }
 section.invitados .container p {
   text-align: justify;
-}
-section.colaboradores .container .row {
-  margin-bottom: 40px;
 }
 section.colaboradores .container h2 {
   margin-bottom: 20px;

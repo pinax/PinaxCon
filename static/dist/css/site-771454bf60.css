@@ -9310,8 +9310,8 @@ section.sponsors ul li {
 section.sponsors a {
   background: #fff;
   display: inline-block;
-  padding: 15px 30px;
-  border-radius: 3px;
+  padding: 10px 20px;
+  border-radius: 4px;
 }
 input.newsletter {
   color: #201815;
@@ -9335,6 +9335,9 @@ footer {
 }
 footer p {
   font-weight: bold;
+}
+footer .nav li {
+  font-size: 14px;
 }
 footer .nav li a {
   color: #201815;
@@ -9371,6 +9374,12 @@ section.colaboradores .container img {
 }
 section.colaboradores .container p {
   text-align: center;
+}
+section.apoyan .container a {
+  background: #073755;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
 }
 /* Esto es lo "nativo" de pinax */
 .feature-columns {

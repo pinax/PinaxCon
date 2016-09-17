@@ -34,7 +34,9 @@
       </div>
     </nav>
 
-    {% include "_header.html" %}
+    {% if request.path == '/' %}
+      {% include "_header.html" %}
+    {% endif %}
 
     {% include "_messages.html" %}
 {% endblock %}

@@ -25,12 +25,12 @@ body.home {
 
 body.pages {
   nav.navbar .navbar-nav {
-    margin-top: 50px;
+    margin-top: 0;
   }
   nav.navbar {
     margin-bottom: 0;
-    background: #0065b5 url('../images/back.png') no-repeat left top;
-    height: 106px;
+    background: #073755 url('../images/back2.png') no-repeat center top;
+    height: 200px;
 
     ul.dropdown-menu {
       li.active a {
@@ -38,7 +38,7 @@ body.pages {
       }
       li a {
         padding: 7px 15px;
-        color: #0065b5;
+        color: #e3c501;
         &:hover {
           color: #fff;
           background: #0065b5;
@@ -47,23 +47,23 @@ body.pages {
     }
   }
   nav.navbar li a {
-      color: #fff;
+    color: #e3c501;
   }
   nav.navbar li a:after {
-      background: #fff;
+    background: #e3c501;
   }
   nav.navbar li a:hover {
     background: none;
-    color: #201815;
+    color: #fff;
   }
   nav.navbar li.active a {
-      color: #201815;
+      color: #fff;
       text-decoration: underline;
   }
 
   .nav > li > a:hover, .nav > li > a:focus {
     background: none;
-     border:none;
+    border:none;
   }
 }
 
@@ -189,6 +189,27 @@ nav.navbar {
   }
 }
 
+section {
+  background: #fff;
+  p {
+    color: #201815;
+    font-size: 18px;
+  }
+  h2 {
+    color: #0e76bc;
+  }
+  .btn {
+		font-size: 18px;
+		color: #fff;
+    background: #e3c501;
+		border:none;
+    display: inline-block;
+		&:hover {
+			background: #ffe74c;
+		}
+	}
+}
+
 section.block-blue {
   &:nth-of-type(4n+1) {
     background: #265890;
@@ -202,10 +223,6 @@ section.block-blue {
   &:nth-of-type(4n+4) {
     background: #002839;
   }
-  p {
-    color: #FFF;
-    font-size: 18px;
-  }
   .btn {
 		font-size: 18px;
 		color: #201815;
@@ -217,33 +234,18 @@ section.block-blue {
 			background: #ffe74c;
 		}
 	}
+  p {
+    color: #fff;
+  }
+  h2 {
+    color: #fff;
+  }
   a {
 		/* display: block; */
 		color: #e3c501;
 		&:hover {
 			color: #ffe74c;
 			text-decoration: none;
-		}
-	}
-}
-
-section.block-yellow {
-  background: #fff;
-  p {
-    color: #201815;
-    font-size: 18px;
-  }
-  h2 {
-    color: #e3c501;
-  }
-  .btn {
-		font-size: 18px;
-		color: #fff;
-    background: #e3c501;
-		border:none;
-    display: inline-block;
-		&:hover {
-			background: #ffe74c;
 		}
 	}
 }
@@ -306,15 +308,18 @@ div.codigo-conducta {
 }
 
 footer {
-  background: #fff;
+  background: #e3c501;
 	color: #201815;
 	padding: 50px 0 30px 0;
+  p {
+    font-weight: bold;
+  }
 	.nav {
 		li {
       a {
 			  color: #201815;
         &:hover {
-  				color: #4a72b1;
+  				color: #fff;
   			}
 		  }
       &:first-child a {

@@ -9081,36 +9081,36 @@ body.home {
   color: #fff;
 }
 body.pages nav.navbar .navbar-nav {
-  margin-top: 50px;
+  margin-top: 0;
 }
 body.pages nav.navbar {
   margin-bottom: 0;
-  background: #0065b5 url('../images/back.png') no-repeat left top;
-  height: 106px;
+  background: #073755 url('../images/back2.png') no-repeat center top;
+  height: 200px;
 }
 body.pages nav.navbar ul.dropdown-menu li.active a {
   color: #fff;
 }
 body.pages nav.navbar ul.dropdown-menu li a {
   padding: 7px 15px;
-  color: #0065b5;
+  color: #e3c501;
 }
 body.pages nav.navbar ul.dropdown-menu li a:hover {
   color: #fff;
   background: #0065b5;
 }
 body.pages nav.navbar li a {
-  color: #fff;
+  color: #e3c501;
 }
 body.pages nav.navbar li a:after {
-  background: #fff;
+  background: #e3c501;
 }
 body.pages nav.navbar li a:hover {
   background: none;
-  color: #201815;
+  color: #fff;
 }
 body.pages nav.navbar li.active a {
-  color: #201815;
+  color: #fff;
   text-decoration: underline;
 }
 body.pages .nav > li > a:hover,
@@ -9224,6 +9224,26 @@ nav.navbar ul.dropdown-menu li a:hover {
   color: #fff;
   background: #0065b5;
 }
+section {
+  background: #fff;
+}
+section p {
+  color: #201815;
+  font-size: 18px;
+}
+section h2 {
+  color: #0e76bc;
+}
+section .btn {
+  font-size: 18px;
+  color: #fff;
+  background: #e3c501;
+  border: none;
+  display: inline-block;
+}
+section .btn:hover {
+  background: #ffe74c;
+}
 section.block-blue:nth-of-type(4n+1) {
   background: #265890;
 }
@@ -9236,10 +9256,6 @@ section.block-blue:nth-of-type(4n+3) {
 section.block-blue:nth-of-type(4n+4) {
   background: #002839;
 }
-section.block-blue p {
-  color: #FFF;
-  font-size: 18px;
-}
 section.block-blue .btn {
   font-size: 18px;
   color: #201815;
@@ -9251,6 +9267,12 @@ section.block-blue .btn:hover {
   color: #201815;
   background: #ffe74c;
 }
+section.block-blue p {
+  color: #fff;
+}
+section.block-blue h2 {
+  color: #fff;
+}
 section.block-blue a {
   /* display: block; */
   color: #e3c501;
@@ -9258,26 +9280,6 @@ section.block-blue a {
 section.block-blue a:hover {
   color: #ffe74c;
   text-decoration: none;
-}
-section.block-yellow {
-  background: #fff;
-}
-section.block-yellow p {
-  color: #201815;
-  font-size: 18px;
-}
-section.block-yellow h2 {
-  color: #e3c501;
-}
-section.block-yellow .btn {
-  font-size: 18px;
-  color: #fff;
-  background: #e3c501;
-  border: none;
-  display: inline-block;
-}
-section.block-yellow .btn:hover {
-  background: #ffe74c;
 }
 @media (min-width: 1200px) {
   section.primary .container {
@@ -9324,21 +9326,24 @@ div.codigo-conducta p {
   font-size: 20px;
 }
 footer {
-  background: #fff;
+  background: #e3c501;
   color: #201815;
   padding: 50px 0 30px 0;
+}
+footer p {
+  font-weight: bold;
 }
 footer .nav li a {
   color: #201815;
 }
 footer .nav li a:hover {
-  color: #4a72b1;
+  color: #fff;
 }
 footer .nav li:first-child a {
   padding-left: 0;
 }
 section.colaboradores .container .row {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 section.colaboradores .container h2 {
   margin-bottom: 20px;

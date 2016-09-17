@@ -9081,13 +9081,18 @@ li {
 }
 nav.navbar {
   margin-bottom: 0;
-  background: #073755 url('../images/back2.png') no-repeat center top;
   height: 200px;
+  background: #073755 url('../images/logo-mobile.png') no-repeat left top;
 }
 nav.navbar .navbar-nav {
   float: right;
   margin-top: 0;
   border-radius: 0;
+}
+@media (min-width: 992px) {
+  nav.navbar {
+    background: #073755 url('../images/back2.png') no-repeat center top;
+  }
 }
 nav.navbar ul.dropdown-menu li.active a {
   color: #fff;

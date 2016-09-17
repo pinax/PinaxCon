@@ -30,8 +30,12 @@ nav.navbar {
   }
 
   margin-bottom: 0;
-  background: #073755 url('../images/back2.png') no-repeat center top;
   height: 200px;
+  background: #073755 url('../images/logo-mobile.png') no-repeat 10px 10px;
+
+  @media (min-width: @screen-md-min) {
+    background: #073755 url('../images/back2.png') no-repeat center top;
+  }
 
   ul.dropdown-menu {
     li.active a {

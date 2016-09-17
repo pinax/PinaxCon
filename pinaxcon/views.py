@@ -19,7 +19,7 @@ def becas(request):
                 'email')
             form_content = request.POST.get('que_necesitas')
 
-            # Email the profile with the 
+            # Email the profile with the
             # contact information
             template = loader.get_template('becas_email.txt')
             context = Context({

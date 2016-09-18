@@ -23,18 +23,34 @@ li {
 }
 
 nav.navbar {
-  .navbar-nav {
-    float: right;
-    margin-top: 0;
-    border-radius: 0;
+  margin-bottom: 0;
+  background: #073755;
+
+  .navbar-brand {
+    color: #e3c501;
+    font-family: 'Bungee', cursive;
+    float: left;
+    height: 50px;
+    padding: 12px;
+    font-size: 28px;
+    line-height: 28px;
   }
 
-  margin-bottom: 0;
-  height: 200px;
-  background: #073755 url('../images/logo-mobile.png') no-repeat 10px 10px;
+  .navbar-header .icon-bar {
+  	background: #e3c501;
+  }
 
   @media (min-width: @screen-md-min) {
+    height: 200px;
     background: #073755 url('../images/back2.png') no-repeat center top;
+    .navbar-brand {
+      display: none;
+    }
+    .navbar-nav {
+      float: right;
+      margin-top: 0;
+      border-radius: 0;
+    }
   }
 
   ul.dropdown-menu {
@@ -55,15 +71,17 @@ nav.navbar {
     a {
       cursor: pointer;
       color: #e3c501;
-      &:after {
-        width: 1px;
-        height: 15px;
-        background: #e3c501;
-        content: '';
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 17px;
+      @media (min-width: @screen-md-min) {
+        &:after {
+          width: 1px;
+          height: 15px;
+          background: #e3c501;
+          content: '';
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 17px;
+        }
       }
       &:hover {
         background: none;
@@ -93,6 +111,9 @@ body.home {
     background: none;
     height: inherit;
     margin-bottom: 20px;
+    .navbar-brand {
+      display: none;
+    }
     li {
   		a {
   			color: #201815;
@@ -169,6 +190,7 @@ header {
     text-align: center;
 	}
 }
+
 .navbar-header .icon-bar {
 	background: #201815;
 }

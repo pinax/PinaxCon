@@ -34,9 +34,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           {% block nav %}
+            {% block account_bar %}{% include "_account_bar.html" %}{% endblock %}
             {% sitetree_menu from "main" include "trunk" template "sitetree/menu_bootstrap3.html" %}
           {% endblock %}
-          <!-- {% block account_bar %}{% include "_account_bar.html" %}{% endblock %} -->
         </div><!--/.nav-collapse -->
       </div>
     </nav>

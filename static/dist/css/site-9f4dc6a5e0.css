@@ -9143,7 +9143,7 @@ nav.navbar li a:hover {
   background: none;
   color: #fff;
 }
-nav.navbar li:last-child a:after {
+nav.navbar ul.user-buttons li:last-child a:after {
   display: none;
 }
 nav.navbar li.active a {
@@ -9339,6 +9339,9 @@ footer {
   background: #e3c501;
   color: #201815;
   padding: 50px 0 30px 0;
+}
+footer p {
+  clear: both;
 }
 footer p a {
   color: #201815;

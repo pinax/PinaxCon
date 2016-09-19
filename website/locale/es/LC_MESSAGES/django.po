@@ -512,3 +512,7 @@ msgstr "Aplicar para ser Sponsor"
 #: templates/symposion/sponsorship/list.html:12
 msgid "About Our Sponsors"
 msgstr "Acerca de nuestros sponsors"
+
+# Manual
+msgid "As you would like it to appear in the conference program."
+msgstr "Como te gustaría aparecer en el programa."

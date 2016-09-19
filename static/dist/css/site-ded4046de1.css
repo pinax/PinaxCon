@@ -9340,6 +9340,14 @@ footer {
   color: #201815;
   padding: 50px 0 30px 0;
 }
+@media (max-width: 480px) {
+  footer .col-md-6 {
+    text-align: center;
+  }
+}
+footer p {
+  clear: both;
+}
 footer p a {
   color: #201815;
 }
@@ -9356,8 +9364,10 @@ footer .nav li a {
 footer .nav li a:hover {
   color: #fff;
 }
-footer .nav li:first-child a {
-  padding-left: 0;
+@media (min-width: 992px) {
+  footer .nav li:first-child a {
+    padding-left: 0;
+  }
 }
 section.invitados .container .row {
   margin-bottom: 40px;

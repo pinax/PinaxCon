@@ -46,7 +46,7 @@ msgstr "Bienvenid@"
 
 #: templates/account/login.html:15
 msgid "Log in to an existing account"
-msgstr ""
+msgstr "Loguearse a una cuenta existente"
 
 #: templates/account/login.html:22
 msgid "Forgot your password?"
@@ -290,7 +290,7 @@ msgstr ""
 
 #: templates/symposion/proposals/_proposal_fields.html:14
 msgid "Additional Speakers"
-msgstr ""
+msgstr "Oradores adicionales"
 
 #: templates/symposion/proposals/_proposal_fields.html:21
 msgid "Invitation Sent"
@@ -388,24 +388,24 @@ msgstr "Editar propuesta"
 
 #: templates/symposion/proposals/proposal_speaker_manage.html:14
 msgid "Current Speakers"
-msgstr ""
+msgstr "Oradores actuales"
 
 #: templates/symposion/proposals/proposal_speaker_manage.html:20
 msgid "pending invitation"
-msgstr ""
+msgstr "invitación pendiente"
 
 #: templates/symposion/proposals/proposal_speaker_manage.html:24
 msgid "Add another speaker"
-msgstr ""
+msgstr "Agregar orador adicional"
 
 #: templates/symposion/proposals/proposal_submit.html:6
 msgid "Submit A Proposal"
-msgstr ""
+msgstr "Enviar una propuesta"
 
 #: templates/symposion/reviews/_review_table.html:6
 #: templates/symposion/reviews/result_notification.html:48
 msgid "Speaker / Title"
-msgstr ""
+msgstr "Orador / Título"
 
 #: templates/symposion/reviews/_review_table.html:7
 #: templates/symposion/reviews/result_notification.html:49
@@ -430,43 +430,43 @@ msgstr ""
 
 #: templates/symposion/reviews/_review_table.html:13
 msgid "Your Rating"
-msgstr ""
+msgstr "Tu rating"
 
 #: templates/symposion/reviews/base.html:64
 msgid "All Reviews"
-msgstr ""
+msgstr "Todas las revisiones"
 
 #: templates/symposion/reviews/base.html:75
 msgid "Voting Status"
-msgstr ""
+msgstr "Estado de la votación"
 
 #: templates/symposion/reviews/result_notification.html:50
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 #: templates/symposion/reviews/result_notification.html:51
 msgid "Notified?"
-msgstr ""
+msgstr "¿Notificado?"
 
 #: templates/symposion/reviews/review_detail.html:66
 msgid "Speaker Feedback"
-msgstr ""
+msgstr "Feedback del orador"
 
 #: templates/symposion/reviews/review_detail.html:74
 msgid "Current Results"
-msgstr ""
+msgstr "Resultados actuales"
 
 #: templates/symposion/reviews/review_detail.html:81
 msgid "Total Responses"
-msgstr ""
+msgstr "Respuestas totales"
 
 #: templates/symposion/reviews/review_detail.html:98
 msgid "Submit Review"
-msgstr ""
+msgstr "Enviar revisión"
 
 #: templates/symposion/reviews/review_detail.html:136
 msgid "Conversation with the submitter"
-msgstr ""
+msgstr "Conversación con quien envió la propuesta"
 
 #: templates/symposion/reviews/review_detail.html:150
 msgid "Send a message"
@@ -480,6 +480,11 @@ msgid ""
 "                            notified and given the opportunity to respond.\n"
 "                        "
 msgstr ""
+"\n"
+"                            Si estás interesado en comunicarte con quien envió la propuesta, "
+"usá el siguiente formulario y ella o el serán\n"
+"                            notificados y se les dará la oportunidad de responder.\n"
+"                        "
 
 #: templates/symposion/schedule/_slot_edit.html:5
 msgid "Edit Slot"

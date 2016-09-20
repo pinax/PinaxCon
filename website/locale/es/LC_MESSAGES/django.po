@@ -54,15 +54,15 @@ msgstr "Recuperar contraseña"
 
 #: templates/account/login.html:27
 msgid "Don't have an account?"
-msgstr ""
+msgstr "¿No tenés cuenta?"
 
 #: templates/account/signup.html:25
 msgid "Already have an account?"
-msgstr ""
+msgstr "¿Ya tenés una cuenta?"
 
 #: templates/dashboard.html:31
 msgid "Speaking"
-msgstr ""
+msgstr "Orando"
 
 #: templates/dashboard.html:108 templates/symposion/sponsorship/detail.html:8
 msgid "Sponsorship"

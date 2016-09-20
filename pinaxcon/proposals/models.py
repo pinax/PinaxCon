@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 
 from symposion.proposals.models import ProposalBase
@@ -19,7 +20,7 @@ class Proposal(ProposalBase):
 
     recording_release = models.BooleanField(
         default=True,
-        help_text="By submitting your proposal, you agree to give permission to the conference organizers to record, edit, and release audio and/or video of your presentation. If you do not agree to this, please uncheck this box."
+        help_text="Al enviar tu propuesta, le estás dando permiso a los organizadores de la conferencia para grabar, editar y transmitir audio y/o video de tu presentación. Si no estas de acuerdo con esto, no chequees este recuadro."
     )
 
     class Meta:

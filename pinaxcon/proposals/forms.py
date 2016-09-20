@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django import forms
 
 from .models import TalkProposal
@@ -9,7 +11,7 @@ class ProposalForm(forms.ModelForm):
         value = self.cleaned_data["description"]
         if len(value) > 400:
             raise forms.ValidationError(
-                u"The description must be less than 400 characters"
+                u"La descripción debe ser menor a 400 caracteres"
             )
         return value
 

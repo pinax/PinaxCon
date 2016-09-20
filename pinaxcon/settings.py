@@ -6,7 +6,7 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir
 PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 BASE_DIR = PACKAGE_ROOT
 
-DEBUG = False #bool(int(os.environ.get("DEBUG", "1")))
+DEBUG = True #bool(int(os.environ.get("DEBUG", "1")))
 
 DATABASES = {
     'default': {
@@ -225,7 +225,7 @@ AUTHENTICATION_BACKENDS = [
 
 CONFERENCE_ID = 1
 PROPOSAL_FORMS = {
-    "talk": "pinaxcon.proposals.forms.TalkProposalForm",
+    "charla": "pinaxcon.proposals.forms.TalkProposalForm",
 }
 PINAX_PAGES_HOOKSET = "pinaxcon.hooks.PinaxPagesHookSet"
 PINAX_BOXES_HOOKSET = "pinaxcon.hooks.PinaxBoxesHookSet"

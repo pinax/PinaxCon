@@ -222,7 +222,7 @@ msgstr "¿Ya tenés una cuenta?"
 
 #: templates/dashboard.html:31
 msgid "Speaking"
-msgstr "Orando"
+msgstr "Orador"
 
 #: templates/dashboard.html:102
 #: templates/symposion/reviews/review_detail.html:65
@@ -672,7 +672,7 @@ msgstr "Aplicar para ser Sponsor"
 
 #: templates/symposion/sponsorship/detail.html:8
 msgid "Sponsorship"
-msgstr "Sponsoreso"
+msgstr "Esponsoreo"
 
 #: templates/symposion/sponsorship/list.html:7
 #: templates/symposion/sponsorship/list.html:12

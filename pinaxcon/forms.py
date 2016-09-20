@@ -8,6 +8,6 @@ class BecasForm(forms.Form):
     que_necesitas = forms.CharField(
         required=True,
         widget=forms.Textarea,
-        label="¿Qué necesitás?"
+        label=u"¿Qué necesitás?"
     )
     ingresa_el_texto = CaptchaField()

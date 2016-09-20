@@ -232,3 +232,5 @@ PINAX_BOXES_HOOKSET = "pinaxcon.hooks.PinaxBoxesHookSet"
 
 LOCALE_PATHS = (
             PROJECT_ROOT + '/website/locale', )
+
+THEME_CONTACT_EMAIL = 'pyconar@python.org.ar'

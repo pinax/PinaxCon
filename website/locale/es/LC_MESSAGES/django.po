@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-17 15:45-0300\n"
+"POT-Creation-Date: 2016-09-20 16:53-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,6 +44,99 @@ msgstr "Registrate"
 msgid "Welcome"
 msgstr "Bienvenid@"
 
+#: templates/account/email/email_confirmation_message.txt:1
+#, python-format
+msgid ""
+"A user on %(site_name)s has created an account using this email address.\n"
+"\n"
+"To confirm this email address, go to %(activate_url)s\n"
+"\n"
+"If you did not sign up for this site, you can ignore this message.\n"
+msgstr ""
+"Un usuari@ en %(site_name)s ha creado una cuenta usando esta dirección de "
+"correo.\n"
+"\n"
+"para confirmar esta dirección, hacé click en %(activate_url)s\n"
+"\n"
+"Si no te registraste a este sitio, ¿Qué esperás? ;) .\n"
+
+#: templates/account/email/email_confirmation_subject.txt:1
+#, python-format
+msgid "Confirm email address for %(site_name)s"
+msgstr "Confirmar dirección de correo para %(site_name)s"
+
+#: templates/account/email/invite_user.txt:1
+#, python-format
+msgid ""
+"You have been invited to sign up at %(name)s.\n"
+"\n"
+"%(signup_url)s\n"
+msgstr ""
+
+#: templates/account/email/invite_user_subject.txt:1
+#, python-format
+msgid "Create an account on %(name)s"
+msgstr ""
+
+#: templates/account/email/password_change.txt:1
+#, python-format
+msgid ""
+"This is the email notification to confirm your password has been changed on "
+"%(now)s."
+msgstr ""
+"Este es un correo de notificación para confirmar que tu contraseña ha sido "
+"cambiada %(now)s."
+
+#: templates/account/email/password_change_subject.txt:1
+msgid "Change password email notification"
+msgstr "Notificación de cambio de contraseña"
+
+#: templates/account/email/password_reset.txt:1
+#, python-format
+msgid ""
+"You're receiving this email because you or someone else has requested a "
+"password for your user account at %(site_name)s.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password.\n"
+"\n"
+"%(password_reset_url)s\n"
+msgstr ""
+"Estás recibiendo este correo porque alguien ha requerido una contraseña para "
+"tu cuenta en %(site_name)s.\n"
+"Puede ser ignorado de manera segura si no has requerido un cambio de "
+"contraseña· Hacé click en el siguiente link para resetear tu contraseña.\n"
+"\n"
+"%(password_reset_url)s\n"
+
+#: templates/account/email/password_reset_subject.txt:1
+#, python-format
+msgid "[%(site_name)s] Password reset"
+msgstr "[%(site_name)s] Resetear contraseña"
+
+#: templates/account/email_confirmation_sent.html:5
+#: templates/account/email_confirmation_sent.html:8
+#, fuzzy
+#| msgid "Confirm email address for %(site_name)s"
+msgid "Confirm your email address"
+msgstr "Confirmar dirección de correo para %(site_name)s"
+
+#: templates/account/email_confirmation_sent.html:10
+#, python-format
+msgid ""
+"We have sent you an email to <b>%(email)s</b> for verification. Follow the "
+"link provided to finalize the signup process. If you do not receive it "
+"within a few minutes, contact us at <a href=\"mailto:%(THEME_CONTACT_EMAIL)s"
+"\">%(THEME_CONTACT_EMAIL)s</a>."
+msgstr ""
+"Te hemos enviado un email a <b>%(email)s</b> para verificación. Seguí el "
+"link provisto para finalizar el proceso de registración. Si no lo recibis "
+"dentro de unos minutoscontactanos a <a href=\"mailto:%(THEME_CONTACT_EMAIL)s"
+"\">%(THEME_CONTACT_EMAIL)s</a>."
+
+#: templates/account/email_confirmation_sent.html:11
+msgid "Go back"
+msgstr "Volver"
+
 #: templates/account/login.html:15
 msgid "Log in to an existing account"
 msgstr "Loguearse a una cuenta existente"
@@ -56,6 +149,73 @@ msgstr "Recuperar contraseña"
 msgid "Don't have an account?"
 msgstr "¿No tenés cuenta?"
 
+#: templates/account/password_reset.html:7
+#: templates/account/password_reset.html:15
+#, fuzzy
+#| msgid "[%(site_name)s] Password reset"
+msgid "Password reset"
+msgstr "[%(site_name)s] Resetear contraseña"
+
+#: templates/account/password_reset.html:16
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll send you "
+"an email allowing you to reset it."
+msgstr ""
+"¿Te olvidaste la contraseña?. Ingresá tu correo abajo, y te enviaramos un "
+"email para que la puedas resetear."
+
+#: templates/account/password_reset.html:22
+#, fuzzy
+#| msgid "Forgot your password?"
+msgid "Reset my password"
+msgstr "Recuperar contraseña"
+
+#: templates/account/password_reset.html:29
+#, python-format
+msgid ""
+"If you have any trouble resetting your password, contact us at <a href="
+"\"mailto:%(THEME_CONTACT_EMAIL)s\">%(THEME_CONTACT_EMAIL)s</a>."
+msgstr ""
+"Si llegás a tener algún problema para resetear tu contraseña, podés "
+"contactarnos a <a href=\"mailto:%(THEME_CONTACT_EMAIL)s\">"
+"%(THEME_CONTACT_EMAIL)s</a>."
+
+#: templates/account/password_reset_sent.html:6
+#: templates/account/password_reset_sent.html:9
+#, fuzzy
+#| msgid "[%(site_name)s] Password reset"
+msgid "Password reset sent"
+msgstr "[%(site_name)s] Resetear contraseña"
+
+#: templates/account/password_reset_sent.html:11
+#, fuzzy, python-format
+#| msgid ""
+#| "If you have any trouble resetting your password, contact us at <a href="
+#| "\"mailto:%(THEME_CONTACT_EMAIL)s\">%(THEME_CONTACT_EMAIL)s</a>."
+msgid ""
+"We have sent you an email. If you do not receive it within a few minutes, "
+"try resending or contact us at <a href=\"mailto:%(THEME_CONTACT_EMAIL)s\">"
+"%(THEME_CONTACT_EMAIL)s</a>."
+msgstr ""
+"Si llegás a tener algún problema para resetear tu contraseña, podés "
+"contactarnos a <a href=\"mailto:%(THEME_CONTACT_EMAIL)s\">"
+"%(THEME_CONTACT_EMAIL)s</a>."
+
+#: templates/account/password_reset_sent.html:20
+msgid "Resend"
+msgstr ""
+
+#: templates/account/password_reset_sent.html:25
+#, python-format
+msgid ""
+"We have resent the password email. If you do not receive it within a few "
+"minutes, contact us at <a href=\"mailto:%(THEME_CONTACT_EMAIL)s\">"
+"%(THEME_CONTACT_EMAIL)s</a>."
+msgstr ""
+"The hemos reenviado el email con de contraseña. Si no lo recibis dentro de unos "
+"minutos, contactanos a <a href=\"mailto:%(THEME_CONTACT_EMAIL)s\">"
+"%(THEME_CONTACT_EMAIL)s</a>."
+
 #: templates/account/signup.html:25
 msgid "Already have an account?"
 msgstr "¿Ya tenés una cuenta?"
@@ -64,16 +224,12 @@ msgstr "¿Ya tenés una cuenta?"
 msgid "Speaking"
 msgstr "Orando"
 
-#: templates/dashboard.html:108 templates/symposion/sponsorship/detail.html:8
-msgid "Sponsorship"
-msgstr "Sponsoreso"
-
-#: templates/dashboard.html:143
+#: templates/dashboard.html:102
 #: templates/symposion/reviews/review_detail.html:65
 msgid "Reviews"
 msgstr "Revisiones"
 
-#: templates/dashboard.html:188
+#: templates/dashboard.html:147
 msgid "Teams"
 msgstr "Equipos"
 
@@ -294,7 +450,7 @@ msgstr "Oradores adicionales"
 
 #: templates/symposion/proposals/_proposal_fields.html:21
 msgid "Invitation Sent"
-msgstr ""
+msgstr "Invitación enviada"
 
 #: templates/symposion/proposals/_proposal_fields.html:28
 msgid "Description"
@@ -352,7 +508,7 @@ msgstr "Comentarios recibidos"
 
 #: templates/symposion/proposals/proposal_detail.html:57
 msgid "delete"
-msgstr "elimiar"
+msgstr "eliminar"
 
 #: templates/symposion/proposals/proposal_detail.html:64
 msgid "No supporting documents attached to this proposal."
@@ -481,9 +637,10 @@ msgid ""
 "                        "
 msgstr ""
 "\n"
-"                            Si estás interesado en comunicarte con quien envió la propuesta, "
-"usá el siguiente formulario y ella o el serán\n"
-"                            notificados y se les dará la oportunidad de responder.\n"
+"                            Si estás interesado en comunicarte con quien "
+"envió la propuesta, usá el siguiente formulario y ella o el serán\n"
+"                            notificados y se les dará la oportunidad de "
+"responder.\n"
 "                        "
 
 #: templates/symposion/schedule/_slot_edit.html:5
@@ -512,6 +669,10 @@ msgstr "Aplicar para ser Sponsor"
 #: templates/symposion/sponsorship/apply.html:17
 msgid "Apply to Be a Sponsor"
 msgstr "Aplicar para ser Sponsor"
+
+#: templates/symposion/sponsorship/detail.html:8
+msgid "Sponsorship"
+msgstr "Sponsoreso"
 
 #: templates/symposion/sponsorship/list.html:7
 #: templates/symposion/sponsorship/list.html:12

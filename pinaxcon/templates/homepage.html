@@ -2,7 +2,7 @@
 
 {% load i18n %}
 {% load pinax_boxes_tags %}
-
+{% load static %}
 {% block head_title %}Bienvenid@os a Pyconar2016{% endblock %}
 
 {% block body_class %}home{% endblock %}
@@ -96,7 +96,7 @@
       </div>
       <div class="row">
         <div class="col-md-3">
-          <img src="/site_media/static/images/angel.jpg" class="img-responsive" />
+            <img src="{% static "images/angel.jpg" %}" class="img-responsive" />
         </div>
         <div class="col-md-9">
           <h3>Ángel Medinilla</h3>
@@ -106,7 +106,7 @@
       </div>
       <div class="row">
         <div class="col-md-3">
-          <img src="/site_media/static/images/fernando.jpg" class="img-responsive" />
+            <img src="{% static "images/Fernando-S.png" %}" class="img-responsive" />
         </div>
         <div class="col-md-9">
           <h3>Fernando Schapachnik</h3>

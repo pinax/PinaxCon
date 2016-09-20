@@ -226,6 +226,7 @@ AUTHENTICATION_BACKENDS = [
 CONFERENCE_ID = 1
 PROPOSAL_FORMS = {
     "charla": "pinaxcon.proposals.forms.TalkProposalForm",
+    "taller": "pinaxcon.proposals.forms.TalkProposalForm",
 }
 PINAX_PAGES_HOOKSET = "pinaxcon.hooks.PinaxPagesHookSet"
 PINAX_BOXES_HOOKSET = "pinaxcon.hooks.PinaxBoxesHookSet"

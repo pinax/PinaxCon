@@ -11,9 +11,9 @@ class Proposal(ProposalBase):
     AUDIENCE_LEVEL_INTERMEDIATE = 3
 
     AUDIENCE_LEVELS = [
-        (AUDIENCE_LEVEL_NOVICE, "Novice"),
-        (AUDIENCE_LEVEL_INTERMEDIATE, "Intermediate"),
-        (AUDIENCE_LEVEL_EXPERIENCED, "Experienced"),
+        (AUDIENCE_LEVEL_NOVICE, "Principiante"),
+        (AUDIENCE_LEVEL_INTERMEDIATE, "Intermedia"),
+        (AUDIENCE_LEVEL_EXPERIENCED, "Avanzada"),
     ]
 
     audience_level = models.IntegerField(choices=AUDIENCE_LEVELS)

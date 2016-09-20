@@ -301,13 +301,21 @@ msgid ""
 "%(current_site)s{{ dashboard_url ]}</a>\n"
 "</p>\n"
 msgstr ""
+"\n"
+"<p>%(username)s te ha agregado como un orador adicional a la \n"
+"    propuesta de charla para %(site_name)s titulada \"%(title)s\".</p>\n"
+"\n"
+"<p>Para mas detalles, visita el dashboard de oradores de %(site_name)s:\n"
+"    <a href=\"http://%(current_site)s%(dashboard_url)s\">http://"
+"%(current_site)s{{ dashboard_url ]}</a>\n"
+"</p>\n"
 
 #: templates/symposion/emails/speaker_addition/subject.txt:1
 #: templates/symposion/emails/speaker_invite/subject.txt:1
 #: templates/symposion/emails/speaker_no_profile/subject.txt:1
 #, python-format
 msgid "%(name)s has invited you to join as a speaker on %(title)s"
-msgstr ""
+msgstr "%(name)s Te ha invitado a unirte como orador adicional en %(title)s"
 
 #: templates/symposion/emails/speaker_invite/message.html:3
 #, python-format
@@ -326,6 +334,20 @@ msgid ""
 "<p>If you don't have account on the website, you will be asked to create one."
 "</p>\n"
 msgstr ""
+"\n"
+"<p>%(invitator)s te agregó como un orador adicional a\n"
+"    la propuesta de charla para %(site_name)s titulada \"%(title)s\".</p>\n"
+"\n"
+"<p>Hace click en</p>\n"
+"\n"
+"<p><a href=\"http://%(current_site)s%(token_url)s\">http://%(current_site)s"
+"%(token_url)s</a></p>\n"
+"\n"
+"<p>para confirmar.</p>\n"
+"\n"
+"<p>Si no tenés una cuenta en el sitio, se te pedira que crees una. Luego deberás volver a este email y cliquear nuevamente el link."
+"</p>\n"
+
 
 #: templates/symposion/emails/speaker_no_profile/message.html:3
 #, python-format
@@ -679,6 +701,24 @@ msgstr "Esponsoreo"
 msgid "About Our Sponsors"
 msgstr "Acerca de nuestros sponsors"
 
-# Manual
+# Como te gustaria aparecer
 msgid "As you would like it to appear in the conference program."
 msgstr "Como te gustaría aparecer en el programa."
+
+# Propuesta aceptada
+msgid "If your proposal is accepted this will be made public and printed in the program. Should be one paragraph, maximum 400 characters."
+msgstr "Si tu propuesta es aceptada, esto se hará público. Un párrafo, máximo 400 caracteres"
+
+# Detailed abstract
+msgid "Detailed outline. Will be made public if your proposal is accepted. Edit using <a href='http://daringfireball.net/projects/markdown/basics' target='_blank'>Markdown</a>."
+msgstr "Descripción detallada. Será hecha pública si tu propuesta es aceptada Edita usando <a href='http://daringfireball.net/projects/markdown/basics' target='_blank'>Markdown</a>."
+
+# Biography
+msgid "A little bit about you.  Edit using <a href='http://warpedvisions.org/projects/markdown-cheat-sheet/target='_blank'>Markdown</a>."
+msgstr "Contanos un poco acerca tuyo.  Edita usando <a href='http://warpedvisions.org/projects/markdown-cheat-sheet/target='_blank'>Markdown</a>."
+
+# Additional notes
+msgid "Anything else you'd like the program committee to know when making their selection: your past experience, etc. This is not made public. Edit using <a href='http://daringfireball.net/projects/markdown/basics' target='_blank'>Markdown</a>."
+msgstr "Cualquier otra cosa que desees que el comite tenga en cuenta al hacer la selección, tus experiencias pasdas, algún requerimiento extra, etc. Esto no se hará público. Editar usando <a href='http://daringfireball.net/projects/markdown/basics' target='_blank'>Markdown</a>."
+
+

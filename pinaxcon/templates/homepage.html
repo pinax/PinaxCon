@@ -9,6 +9,7 @@
 
 {% block body_base %}
   {% if ACCOUNT_OPEN_SIGNUP %}
+  <!--
   <section class="container-fluid primary block-blue">
     <div class="container">
       <h2>!Inscripciones abiertas!</h2>
@@ -18,15 +19,20 @@
       más..te mantenemos al tanto!</p>
       <div class="center"><a href="{% url 'account_signup' %}" class="btn btn-warning">Inscribite</a></div>
     </div>
-  </section>
-  {% else %}
+  -->
   <section class="container-fluid primary block-blue">
     <div class="container">
         <h2>Inscripción</h2>
-        <p>La entrada es libre y gratuita. Seguinos en twitter <a href="https://twitter.com/pyconar" target="_blank">@pyconar</a> para más novedades sobre el evento y la apertura de la inscripción.</p>
+        <p>La entrada es libre y gratuita. Seguinos en twitter <a
+            href="https://twitter.com/pyconar" target="_blank">@pyconar</a>
+        para más novedades sobre el evento y la apertura de la inscripción.</p>
+        <p>¡Mientras tanto podés ayudarnos con el evento o <a href="/forma-parte/">enviarnos tu charla </a>!</p>
         <p>Todos los asistentes deberán aceptar y respetar el <a href="/codigo-conducta">código de conducta</a>.</p>
     </div>
   </section>
+
+  </section>
+  {% else %}
   {% endif %}
 
   <section class="container-fluid secondary block-blue">

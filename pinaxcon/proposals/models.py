@@ -30,4 +30,5 @@ class Proposal(ProposalBase):
 class TalkProposal(Proposal):
 
     class Meta:
-        verbose_name = "talk proposal"
+        verbose_name = "Propuesta de charla/taller"
+        verbose_name_plural = "Propuestas de charlas/talleres"

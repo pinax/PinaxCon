@@ -114,11 +114,8 @@ msgid "[%(site_name)s] Password reset"
 msgstr "[%(site_name)s] Resetear contraseña"
 
 #: templates/account/email_confirmation_sent.html:5
-#: templates/account/email_confirmation_sent.html:8
-#, fuzzy
-#| msgid "Confirm email address for %(site_name)s"
 msgid "Confirm your email address"
-msgstr "Confirmar dirección de correo para %(site_name)s"
+msgstr "Confirmar dirección de correo electrónico"
 
 #: templates/account/email_confirmation_sent.html:10
 #, python-format
@@ -139,7 +136,7 @@ msgstr "Volver"
 
 #: templates/account/login.html:15
 msgid "Log in to an existing account"
-msgstr "Loguearse a una cuenta existente"
+msgstr "Ingresar a una cuenta existente"
 
 #: templates/account/login.html:22
 msgid "Forgot your password?"
@@ -700,6 +697,33 @@ msgstr "Esponsoreo"
 #: templates/symposion/sponsorship/list.html:12
 msgid "About Our Sponsors"
 msgstr "Acerca de nuestros sponsors"
+
+
+#: templates/account/email_confirm.html:5
+#: templates/account/email_confirm.html:11
+#, fuzzy
+msgid "Confirm Email"
+msgstr "Confirmar dirección de correo electrónico"
+
+#: templates/account/email_confirm.html:14
+#, fuzzy, python-format
+msgid "Confirm email address <b>%(email)s</b>?"
+msgstr "Confirmar dirección de correo <b>%(email)s</b>"
+
+#: templates/account/email_confirm.html:15
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: templates/account/email_confirmed.html:5
+#: templates/account/email_confirmed.html:8
+msgid "Email confirmed"
+msgstr "Dirección de correo electrónico confirmada."
+
+#: templates/account/email_confirmed.html:9
+#, python-format
+msgid "You have confirmed <b>%(email)s</b>"
+msgstr "Confirmaste <b>%(email)s</b>"
+
 
 # Como te gustaria aparecer
 msgid "As you would like it to appear in the conference program."

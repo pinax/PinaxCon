@@ -219,7 +219,7 @@ msgstr "¿Ya tenés una cuenta?"
 
 #: templates/dashboard.html:31
 msgid "Speaking"
-msgstr "Orador"
+msgstr "Orador/a"
 
 #: templates/dashboard.html:102
 #: templates/symposion/reviews/review_detail.html:65
@@ -248,7 +248,7 @@ msgstr "Nombre"
 
 #: templates/symposion/conference/user_list.html:52
 msgid "Speaker Profile?"
-msgstr "Perfil del orador"
+msgstr "Perfil de orador/a"
 
 #: templates/symposion/emails/proposal_new_message/message.html:5
 #, python-format
@@ -299,7 +299,7 @@ msgid ""
 "</p>\n"
 msgstr ""
 "\n"
-"<p>%(username)s te ha agregado como un orador adicional a la \n"
+"<p>%(username)s te ha agregado como un/a orador/a adicional a la \n"
 "    propuesta de charla para %(site_name)s titulada \"%(title)s\".</p>\n"
 "\n"
 "<p>Para mas detalles, visita el dashboard de oradores de %(site_name)s:\n"
@@ -312,7 +312,7 @@ msgstr ""
 #: templates/symposion/emails/speaker_no_profile/subject.txt:1
 #, python-format
 msgid "%(name)s has invited you to join as a speaker on %(title)s"
-msgstr "%(name)s Te ha invitado a unirte como orador adicional en %(title)s"
+msgstr "%(name)s Te ha invitado a unirte como orador/a adicional en %(title)s"
 
 #: templates/symposion/emails/speaker_invite/message.html:3
 #, python-format
@@ -332,7 +332,7 @@ msgid ""
 "</p>\n"
 msgstr ""
 "\n"
-"<p>%(invitator)s te agregó como un orador adicional a\n"
+"<p>%(invitator)s te agregó como orador/a adicional a\n"
 "    la propuesta de charla para %(site_name)s titulada \"%(title)s\".</p>\n"
 "\n"
 "<p>Hace click en</p>\n"
@@ -571,7 +571,7 @@ msgstr "invitación pendiente"
 
 #: templates/symposion/proposals/proposal_speaker_manage.html:24
 msgid "Add another speaker"
-msgstr "Agregar orador adicional"
+msgstr "Agregar orador/a adicional"
 
 #: templates/symposion/proposals/proposal_submit.html:6
 msgid "Submit A Proposal"
@@ -580,7 +580,7 @@ msgstr "Enviar una propuesta"
 #: templates/symposion/reviews/_review_table.html:6
 #: templates/symposion/reviews/result_notification.html:48
 msgid "Speaker / Title"
-msgstr "Orador / Título"
+msgstr "Orador/a - Título"
 
 #: templates/symposion/reviews/_review_table.html:7
 #: templates/symposion/reviews/result_notification.html:49
@@ -625,7 +625,7 @@ msgstr "¿Notificado?"
 
 #: templates/symposion/reviews/review_detail.html:66
 msgid "Speaker Feedback"
-msgstr "Feedback del orador"
+msgstr "Feedback orador/a"
 
 #: templates/symposion/reviews/review_detail.html:74
 msgid "Current Results"
@@ -669,12 +669,12 @@ msgstr "Editar espacio"
 #: templates/symposion/speakers/speaker_create.html:7
 #: templates/symposion/speakers/speaker_create.html:14
 msgid "Create Speaker Profile"
-msgstr "Crear perfil de orador"
+msgstr "Crear perfil de orador/a"
 
 #: templates/symposion/speakers/speaker_edit.html:7
 #: templates/symposion/speakers/speaker_edit.html:14
 msgid "Edit Speaker Profile"
-msgstr "Editar perfil de orador"
+msgstr "Editar perfil de orador/a"
 
 #: templates/symposion/sponsorship/add.html:7
 #: templates/symposion/sponsorship/add.html:14

@@ -12,7 +12,7 @@
                 <fieldset>
                     {% csrf_token %}
                     <p>Confirmar dirección de correo electrónico <b> {{ confirmation.email_address.email }} </b></p>
-                    <button type="submit" class="btn btn-primary">{% trans "Confirm" %}</button>
+                    <button type="submit" class="btn-primary btn">{% trans "Confirm" %}</button>
                 </fieldset>
             </form>
         </div>

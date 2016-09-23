@@ -127,7 +127,7 @@ msgid ""
 msgstr ""
 "Te hemos enviado un email a <b>%(email)s</b> para verificación. Seguí el "
 "link provisto para finalizar el proceso de registración. Si no lo recibis "
-"dentro de unos minutoscontactanos a <a href=\"mailto:%(THEME_CONTACT_EMAIL)s"
+"dentro de unos minutos, contactanos a <a href=\"mailto:%(THEME_CONTACT_EMAIL)s"
 "\">%(THEME_CONTACT_EMAIL)s</a>."
 
 #: templates/account/email_confirmation_sent.html:11
@@ -441,7 +441,7 @@ msgstr "Invitado"
 
 #: templates/symposion/proposals/_pending_proposal_row.html:30
 msgid "Choose Response"
-msgstr "Elegija la respuesta"
+msgstr "Elegí una respuesta"
 
 #: templates/symposion/proposals/_pending_proposal_row.html:35
 msgid "Accept invitation"

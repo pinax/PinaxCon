@@ -9120,6 +9120,9 @@ nav.navbar ul.dropdown-menu li a:hover {
   color: #fff;
   background: #0065b5;
 }
+nav.navbar ul.dropdown-menu li a:after {
+  display: none;
+}
 nav.navbar li {
   font-size: 16px;
 }
@@ -9156,7 +9159,7 @@ nav.navbar li.active a {
   border: none;
 }
 body.home {
-  background: #fff;
+  background: #0e76bc;
   color: #fff;
 }
 body.home nav.navbar {
@@ -9168,10 +9171,10 @@ body.home nav.navbar .navbar-brand {
   display: none;
 }
 body.home nav.navbar li a {
-  color: #201815;
+  color: #e3c501;
 }
 body.home nav.navbar li a:after {
-  background: #201815;
+  background: #e3c501;
 }
 body.home nav.navbar li a:hover {
   color: #4a72b1;
@@ -9253,7 +9256,7 @@ section .btn {
 }
 section .btn:hover {
   background: #0e76bc;
-  color: black;
+  color: #201815;
 }
 section.block-blue:nth-of-type(4n+1) {
   background: #265890;
@@ -9270,7 +9273,7 @@ section.block-blue:nth-of-type(4n+4) {
 section.block-blue .btn {
   font-size: 18px;
   color: #FFF;
-  background: #00456e;
+  background: #0e76bc;
   border: none;
   display: inline-block;
 }

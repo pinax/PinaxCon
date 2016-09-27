@@ -7,9 +7,9 @@
         <!-- span class="navbar-text">
             <i class="fa fa-user"></i> {% user_display request.user %}
         </span -->
-            
+
         <li>
-            <a href="{% url "dashboard" %}" title="{% trans "Dashboard" %}">{{ request.user.username }} <i class="fa fa-tasks"></i></span></a>
+            <a href="{% url "dashboard" %}" title="{% trans "Dashboard" %}"><i class="fa fa-tasks"></i> <span>{{ request.user.username }}</span></a>
         </li>
         <li>
             <a href="{% url 'account_settings' %}" title="{% trans "Settings" %}"><i class="fa fa-cog"></i> <span class="hidden-lg"> {% trans "Settings" %}</span></a>

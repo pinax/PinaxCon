@@ -52,7 +52,7 @@
       <div class="row">
         <div class="col-md-12">
           <h2>Becas y transporte</h2>
-          <p>Habra becas disponibles para que nadie se quede afuera, tanto para
+          <p>Hay becas disponibles para que nadie se quede afuera, tanto para
           transporte como para alojamiento.<a href="/becas/"> Aplicá aquí</a>
           Tenés tiempo hasta el 15/10</p>
           <p>También habrá un micro gratuito para los asistentes que irá desde CABA hasta Bahia Blanca organizado y gestionado, como años anteriores, por ONAPSIS a quienes agradecemos el compromiso con este evento.</p><p>Estamos trabajando en otras opciones para quienes vienen de diferentes partes del país.</p>
@@ -65,20 +65,39 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>Lugar</h2>
-          <p>La conferencia se desarrollará en el Complejo Palihue perteneciente a la Universidad Nacional del Sur, ubicado en la calle San Andrés al 800.</p>
-          <p>Habrá espacio para stands, talleres, múltiples tracks, espacios de networking y sprints.</p>
+          <h2>Ubicaciones</h2>
+          <p>La conferencia se desarrollará en dos espacios. El día viernes
+          será de talleres y sprints en el Club de emprendedors de Bahía
+          Blanca en la calle Drago 45 (pleno centro de la ciudad), y los días sábado y domingo el evento se realizará en el
+          Complejo Palihue perteneciente a la Universidad Nacional del Sur,
+          ubicado en la calle San Andrés al 800, donde habrá espacio para
+          stands, talleres, múltiples tracks de charlas, espacios de networking y sprints.</p>
         </div>
       </div>
-      <div class="row">
+      <h3>Club de emprendedores</h3>
+      <div class="row top-buffer">
         <div class="col-md-6">
-          <div id="map"></div>
+          <div id="map-club"></div>
         </div>
         <div class="col-md-6">
-          <img src="/site_media/static/images/palihue.jpg" class="img-responsive" />
+          <img src="{% static "images/club_emprendedores.jpg" %}" class="img-responsive" />
         </div>
       </div>
+      <h3>Complejo Palihue</h3>
+      <div class="row top-buffer">
+        <div class="col-md-6">
+          <div id="map-palihue"></div>
+        </div>
+        <div class="col-md-6">
+          <img src="{% static "images/palihue.jpg" %}" class="img-responsive" />
+        </div>
+      </div>
+
+
+
     </div>
+
+
   </section>
 
   <section class="container-fluid secondary block-blue invitados">
@@ -226,22 +245,36 @@ de la Computación a la escuela argentina.</p>
 
 {% block scripts %}
     {{ block.super }}
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyG0dHUK_9vhz5neVjdUriBQm91eQppdQ&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyG0dHUK_9vhz5neVjdUriBQm91eQppdQ&callback=initMaps" async defer></script>
     <script>
-    function initMap() {
-      var myLatLng = {lat: -38.695164, lng: -62.253801};
+    function initMaps() {
+      var LatLngPalihue = {lat: -38.695164, lng: -62.253801};
+      var LatLngClub = {lat: -38.719668, lng: -62.266995};
 
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: myLatLng,
+      var mapPalihue = new google.maps.Map(document.getElementById('map-palihue'), {
+        center: LatLngPalihue,
         scrollwheel: false,
         zoom: 17
       });
 
+      var mapClub = new google.maps.Map(document.getElementById('map-club'), {
+        center: LatLngClub,
+        scrollwheel: false,
+        zoom: 18
+      });
+
       var marker = new google.maps.Marker({
-        map: map,
-        position: myLatLng,
+        map: mapPalihue,
+        position: LatLngPalihue,
         title: 'UNS Campus Palihue'
       });
+
+      var marker = new google.maps.Marker({
+        map: mapClub,
+        position: LatLngClub,
+        title: 'Club de emprendedores de Bahía Blanca'
+      });
+
     }
     </script>
 {% endblock %}

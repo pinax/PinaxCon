@@ -29,6 +29,8 @@ urlpatterns = [
     url(r"^sponsors/", include("symposion.sponsorship.urls")),
     url(r"^reviews/", include("symposion.reviews.urls")),
     url(r"^schedule/", include("symposion.schedule.urls")),
+    url(r"^attendee-create/$", views.attendee_create, name="attendee_create"),
+    url(r"^attendee-edit/(?:(?P<pk>\d+)/)?$", views.attendee_edit, name="attendee_edit"),
 
     url(r"^teams/", include("symposion.teams.urls")),
 

@@ -7,6 +7,7 @@ from django.contrib import admin
 
 import symposion.views
 from pinaxcon import views
+from pinaxcon.attendees import views as attendee_views
 
 urlpatterns = [
     url(r"^$", TemplateView.as_view(template_name="homepage.html"), name="home"),
@@ -29,8 +30,8 @@ urlpatterns = [
     url(r"^sponsors/", include("symposion.sponsorship.urls")),
     url(r"^reviews/", include("symposion.reviews.urls")),
     url(r"^schedule/", include("symposion.schedule.urls")),
-    url(r"^attendee-create/$", views.attendee_create, name="attendee_create"),
-    url(r"^attendee-edit/(?:(?P<pk>\d+)/)?$", views.attendee_edit, name="attendee_edit"),
+    url(r"^attendee-create/$", attendee_views.attendee_create, name="attendee_create"),
+    url(r"^attendee-edit/(?:(?P<pk>\d+)/)?$", attendee_views.attendee_edit, name="attendee_edit"),
 
     url(r"^teams/", include("symposion.teams.urls")),
 

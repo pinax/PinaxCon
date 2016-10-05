@@ -10,7 +10,6 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
 from django.contrib.postgres.fields import ArrayField
 
-from symposion.markdown_parser import parse
 
 
 @python_2_unicode_compatible

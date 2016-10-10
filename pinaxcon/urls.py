@@ -30,9 +30,7 @@ urlpatterns = [
     url(r"^sponsors/", include("symposion.sponsorship.urls")),
     url(r"^reviews/", include("symposion.reviews.urls")),
     url(r"^schedule/", include("symposion.schedule.urls")),
-    url(r"^attendee-create/$", attendee_views.attendee_create, name="attendee_create"),
-    url(r"^attendee-edit/(?:(?P<pk>\d+)/)?$", attendee_views.attendee_edit, name="attendee_edit"),
-
+    url(r"^attendee/", include("pinaxcon.attendees.urls")),
     url(r"^teams/", include("symposion.teams.urls")),
 
     url(r"^boxes/", include("pinax.boxes.urls")),

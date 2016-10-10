@@ -1,19 +1,19 @@
-{% extends "symposion/speakers/base.html" %}
+{% extends "site_base_onecolumn.html" %}
 
 {% load bootstrap %}
 {% load i18n %}
 {% load pinax_boxes_tags %}
 
-{% block page_title %}{% trans "Edit Speaker Profile" %}{% endblock %}
+{% block page_title %}Editar inscripción{% endblock %}
 
 {% block body %}
     {% box "speaker-profile" %}
 
     <form method="POST" action="" enctype="multipart/form-data">
         {% csrf_token %}
-        <legend>{% trans "Edit Speaker Profile" %}</legend>
+        <legend>Editar inscripción</legend>
         <fieldset>
-            {{ speaker_form|bootstrap }}
+            {{ attendee_form|bootstrap }}
         </fieldset>
         <div class="form-actions">
             <input class="btn btn-primary" type="submit" value="Save" />

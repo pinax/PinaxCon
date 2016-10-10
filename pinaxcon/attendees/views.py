@@ -2,34 +2,31 @@
 from account.decorators import login_required
 from django.shortcuts import render, redirect
 from django.template import loader
+from django.contrib.auth.models import User
+from django.core.exceptions import ObjectDoesNotExist
 from django.core.mail import EmailMessage
-from django.template import Context
 from django.contrib import messages
+from django.template import Context
 
 from .forms import AttendeeForm
 from .models import Attendee
 
 @login_required
 def attendee_create(request):
-    try:
-        return redirect(request.user.attendee)
-    except ObjectDoesNotExist:
-        pass
+    user = request.user
+    import pdb;pdb.set_trace()
+
+    attendee = getattr(request.user, "attendee", None)
+    if attendee is not None:
+        messages.error(request, u"Ya te encontrás registrado para la PyconAR.")
+        return redirect("dashboard")
 
     if request.method == "POST":
-        try:
-            attendee = Attendee.objects.get(invite_email=request.user.email)
-            found = True
-        except Attendee.DoesNotExist:
-            attendee = None
-            found = False
-        form = AttendeeForm(request.POST, request.FILES, instance=attendee)
+        form = AttendeeForm(request.POST, request.FILES)
 
         if form.is_valid():
             attendee = form.save(commit=False)
-            attendee.user = request.user
-            if not found:
-                attendee.invite_email = None
+            attendee.user = user
             attendee.save()
             messages.success(request, u"¡Te registraste exitosamente a la pyconAR te esperamos!.")
             return redirect("dashboard")

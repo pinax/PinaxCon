@@ -15,9 +15,7 @@
                 <legend>{% trans "Log in to an existing account" %}</legend>
                 {% csrf_token %}
                 {{ form|bootstrap }}
-                {% if redirect_field_value %}
-                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                {% endif %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="dashboard" />
                 <button type="submit" class="btn btn-primary">{% trans "Log in" %}</button>
                 <a href="{% url "account_password_reset" %}" class="btn btn-link">{% trans "Forgot your password?" %}</a>
             </form>

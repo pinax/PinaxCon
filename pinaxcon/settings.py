@@ -165,6 +165,7 @@ INSTALLED_APPS = [
     # project
     "pinaxcon",
     "pinaxcon.proposals",
+    "pinaxcon.attendees",
     #extra
     "django_extensions",
     "captcha",

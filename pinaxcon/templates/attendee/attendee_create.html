@@ -1,0 +1,23 @@
+{% extends "site_base_onecolumn.html" %}
+
+{% load bootstrap %}
+{% load i18n %}
+{% load pinax_boxes_tags %}
+
+{% block page_title %}Inscripción PyconAR 2016{% endblock %}
+
+{% block body %}
+    {% box "speaker-profile" %}
+
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        <legend>Inscribite al evento</legend>
+        <fieldset>
+            {{ attendee_form|bootstrap }}
+        </fieldset>
+        <div class="form-actions">
+            <input class="btn btn-primary" type="submit" value="Save" />
+            <a class="btn btn-default" href="{% url "dashboard" %}">Cancel</a>
+        </div>
+    </form>
+{% endblock %}

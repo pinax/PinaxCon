@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
-from .forms import BecasForm
 from django.shortcuts import render, redirect
 from django.template import loader
 from django.core.mail import EmailMessage
 from django.template import Context
 from django.contrib import messages
+
+from .forms import BecasForm
 
 def becas(request):
     form_class = BecasForm
@@ -47,3 +48,4 @@ def becas(request):
     return render(request, 'becas.html', {
         'form': form_class,
     })
+

@@ -28,6 +28,22 @@ def attendee_create(request):
             attendee = form.save(commit=False)
             attendee.user = user
             attendee.save()
+            # Email the profile with the
+            # contact information
+            template = loader.get_template('inscripcion.txt')
+            context = Context({
+                'contact_name': attendee.full_name,
+            })
+            content = template.render(context)
+
+            email = EmailMessage(
+                "Inscripción PyconAR 2016 - Bahía Blanca",
+                content,
+                "no-reply@python.org.ar",
+               [user.email]
+            )
+            email.send()
+
             messages.success(request, u"¡Te registraste exitosamente a la pyconAR te esperamos!.")
             return redirect("dashboard")
     else:

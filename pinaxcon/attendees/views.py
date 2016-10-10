@@ -14,9 +14,9 @@ from .models import Attendee
 @login_required
 def attendee_create(request):
     user = request.user
-    import pdb;pdb.set_trace()
 
     attendee = getattr(request.user, "attendee", None)
+
     if attendee is not None:
         messages.error(request, u"Ya te encontrás registrado para la PyconAR.")
         return redirect("dashboard")

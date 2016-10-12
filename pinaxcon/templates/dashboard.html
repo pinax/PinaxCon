@@ -15,7 +15,7 @@
             <div class="pull-right">
                 {% if not user.attendee %}
                     <a href="{% url "attendee_create" %}" class="btn btn-xs btn-default">
-                        <i class="fa fa-plus-sign"></i> Inscribirme ya a la Pyconar2016
+                        <i class="fa fa-plus-sign"></i> Inscribirme a Pyconar2016
                     </a>
                 {% else %}
                     <a href="{% url "attendee_edit" %}" class="btn btn-xs btn-default">
@@ -25,19 +25,19 @@
             </div>
             <h3 class="panel-title">
                 <i class="fa fa-users"></i>
-                Inscripción a PyconAR 2016
+                Inscripciones
             </h3>
         </div>
 
         <div class="panel-body">
             {% if not user.attendee %}
-                <p>Todavía no estás inscripto a PyconAr 2016</p>
+            <p><b>Todavía no estás inscripto a PyconAr 2016</b></p>
             {% else %}
             <p>Ya estás inscripto. ¡Te esperamos!</p>
+            {% endif %}
             <p>Podés comprar remeras y reservar tus viandas online en el siguiente <a href="http://bitson.tiendas.coop/comidapyconar2016/menu-conferencia" target="_blank">link.</a></p>
             <p>Si viajas desde CABA podés <a href="http://pybus"
                 target="_blank">reservar un lugar en el PyBus.</a></p>
-            {% endif %}
         </div>
     </div>
 

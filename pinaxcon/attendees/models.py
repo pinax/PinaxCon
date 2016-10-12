@@ -18,12 +18,15 @@ class Attendee(models.Model):
                                         " gafete.(si querés puede ser un nick)"))
     annotation = models.TextField(verbose_name="Observaciones",
                                   help_text=("Si tenés alguna necesidad "
-                                      "especial que necesites que "
-                                      "contemplemos, contanos y haremos "
-                                      "lo posible por ayudarte. Recordá "
-                                      "que podés reservar tus viandas para el "
-                                      "evento. Seguí el link al principio de la "
-                                      "página."), blank=True, null=True)
+                                  "particular que necesites que contemplemos "
+                                  "para el evento contanos y haremos lo posible "
+                                  "por ayudarte. "
+                                  "Te recomendamos reservar tu vianda para los "
+                                  "días sábado y domingo, ya que cerca del "
+                                  "complejo las ofertas gastronómicas son "
+                                  "reducidas Podrás elegir el tipo de vianda de "
+                                  "acuerdo a tus necesidades. "),
+                                  blank=True, null=True)
     registration_date = models.DateTimeField(auto_now_add=True,
         editable=False)
     cv = models.FileField(upload_to="attendees_cvs", blank=True,

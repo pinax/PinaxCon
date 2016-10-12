@@ -9,23 +9,11 @@
 
 {% block body_base %}
   {% if ACCOUNT_OPEN_SIGNUP %}
-  <!--
-  <section class="container-fluid primary block-blue">
-    <div class="container">
-      <h2>!Inscripciones abiertas!</h2>
-      <p>Durante todas las jornadas, podrás elegir entre 2 charlas que se darán al
-      mismo tiempo. ¿Qué tenemos preparado para que vengas? Un pybus que
-      viaja de CABA a Bahía Blanca , convenios con hostels, premios y mucho
-      más..te mantenemos al tanto!</p>
-      <div class="center"><a href="{% url 'account_signup' %}" class="btn btn-warning">Inscribite</a></div>
-    </div>
-  </section>
-  -->
   <section class="container-fluid primary block-blue">
     <div class="container">
       <h2>!Inscripciones abiertas!</h2>
       <p>Para inscribirte al evento primero necesitas<a href="{% url 'account_signup' %}"> registrate en el sitio</a>, una
-      vez logueado podrás inscribirte al evento <a href="{% url 'attendee_create' %}">aquí</a>.</p>
+      vez logueado podrás inscribirte al evento <a href="{% url 'dashboard' %}">aquí</a>.</p>
         <p>Todos los asistentes deberán aceptar y respetar el <a href="/codigo-conducta">código de conducta</a>.</p>
     </div>
   </section>

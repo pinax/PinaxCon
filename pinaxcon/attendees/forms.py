@@ -12,6 +12,6 @@ class AttendeeForm(forms.ModelForm):
         fields = [
             "full_name",
             "annotation",
-            "show_to_sponsor",
             "cv",
+            "show_to_sponsor",
         ]

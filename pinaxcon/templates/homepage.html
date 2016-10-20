@@ -228,38 +228,39 @@ de la Computación a la escuela argentina.</p>
 
 {% endblock %}
 
+{% block styles %}
+  {{ block.super }}
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+{% endblock %}
+
 {% block scripts %}
     {{ block.super }}
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyG0dHUK_9vhz5neVjdUriBQm91eQppdQ&callback=initMaps" async defer></script>
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js" defer></script>
     <script>
     function initMaps() {
       var LatLngPalihue = {lat: -38.695164, lng: -62.253801};
       var LatLngClub = {lat: -38.719668, lng: -62.266995};
 
-      var mapPalihue = new google.maps.Map(document.getElementById('map-palihue'), {
-        center: LatLngPalihue,
-        scrollwheel: false,
-        zoom: 17
-      });
+      function makeTileLayer() {
+        return L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="http://openstreetmap.org/copyright">Colaboradores de OpenStreetMap</a>',
+          maxZoom: 19
+        });
+      }
 
-      var mapClub = new google.maps.Map(document.getElementById('map-club'), {
-        center: LatLngClub,
-        scrollwheel: false,
-        zoom: 18
-      });
+      var mapPalihue = L.map('map-palihue').setView(LatLngPalihue, 17);
+      makeTileLayer().addTo(mapPalihue);
 
-      var marker = new google.maps.Marker({
-        map: mapPalihue,
-        position: LatLngPalihue,
-        title: 'UNS Campus Palihue'
-      });
+      var mapClub = L.map('map-club').setView(LatLngClub, 18);
+      makeTileLayer().addTo(mapClub);
 
-      var marker = new google.maps.Marker({
-        map: mapClub,
-        position: LatLngClub,
-        title: 'Club de emprendedores de Bahía Blanca'
-      });
+      var marker = L.marker(LatLngPalihue).addTo(mapPalihue);
+      marker.bindPopup('UNS Campus Palihue');
 
+      var marker = L.marker(LatLngClub).addTo(mapClub);
+      marker.bindPopup('Club de emprendedores de Bahía Blanca');
     }
+
+    $(document).ready(initMaps);
     </script>
 {% endblock %}

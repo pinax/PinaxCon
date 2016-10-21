@@ -206,7 +206,7 @@ FIXTURE_DIRS = [
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = 'smtp'
-EMAIL_PORT = 25
+EMAIL_PORT = 1025
 DEFAULT_FROM_EMAIL = 'no-reply@python.org.ar'
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 

@@ -25,7 +25,9 @@ class Attendee(models.Model):
                                   "días sábado y domingo, ya que cerca del "
                                   "complejo las ofertas gastronómicas son "
                                   "reducidas Podrás elegir el tipo de vianda de "
-                                  "acuerdo a tus necesidades. "),
+                                  "acuerdo a tus necesidades. Encontrarás el "
+                                  "link para hacerlo al confirmar la "
+                                  "registración."),
                                   blank=True, null=True)
     registration_date = models.DateTimeField(auto_now_add=True,
         editable=False)

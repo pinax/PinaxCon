@@ -38,9 +38,9 @@
       <div class="row">
         <div class="col-md-12">
           <h2>Becas y transporte</h2>
-          <p>Hemos recibido más de 30 solicutdes de becas este año las cuales
+          <p>Hemos recibido más de 30 solicitudes de becas este año las cuales
           estamos evaluando.  ¡Si hiciste tu solicitud estate atent@!</p>
-          <p>También habrá un micro gratuito para los asistentes que irá desde CABA hasta Bahia Blanca organizado y gestionado, como años anteriores, por ONAPSIS a quienes agradecemos el compromiso con este evento.</p>
+          <p>También habrá un micro gratuito para los asistentes que irá desde CABA hasta Bahía Blanca organizado y gestionado, como años anteriores, por ONAPSIS a quienes agradecemos el compromiso con este evento.</p>
         </div>
       </div>
     </div>
@@ -52,7 +52,7 @@
         <div class="col-md-12">
           <h2>Ubicaciones</h2>
           <p>La conferencia se desarrollará en dos espacios. El día viernes
-          será de talleres y sprints en el Club de emprendedors de Bahía
+          será de talleres y sprints en el Club de emprendedores de Bahía
           Blanca en la calle Drago 45 (pleno centro de la ciudad), y los días sábado y domingo el evento se realizará en el
           Complejo Palihue perteneciente a la Universidad Nacional del Sur,
           ubicado en la calle San Andrés al 800, donde habrá espacio para
@@ -110,7 +110,7 @@
         <div class="col-md-9">
           <h3>Ángel Medinilla</h3>
           <p>Fundador, Gerente y Consultor Senior en <a href="http://www.proyectalis.com/" target="_blank">Proyectalis</a> y en <a href="http://www.improvement21.com/" target="_blank">Improvement21</a>.</p>
-          <p>Ángel Medinilla lleva más de 20 años en el mercado de las Tecnologías de la Información y las Telecomunicaciones. Desde 2007 es Gerente y Consultor Senior en Proyectalis, la empresa líder en la prestación de servicios de consultoría y formación en medotodologías Ágiles en España y una de las más reconocidas a nivel internacional, con proyectos desarrollados en empresas internacionales y nacionales. En 2015, junto con Andrea Darabos, ha fundado Improvement21, una empresa dedicada a llevar los hábitos de mejora continua a personas y organizaciones de todo el mundo.</p>
+          <p>Ángel Medinilla lleva más de 20 años en el mercado de las Tecnologías de la Información y las Telecomunicaciones. Desde 2007 es Gerente y Consultor Senior en Proyectalis, la empresa líder en la prestación de servicios de consultoría y formación en metodologías Ágiles en España y una de las más reconocidas a nivel internacional, con proyectos desarrollados en empresas internacionales y nacionales. En 2015, junto con Andrea Darabos, ha fundado Improvement21, una empresa dedicada a llevar los hábitos de mejora continua a personas y organizaciones de todo el mundo.</p>
         </div>
       </div>
       <div class="row">
@@ -221,45 +221,46 @@ de la Computación a la escuela argentina.</p>
   <section class="container-fluid primary block-blue">
     <div class="container">
       <h2>Seguimos buscando Sponsors</h2>
-      <p>¡Si querés apoyar la pyconar no dudes en escribinos!</p>
+      <p>¡Si querés apoyar la pyconar no dudes en escribirnos!</p>
       <div class="center"><a href="mailto:sponsor-pyconar@python.org.ar" class="btn btn-warning">Convertite en Sponsor</a></div>
     </div>
   </section>
 
 {% endblock %}
 
+{% block styles %}
+  {{ block.super }}
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+{% endblock %}
+
 {% block scripts %}
     {{ block.super }}
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyG0dHUK_9vhz5neVjdUriBQm91eQppdQ&callback=initMaps" async defer></script>
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js" defer></script>
     <script>
     function initMaps() {
       var LatLngPalihue = {lat: -38.695164, lng: -62.253801};
       var LatLngClub = {lat: -38.719668, lng: -62.266995};
 
-      var mapPalihue = new google.maps.Map(document.getElementById('map-palihue'), {
-        center: LatLngPalihue,
-        scrollwheel: false,
-        zoom: 17
-      });
+      function makeTileLayer() {
+        return L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="http://openstreetmap.org/copyright">Colaboradores de OpenStreetMap</a>',
+          maxZoom: 19
+        });
+      }
 
-      var mapClub = new google.maps.Map(document.getElementById('map-club'), {
-        center: LatLngClub,
-        scrollwheel: false,
-        zoom: 18
-      });
+      var mapPalihue = L.map('map-palihue').setView(LatLngPalihue, 17);
+      makeTileLayer().addTo(mapPalihue);
 
-      var marker = new google.maps.Marker({
-        map: mapPalihue,
-        position: LatLngPalihue,
-        title: 'UNS Campus Palihue'
-      });
+      var mapClub = L.map('map-club').setView(LatLngClub, 18);
+      makeTileLayer().addTo(mapClub);
 
-      var marker = new google.maps.Marker({
-        map: mapClub,
-        position: LatLngClub,
-        title: 'Club de emprendedores de Bahía Blanca'
-      });
+      var marker = L.marker(LatLngPalihue).addTo(mapPalihue);
+      marker.bindPopup('UNS Campus Palihue');
 
+      var marker = L.marker(LatLngClub).addTo(mapClub);
+      marker.bindPopup('Club de emprendedores de Bahía Blanca');
     }
+
+    $(document).ready(initMaps);
     </script>
 {% endblock %}

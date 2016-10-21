@@ -6,7 +6,7 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir
 PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 BASE_DIR = PACKAGE_ROOT
 
-DEBUG = False #bool(int(os.environ.get("DEBUG", "1")))
+DEBUG = True #bool(int(os.environ.get("DEBUG", "1")))
 
 DATABASES = {
     'default': {
@@ -205,9 +205,6 @@ FIXTURE_DIRS = [
 ]
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = 'smtp'
-EMAIL_PORT = 1025
-DEFAULT_FROM_EMAIL = 'no-reply@python.org.ar'
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
@@ -236,3 +233,5 @@ LOCALE_PATHS = (
             PROJECT_ROOT + '/website/locale', )
 
 THEME_CONTACT_EMAIL = 'pyconar@python.org.ar'
+
+from local_settings import *

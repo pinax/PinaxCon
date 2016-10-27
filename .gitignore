@@ -3,3 +3,4 @@ node_modules/
 _build/
 pinaxcon/site_media/
 pinaxcon/local_settings.py
+.DS_Store

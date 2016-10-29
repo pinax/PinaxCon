@@ -55,9 +55,6 @@
                     <a href="{% url "speaker_edit" %}" class="btn btn-xs btn-default">
                         <i class="fa fa-pencil"></i> Editar tu perfil de orador
                     </a>
-                    <a href="{% url "proposal_submit" %}" class="btn btn-xs btn-default">
-                        <i class="fa fa-plus-sign"></i> Enviar una nueva propuesta
-                    </a>
                 {% endif %}
             </div>
             <h3 class="panel-title">
@@ -70,9 +67,10 @@
             {% if not user.speaker_profile %}
                 <p>Para enviar una propuesta, primero tenés que <a href="{% url "speaker_create" %}">crear un perfil de orador</a>.</p>
             {% else %}
+                {% if user.speaker_profile.proposals.exists %}
                 <h4>Tus propuestas</h4>
-                {% if not user.speaker_profile.proposals.exists %}
-                    <p>Aún no has enviado propuestas.</p>
+                {% else %}
+                    <p>El plazo para presentar charlas ha finalizado.</p>
                 {% endif %}
             {% endif %}
         </div>

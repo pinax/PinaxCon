@@ -23,7 +23,7 @@
   <section class="container-fluid secondary block-blue">
     <div class="container">
       <div class="row">
-        <div class="col-md-6"><img src="/site_media/static/images/mendoza.jpg" class="img-responsive" /></div>
+        <div class="col-md-6"><img src="{% static "images/mendoza.jpg" %}" class="img-responsive" /></div>
         <div class="col-md-6">
           <h2>SOBRE EL EVENTO</h2>
           <p>PyconAr es la conferencia anual Argentina de <a href="https://www.python.org/" target="_blank">Python</a>, organizada y llevada a cabo por voluntarios de la comunidad Python Argentina (PyAr), y en esta oportunidad co­organizada por Facttic, la Federación de cooperativas de trabajo de tecnología innovación y conocimiento.</p>
@@ -51,9 +51,10 @@
       <div class="row">
         <div class="col-md-12">
           <h2>Ubicaciones</h2>
-          <p>La conferencia se desarrollará en dos espacios. El día viernes
+          <p>La conferencia se desarrollará en tres espacios. El día viernes
           será de talleres y sprints en el Club de emprendedores de Bahía
-          Blanca en la calle Drago 45 (pleno centro de la ciudad), y los días sábado y domingo el evento se realizará en el
+          Blanca en la calle Drago 45 (pleno centro de la ciudad) y en la Sala Fundadores de la UNS en la calle Colón 80,
+          y los días sábado y domingo el evento se realizará en el
           Complejo Palihue perteneciente a la Universidad Nacional del Sur,
           ubicado en la calle San Andrés al 800, donde habrá espacio para
           stands, talleres, múltiples tracks de charlas, espacios de networking y sprints.</p>
@@ -62,24 +63,30 @@
       <h3>Club de emprendedores</h3>
       <div class="row top-buffer">
         <div class="col-md-6">
-          <div id="map-club"></div>
+          <div id="map-club" class="map"></div>
         </div>
         <div class="col-md-6">
           <img src="{% static "images/club_emprendedores.jpg" %}" class="img-responsive" />
         </div>
       </div>
+      <h3>Sala Fundadores</h3>
+      <div class="row top-buffer">
+        <div class="col-md-6">
+          <div id="map-fundadores" class="map"></div>
+        </div>
+        <div class="col-md-6">
+          <img src="{% static "images/fundadores.jpg" %}" class="img-responsive" />
+        </div>
+      </div>
       <h3>Complejo Palihue</h3>
       <div class="row top-buffer">
         <div class="col-md-6">
-          <div id="map-palihue"></div>
+          <div id="map-palihue" class="map"></div>
         </div>
         <div class="col-md-6">
           <img src="{% static "images/palihue.jpg" %}" class="img-responsive" />
         </div>
       </div>
-
-
-
     </div>
 
 
@@ -240,6 +247,7 @@ de la Computación a la escuela argentina.</p>
     function initMaps() {
       var LatLngPalihue = {lat: -38.694053, lng: -62.249016};
       var LatLngClub = {lat: -38.719668, lng: -62.266995};
+      var LatLngFundadores = {lat: -38.719698, lng: -62.2699748};
 
       function makeTileLayer() {
         return L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -254,11 +262,17 @@ de la Computación a la escuela argentina.</p>
       var mapClub = L.map('map-club').setView(LatLngClub, 18);
       makeTileLayer().addTo(mapClub);
 
+      var mapFundadores = L.map('map-fundadores').setView(LatLngFundadores, 18);
+      makeTileLayer().addTo(mapFundadores);
+
       var marker = L.marker(LatLngPalihue).addTo(mapPalihue);
       marker.bindPopup('UNS Campus Palihue');
 
       var marker = L.marker(LatLngClub).addTo(mapClub);
       marker.bindPopup('Club de emprendedores de Bahía Blanca');
+
+      var marker = L.marker(LatLngFundadores).addTo(mapFundadores);
+      marker.bindPopup('Sala Fundadores');
     }
 
     $(document).ready(initMaps);

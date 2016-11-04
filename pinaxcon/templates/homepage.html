@@ -53,7 +53,7 @@
           <h2>Ubicaciones</h2>
           <p>La conferencia se desarrollará en tres espacios. El día viernes
           será de talleres y sprints en el Club de emprendedores de Bahía
-          Blanca en la calle Drago 45 (pleno centro de la ciudad) y en la Sala Fundadores de la UNS en la calle Colón 80,
+          Blanca en la calle Drago 45 (pleno centro de la ciudad) y en el Salón de los Fundadores de la UNS en la calle Colón 80,
           y los días sábado y domingo el evento se realizará en el
           Complejo Palihue perteneciente a la Universidad Nacional del Sur,
           ubicado en la calle San Andrés al 800, donde habrá espacio para
@@ -69,7 +69,7 @@
           <img src="{% static "images/club_emprendedores.jpg" %}" class="img-responsive" />
         </div>
       </div>
-      <h3>Sala Fundadores</h3>
+      <h3>Salón de los Fundadores</h3>
       <div class="row top-buffer">
         <div class="col-md-6">
           <div id="map-fundadores" class="map"></div>
@@ -272,7 +272,7 @@ de la Computación a la escuela argentina.</p>
       marker.bindPopup('Club de emprendedores de Bahía Blanca');
 
       var marker = L.marker(LatLngFundadores).addTo(mapFundadores);
-      marker.bindPopup('Sala Fundadores');
+      marker.bindPopup('Salón de los Fundadores');
     }
 
     $(document).ready(initMaps);

@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
-from django.shortcuts import render, redirect
-from django.template import loader
-from django.core.mail import EmailMessage
-from django.template import Context
+import json
+
 from django.contrib import messages
+from django.contrib.sites.models import Site
+from django.core.mail import EmailMessage
+from django.core.urlresolvers import reverse
+from django.http import Http404, HttpResponse
+from django.shortcuts import redirect, render
+from django.template import Context, loader
+from symposion.schedule.models import Slot
 
 from .forms import BecasForm
 
@@ -49,3 +54,60 @@ def becas(request):
         'form': form_class,
     })
 
+
+
+def schedule_json(request):
+    slots = Slot.objects.filter(
+        day__schedule__published=True,
+        day__schedule__hidden=False
+    ).order_by("start")
+
+    protocol = request.META.get('HTTP_X_FORWARDED_PROTO', 'http')
+    data = []
+    for slot in slots:
+        slot_data = {
+            "room": ", ".join(room["name"] for room in slot.rooms.values()),
+            "rooms": [room["name"] for room in slot.rooms.values()],
+            "start": slot.start_datetime.isoformat(),
+            "end": slot.end_datetime.isoformat(),
+            "duration": slot.length_in_minutes,
+            "kind": slot.kind.label,
+            "section": slot.day.schedule.section.slug,
+            "conf_key": slot.pk,
+            # TODO: models should be changed.
+            # these are model features from other conferences that have forked symposion
+            # these have been used almost everywhere and are good candidates for
+            # base proposals
+            #"license": "CC BY",
+            "tags": "",
+            #"released": True,
+            "contact": [],
+
+
+        }
+        if hasattr(slot.content, "proposal"):
+            slot_data.update({
+                "name": slot.content.title,
+                "authors": [s.name for s in slot.content.speakers()],
+                "contact": [
+                    s.email for s in slot.content.speakers()
+                ] if request.user.is_staff else ["redacted"],
+                "abstract": slot.content.abstract,
+                "description": slot.content.description,
+                "conf_url": "%s://%s%s" % (
+                    protocol,
+                    Site.objects.get_current().domain,
+                    reverse("schedule_presentation_detail", args=[slot.content.pk])
+                ),
+                "cancelled": slot.content.cancelled,
+            })
+        else:
+            slot_data.update({
+                "name": slot.content_override.raw if slot.content_override else "Slot",
+            })
+        data.append(slot_data)
+
+    return HttpResponse(
+        json.dumps({"schedule": data}),
+        content_type="application/json"
+    )

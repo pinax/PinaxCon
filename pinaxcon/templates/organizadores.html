@@ -2,6 +2,7 @@
 
 {% load i18n %}
 {% load pinax_boxes_tags %}
+{% load static %}
 
 {% block head_title %}Organizadores{% endblock %}
 
@@ -21,7 +22,7 @@
         </p>
       </div>
       <div class="col-md-6 col-md-pull-6">
-        <img src="/site_media/static/images/pyar-logo.jpg" class="img-responsive" />
+        <img src="{% static "images/pyar-logo.jpg" %}" class="img-responsive" />
       </div>
     </div>
   </div>
@@ -40,7 +41,7 @@
         </p>
       </div>
       <div class="col-md-6">
-        <img src="/site_media/static/images/facttic2.png" class="img-responsive" />
+        <img src="{% static "images/facttic2.png" %}" class="img-responsive" />
       </div>
     </div>
   </div>
@@ -56,23 +57,23 @@
 
     <div class="row">
       <div class="col-md-2 col-md-offset-1">
-        <img src="/site_media/static/images/gabi.jpg" class="img-responsive" />
+        <img src="{% static "images/gabi.jpg" %}" class="img-responsive" />
         <p>Gabriel Hernández</p>
       </div>
       <div class="col-md-2">
-        <img src="/site_media/static/images/ska.jpg" class="img-responsive" />
+        <img src="{% static "images/ska.jpg" %}" class="img-responsive" />
         <p>Juan Manuel Schillaci</p>
       </div>
       <div class="col-md-2">
-        <img src="/site_media/static/images/clodo.jpg" class="img-responsive" />
+        <img src="{% static "images/clodo.jpg" %}" class="img-responsive" />
         <p>Claudio Juan Bidau</p>
       </div>
       <div class="col-md-2">
-        <img src="/site_media/static/images/agus.jpg" class="img-responsive" />
+        <img src="{% static "images/agus.jpg" %}" class="img-responsive" />
         <p>Agustín Recouso</p>
       </div>
       <div class="col-md-2">
-        <img src="/site_media/static/images/lean.jpg" class="img-responsive" />
+        <img src="{% static "images/lean.jpg" %}" class="img-responsive" />
         <p>Leandro Colombo Viña</p>
       </div>
     </div>
@@ -89,46 +90,46 @@
 
     <div class="row">
       <div class="col-md-2 col-md-offset-1">
-        <img src="/site_media/static/images/aledott.jpg" class="img-responsive" />
+        <img src="{% static "images/aledott.jpg" %}" class="img-responsive" />
         <p>Ale Dotti</p>
       </div>
       <div class="col-md-2">
-        <img src="/site_media/static/images/cyn.jpg" class="img-responsive" />
+        <img src="{% static "images/cyn.jpg" %}" class="img-responsive" />
         <p>Cyn Monastirsky</p>
       </div>
       <div class="col-md-2">
-        <img src="/site_media/static/images/marie.jpg" class="img-responsive" />
+        <img src="{% static "images/marie.jpg" %}" class="img-responsive" />
         <p>Mariella Abiuso Cabral</p>
       </div>
       <div class="col-md-2">
-        <img src="/site_media/static/images/lean2.jpg" class="img-responsive" />
+        <img src="{% static "images/lean2.jpg" %}" class="img-responsive" />
         <p>Fernanda Bustos</p>
       </div>
       <div class="col-md-2">
-        <img src="/site_media/static/images/alu.jpg" class="img-responsive" />
+        <img src="{% static "images/alu.jpg" %}" class="img-responsive" />
         <p>Alina Ryba</p>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-2 col-md-offset-1">
-        <img src="/site_media/static/images/juan.jpg" class="img-responsive" />
+        <img src="{% static "images/juan.jpg" %}" class="img-responsive" />
         <p>Juan Carrique</p>
       </div>
       <div class="col-md-2">
-        <img src="/site_media/static/images/agus_longoni.jpg" class="img-responsive" />
+        <img src="{% static "images/agus_longoni.jpg" %}" class="img-responsive" />
         <p>Agustín Longoni</p>
       </div>
       <div class="col-md-2">
-        <img src="/site_media/static/images/yamila.jpg" class="img-responsive" />
+        <img src="{% static "images/yamila.jpg" %}" class="img-responsive" />
         <p>Yamila Cuestas</p>
       </div>
       <div class="col-md-2">
-        <img src="/site_media/static/images/zanotti.jpg" class="img-responsive" />
+        <img src="{% static "images/zanotti.jpg" %}" class="img-responsive" />
         <p>José Luis Zanotti</p>
       </div>
       <div class="col-md-2">
-        <img src="/site_media/static/images/toralez.png" class="img-responsive" />
+        <img src="{% static "images/toralez.png" %}" class="img-responsive" />
         <p>Cristian Toralez</p>
       </div>
     </div>
@@ -150,38 +151,44 @@
     </div>
 
     <div class="row">
-      <div class="col-md-3">
-        <a href="http://www.fundacionsadosky.org.ar/" target="_blank"><img src="/site_media/static/images/sadosky.png" class="img-responsive" /></a>
+      <div class="col-md-3 text-center">
+        <a href="http://www.fundacionsadosky.org.ar/" target="_blank"><img src="{% static "images/sadosky.png" %}" class="img-responsive" /></a>
       </div>
-      <div class="col-md-3">
-        <a href="http://www.uns.edu.ar/" target="_blank"><img src="/site_media/static/images/uns2.png" class="img-responsive" /></a>
+      <div class="col-md-3 text-center">
+        <a href="http://www.uns.edu.ar/" target="_blank"><img src="{% static "images/uns2.png" %}" class="img-responsive" /></a>
       </div>
-      <div class="col-md-3">
-        <a href="http://linuxchixar.org/" target="_blank"><img src="/site_media/static/images/linuxchixlogo.png" class="img-responsive" /></a>
+      <div class="col-md-3 text-center">
+        <a href="http://linuxchixar.org/" target="_blank"><img src="{% static "images/linuxchixlogo.png" %}" class="img-responsive" /></a>
       </div>
-      <div class="col-md-3">
-        <a href="https://www.stickermule.com/es" target="_blank"><img src="/site_media/static/images/stickermule.png" class="img-responsive" /></a>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-3">
-        <a href="http://flisol.info/FLISOL2016/Argentina" target="_blank"><img src="/site_media/static/images/flisologo.png" class="img-responsive" /></a>
-      </div>
-      <div class="col-md-3">
-        <a href="http://www.donweb.com" target="_blank"><img src="/site_media/static/images/donweb.png" class="img-responsive" /></a>
-      </div>
-      <div class="col-md-3">
-        <a href="http://www.educacionit.com.ar" target="_blank"><img src="/site_media/static/images/educacion-it.png" class="img-responsive" /></a>
-      </div>
-      <div class="col-md-3">
-        <a href="http://www.bahiaemprende.gob.ar" target="_blank"><img src="/site_media/static/images/bahia_emprende.png" class="img-responsive"></a>
+      <div class="col-md-3 text-center">
+        <a href="https://www.stickermule.com/es" target="_blank"><img src="{% static "images/stickermule.png" %}" class="img-responsive" /></a>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-3">
-        <a href="http://www.adc.org.ar/" target="_blank"><img src="/site_media/static/images/adc.png" class="img-responsive" /></a>
+      <div class="col-md-3 text-center">
+        <a href="http://flisol.info/FLISOL2016/Argentina" target="_blank"><img src="{% static "images/flisologo.png" %}" class="img-responsive" /></a>
+      </div>
+      <div class="col-md-3 text-center">
+        <a href="http://www.donweb.com" target="_blank"><img src="{% static "images/donweb.png" %}" class="img-responsive" /></a>
+      </div>
+      <div class="col-md-3 text-center">
+        <a href="http://www.educacionit.com.ar" target="_blank"><img src="{% static "images/educacion-it.png" %}" class="img-responsive" /></a>
+      </div>
+      <div class="col-md-3 text-center">
+        <a href="http://www.bahiaemprende.gob.ar" target="_blank"><img src="{% static "images/bahia_emprende.png" %}" class="img-responsive"></a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 text-center">
+        <a href="http://www.adc.org.ar/" target="_blank"><img src="{% static "images/adc.png" %}" class="img-responsive" /></a>
+      </div>
+      <div class="col-md-3 text-center">
+        <a href="http://drupal.usla.org.ar/" target="_blank"><img src="{% static "images/usla2.png" %}" class="img-responsive" /></a>
+      </div>
+      <div class="col-md-3 text-center">
+        <a href="http://www.unq.edu.ar/" target="_blank"><img src="{% static "images/unq.png" %}" class="img-responsive" /></a>
       </div>
     </div>
   </div>

@@ -2,6 +2,7 @@
 
 {% load i18n %}
 {% load pinax_boxes_tags %}
+{% load static %}
 
 {% block head_title %}Sponsors{% endblock %}
 
@@ -21,7 +22,7 @@
       <div class="col-md-offset-2 col-md-8">
         <div class="thumbnail">
           <h3>Platino</h3>
-          <a href="https://www.onapsis.com/company/careers" target="_blank"><img src="/site_media/static/images/sponsors/onapsis.png" alt="Onapsis" class="img-responsive"></a>
+          <a href="https://www.onapsis.com/company/careers" target="_blank"><img src="{% static "images/sponsors/onapsis.png" %}" alt="Onapsis" class="img-responsive"></a>
           <div class="caption">
             <p>En Onapsis hacemos investigación y desarrollo en seguridad de sistemas críticos de negocio. Las empresas más grandes del mundo usan nuestro software, para protegerse frente a cyber-ataques.Trabajamos resolviendo problemas difíciles y desafiantes. Usamos Python y las últimas tecnologías para el desarrollo de nuestras soluciones. </p>
           </div>
@@ -33,7 +34,7 @@
       <div class="col-md-offset-2 col-md-8">
         <div class="thumbnail">
           <h3>Platino</h3>
-          <a href="https://www.python.org/psf-landing/" target="_blank"><img src="/site_media/static/images/sponsors/psf.png" alt="PSF" class="img-responsive"></a>
+          <a href="https://www.python.org/psf-landing/" target="_blank"><img src="{% static "images/sponsors/psf.png" %}" alt="PSF" class="img-responsive"></a>
           <div class="caption">
             <p>The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. The majority of the PSF's work is focused on empowering and supporting people within the Python community. The PSF has active grant programs that support sprints, conferences, meetups, user groups, and Python development efforts all over the world. In addition, the PSF underwrites and runs PyCon US, the primary Python community conference. Being part of the PSF means being part of the Python community. Recently we changed the PSF to an open membership organization, so that everyone who uses and supports Python can join. To learn more, visit <a href="https://www.python.org/psf/membership" target="_blank">https://www.python.org/psf/membership</a>.</p>
           </div>
@@ -45,7 +46,7 @@
       <div class="col-md-offset-2 col-md-8">
         <div class="thumbnail">
           <h3>Oro</h3>
-          <a href="http://www.machinalis.com/" target="_blank"><img src="/site_media/static/images/sponsors/machinalis.png" alt="Machinalis" class="img-responsive"></a>
+          <a href="http://www.machinalis.com/" target="_blank"><img src="{% static "images/sponsors/machinalis.png" %}" alt="Machinalis" class="img-responsive"></a>
           <div class="caption">
             <pre class="prettyprint">
 def machinalis(self):
@@ -72,7 +73,7 @@ def machinalis(self):
       <div class="col-md-offset-2 col-md-4">
         <div class="thumbnail">
           <h3>Plata</h3>
-          <a href="http://www.devsar.com/" target="_blank"><img src="/site_media/static/images/sponsors/devsar.png" alt="Devsar" class="img-responsive"></a>
+          <a href="http://www.devsar.com/" target="_blank"><img src="{% static "images/sponsors/devsar.png" %}" alt="Devsar" class="img-responsive"></a>
           <div class="caption">
              <p>Somos una empresa especializada en el desarrollo de aplicaciones web & mobile. Nuestro servicio de desarrollo incluye desde simples sitios web de gestión de contenidos hasta aplicaciones web complejas de e-commerce, social media/content, y soluciones para servicios financieros entre otros.</p>
           </div>
@@ -82,7 +83,7 @@ def machinalis(self):
       <div class="col-md-4">
         <div class="thumbnail">
           <h3>Plata</h3>
-          <a href="http://radiocut.fm" target="_blank"><img src="/site_media/static/images/sponsors/radiocut.png" alt="Radiocut" class="img-responsive"></a>
+          <a href="http://radiocut.fm" target="_blank"><img src="{% static "images/sponsors/radiocut.png" %}" alt="Radiocut" class="img-responsive"></a>
           <div class="caption">
             <p>Las máquinas del tiempo se pueden hacer con Python. Trabajamos para que puedas retroceder y escuchar la radio que te gusta cuando quieras. Escuchá, recortá y compartí con RadioCut, la plataforma que está cambiando la forma de vivir la radio.</p>
           </div>
@@ -95,27 +96,27 @@ def machinalis(self):
       <div class="col-md-3">
         <div class="thumbnail">
         <h3>Bronce</h3>
-          <a href="http://www.fierro.com.ar/" target="_blank"><img src="/site_media/static/images/sponsors/fierro.png" alt="Fierro" class="img-responsive"></a>
+          <a href="http://www.fierro.com.ar/" target="_blank"><img src="{% static "images/sponsors/fierro.png" %}" alt="Fierro" class="img-responsive"></a>
         </div>
       </div>
       <div class="col-md-3">
         <div class="thumbnail">
         <h3>Bronce</h3>
-          <a href="http://www.camba.coop/" target="_blank"><img src="/site_media/static/images/sponsors/camba.png" alt="Camba" class="img-responsive"></a>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="thumbnail">
-        <h3>Bronce</h3>
-          <a href="http://devecoop.com/" target="_blank"><img src="/site_media/static/images/sponsors/devecoop.png" alt="Devecoop" class="img-responsive"></a>
+          <a href="http://www.camba.coop/" target="_blank"><img src="{% static "images/sponsors/camba.png" %}" alt="Camba" class="img-responsive"></a>
         </div>
       </div>
 
       <div class="col-md-3">
         <div class="thumbnail">
         <h3>Bronce</h3>
-          <a href="http://www.bitson.com.ar/" target="_blank"><img src="/site_media/static/images/sponsors/bitson.png" alt="Bitson" class="img-responsive"></a>
+          <a href="http://devecoop.com/" target="_blank"><img src="{% static "images/sponsors/devecoop.png" %}" alt="Devecoop" class="img-responsive"></a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="thumbnail">
+        <h3>Bronce</h3>
+          <a href="http://www.bitson.com.ar/" target="_blank"><img src="{% static "images/sponsors/bitson.png" %}" alt="Bitson" class="img-responsive"></a>
         </div>
       </div>
     </div>
@@ -124,28 +125,37 @@ def machinalis(self):
       <div class="col-md-3">
         <div class="thumbnail">
         <h3>Bronce</h3>
-          <a href="http://fiqus.com/" target="_blank"><img src="/site_media/static/images/sponsors/fiqus2.png" alt="Fiqus" class="img-responsive"></a>
+          <a href="http://fiqus.com/" target="_blank"><img src="{% static "images/sponsors/fiqus2.png" %}" alt="Fiqus" class="img-responsive"></a>
         </div>
       </div>
 
       <div class="col-md-3">
         <div class="thumbnail">
         <h3>Bronce</h3>
-          <a href="http://www.tokkobroker.com/"><img src="/site_media/static/images/sponsors/tokkolabs.png" alt="Tokkolabs" class="img-responsive"></a>
+          <a href="http://www.tokkobroker.com/"><img src="{% static "images/sponsors/tokkolabs.png" %}" alt="Tokkolabs" class="img-responsive"></a>
         </div>
       </div>
 
       <div class="col-md-3">
         <div class="thumbnail">
         <h3>Bronce</h3>
-          <a href="https://www.eventbrite.com.ar/"><img src="/site_media/static/images/sponsors/eventbrite.png" alt="Eventbrite" class="img-responsive"></a>
+          <a href="https://www.eventbrite.com.ar/"><img src="{% static "images/sponsors/eventbrite.png" %}" alt="Eventbrite" class="img-responsive"></a>
         </div>
       </div>
 
       <div class="col-md-3">
         <div class="thumbnail">
         <h3>Bronce</h3>
-          <a href="https://moni.com.ar/"><img src="/site_media/static/images/sponsors/moni.png" alt="Moni" class="img-responsive"></a>
+          <a href="https://moni.com.ar/"><img src="{% static "images/sponsors/moni.png" %}" alt="Moni" class="img-responsive"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="thumbnail">
+        <h3>Bronce</h3>
+          <a href="http://www.unixono.com.ar/" target="_blank"><img src="{% static "images/sponsors/unixono.png" %}" alt="Fiqus" class="img-responsive"></a>
         </div>
       </div>
     </div>

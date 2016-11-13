@@ -2,6 +2,7 @@
 
 {% load i18n %}
 {% load pinax_boxes_tags %}
+{% load static %}
 
 {% block head_title %}Alojamiento{% endblock %}
 
@@ -47,6 +48,26 @@
             Web: <a href="http://www.hostelbahiablanca.com" target="_blank">www.hostelbahiablanca.com</a><br />
             e-mail: <a href="mailto:info@hostelbahiablanca.com">info@hostelbahiablanca.com</a>
           </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Movilidad</h2>
+          <p>Opciones para moverte por la ciudad.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Remis Universitario</h4>
+          <div style="margin-bottom: 10px;">
+            <img src="{% static "images/app-remises.png" %}" class="img-responsive" />
+          </div>
+          <p>Aplicación para solicitar remises en la Agencia Universitario de la ciudad de Bahía Blanca.</p>
+          <a href='https://play.google.com/store/apps/details?id=com.maker.universitario&hl=es_419&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+            <img alt='Disponible en Google Play' src='{% static "images/google-play.png" %}' class="img-responsive" style="max-width: 200px;" />
+          </a>
         </div>
       </div>
 

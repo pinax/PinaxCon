@@ -41,6 +41,7 @@ def generate_schedules(*args, **kwargs):
     taller_emp = SlotKind.objects.create(schedule=schedule_emp,label='taller')
     almuerzo_emp = SlotKind.objects.create(schedule=schedule_emp, label='almuerzo')
     acreditaciones_emp = SlotKind.objects.create(schedule=schedule_emp, label='acreditaciones')
+    libre_emp = SlotKind.objects.create(schedule=schedule_emp, label='libre')
 
     charla = SlotKind.objects.create(schedule=schedule_pal, label='charla')
     taller = SlotKind.objects.create(schedule=schedule_pal, label='taller')
@@ -67,6 +68,11 @@ def generate_schedules(*args, **kwargs):
 
     # Viernes
     create_slot(dia_25, taller_emp, time(8,0),time(19,0), (aula_fund,))
+
+    create_slot(dia_25, libre_emp, time(8,0),time(8,30), (aula_emp_azul,
+                                                                   aula_emp_verde,
+                                                                   aula_emp_auditorio))
+
     create_slot(dia_25, acreditaciones_emp, time(8,30),time(9,0), (aula_emp_azul,
                                                                    aula_emp_verde,
                                                                    aula_emp_auditorio))
@@ -90,6 +96,9 @@ def generate_schedules(*args, **kwargs):
                                                               aula_emp_verde,
                                                               aula_emp_auditorio))
 
+    create_slot(dia_25, libre_emp, time(18,0),time(19,0), (aula_emp_azul,
+                                                                   aula_emp_verde,
+                                                                   aula_emp_auditorio))
 
     # Sabado
     create_slot(dia_26, acreditaciones, time(9,0),time(9,30), (aula_1_pal,

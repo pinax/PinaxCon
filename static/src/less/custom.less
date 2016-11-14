@@ -443,14 +443,32 @@ body.presentation {
   }
 }
 
-table.calendar th.time {
-  width: 60px;
-}
-
-.table th {
+table.calendar{
+  th {
     background: #e3c501;
     color: #000;
     font-weight: 700;
+    &.time {
+      width: 60px;
+    }
+  }
+  td {
+    &.slot {
+      text-shadow: none;
+    }
+    &.slot-libre {
+      background-color: #E0E4CC;
+    }
+    &.slot-almuerzo {
+      background-color: #69D2E7;
+    }
+    &.slot-acreditaciones {
+      background-color: #A7DBD8;
+    }
+    &.slot-sprints {
+      background-color: #F38630;
+    }
+  }
 }
 
 /* Esto es lo "nativo" de pinax */

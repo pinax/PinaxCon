@@ -9566,8 +9566,38 @@ body.schedule h3,
 body.presentation h3 {
   color: #0e76bc;
 }
+table.calendar th {
+  font-size: 14px;
+  background: #e3c501;
+  color: #000;
+  font-weight: 700;
+}
 table.calendar th.time {
-  width: 60px;
+  width: 70px;
+}
+table.calendar td {
+  font-size: 14px;
+}
+table.calendar td.slot {
+  text-shadow: none;
+}
+table.calendar td.time {
+  font-weight: 600;
+  font-size: 14px;
+  vertical-align: middle;
+}
+table.calendar td.slot-libre {
+  background-color: #E0E4CC;
+}
+table.calendar td.slot-almuerzo,
+table.calendar td.slot-coffee-break {
+  background-color: #69D2E7;
+}
+table.calendar td.slot-acreditaciones {
+  background-color: #A7DBD8;
+}
+table.calendar td.slot-sprints {
+  background-color: #F38630;
 }
 /* Esto es lo "nativo" de pinax */
 .feature-columns {

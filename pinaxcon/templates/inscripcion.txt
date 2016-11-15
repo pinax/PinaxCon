@@ -1,0 +1,15 @@
+Hola {{ contact_name }},
+
+Gracias por inscribirte a la PyconAR 2016 en Bahía Blanca.
+
+Te recomendamos reservar tu vianda para los días sábado y domingo, ya que cerca
+del complejo las ofertas gastronómicas son reducidas.
+
+Podés comprar remeras y reservar tus viandas online en https://tienda.bitson.com.ar/productos?f[0]=field_productos_pyconar%3A28
+
+Si viajas desde CABA muy pronto podrás reservas tu lugar en el pybus. Estate atent@ a las redes sociales
+
+¡Te esperamos en noviembre!
+
+El equipo Organizador PyconAR 2016
+

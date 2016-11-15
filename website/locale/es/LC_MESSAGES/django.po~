@@ -1,0 +1,514 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-17 15:45-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/_account_bar.html:11
+msgid "Dashboard"
+msgstr "Panel de control"
+
+#: templates/_account_bar.html:14
+msgid "Settings"
+msgstr "Ajustes"
+
+#: templates/_account_bar.html:17
+msgid "Log out"
+msgstr "Cerrar sesión"
+
+#: templates/_account_bar.html:20 templates/account/login.html.py:21
+#: templates/account/signup.html:25
+msgid "Log in"
+msgstr "Iniciar sesión"
+
+#: templates/_account_bar.html:22 templates/account/login.html.py:27
+#: templates/account/signup.html:15 templates/account/signup.html.py:21
+msgid "Sign up"
+msgstr "Registrate"
+
+#: templates/about.html:6
+msgid "Welcome"
+msgstr "Bienvenid@"
+
+#: templates/account/login.html:15
+msgid "Log in to an existing account"
+msgstr ""
+
+#: templates/account/login.html:22
+msgid "Forgot your password?"
+msgstr "Recuperar contraseña"
+
+#: templates/account/login.html:27
+msgid "Don't have an account?"
+msgstr ""
+
+#: templates/account/signup.html:25
+msgid "Already have an account?"
+msgstr ""
+
+#: templates/dashboard.html:31
+msgid "Speaking"
+msgstr ""
+
+#: templates/dashboard.html:108 templates/symposion/sponsorship/detail.html:8
+msgid "Sponsorship"
+msgstr "Sponsoreso"
+
+#: templates/dashboard.html:143
+#: templates/symposion/reviews/review_detail.html:65
+msgid "Reviews"
+msgstr "Revisiones"
+
+#: templates/dashboard.html:188
+msgid "Teams"
+msgstr "Equipos"
+
+#: templates/pinax/boxes/_box_body.html:10
+msgid "Editing content:"
+msgstr "Edición de contenido"
+
+#: templates/pinax/pages/page_edit.html:11
+msgid "Edit page at:"
+msgstr "Editar página a:"
+
+#: templates/symposion/conference/user_list.html:50
+msgid "Email"
+msgstr "Email"
+
+#: templates/symposion/conference/user_list.html:51
+msgid "Name"
+msgstr "Nombre"
+
+#: templates/symposion/conference/user_list.html:52
+msgid "Speaker Profile?"
+msgstr "Perfil del orador"
+
+#: templates/symposion/emails/proposal_new_message/message.html:5
+#, python-format
+msgid "<b>%(user)s</b> has added a message on <b>%(title)s</b>."
+msgstr "<b>%(user)s</b> agregó un mensaje en <b>%(title)s</b>."
+
+#: templates/symposion/emails/proposal_new_message/message.html:12
+#, python-format
+msgid ""
+" Respond online at <a href=\"http://%(current_site)s%(detail_url)s#proposal-"
+"feedback\">http://%(current_site)s%(detail_url)s#proposal-feedback</a>"
+msgstr ""
+
+#: templates/symposion/emails/proposal_new_message/subject.txt:1
+#, python-format
+msgid "New message on \"%(title)s\" from %(user)s"
+msgstr ""
+
+#: templates/symposion/emails/proposal_updated/message.html:5
+#, python-format
+msgid ""
+"<b>%(username)s</b> has made changes to <b>%(title)s</b> which you have "
+"previously reviewed or commented on."
+msgstr ""
+
+#: templates/symposion/emails/proposal_updated/message.html:9
+#, python-format
+msgid ""
+"View the latest version of the proposal online at <a href=\"http://"
+"%(current_site)s%(detail_url)s\">http://%(current_site)s%(detail_url)s</a>"
+msgstr ""
+
+#: templates/symposion/emails/proposal_updated/subject.txt:1
+#, python-format
+msgid "\"%(title)s\" has been updated by %(username)s"
+msgstr ""
+
+#: templates/symposion/emails/speaker_addition/message.html:3
+#, python-format
+msgid ""
+"\n"
+"<p>%(username)s attached you as an additional speaker to a\n"
+"    talk proposal for %(site_name)s entitled \"%(title)s\".</p>\n"
+"\n"
+"<p>For more details, visit the %(site_name)s speaker dashboard:\n"
+"    <a href=\"http://%(current_site)s%(dashboard_url)s\">http://"
+"%(current_site)s{{ dashboard_url ]}</a>\n"
+"</p>\n"
+msgstr ""
+
+#: templates/symposion/emails/speaker_addition/subject.txt:1
+#: templates/symposion/emails/speaker_invite/subject.txt:1
+#: templates/symposion/emails/speaker_no_profile/subject.txt:1
+#, python-format
+msgid "%(name)s has invited you to join as a speaker on %(title)s"
+msgstr ""
+
+#: templates/symposion/emails/speaker_invite/message.html:3
+#, python-format
+msgid ""
+"\n"
+"<p>%(invitator)s attached you as an additional speaker to a\n"
+"    talk proposal for %(site_name)s entitled \"%(title)s\".</p>\n"
+"\n"
+"<p>Go to</p>\n"
+"\n"
+"<p><a href=\"http://%(current_site)s%(token_url)s\">http://%(current_site)s"
+"%(token_url)s</a></p>\n"
+"\n"
+"<p>to confirm.</p>\n"
+"\n"
+"<p>If you don't have account on the website, you will be asked to create one."
+"</p>\n"
+msgstr ""
+
+#: templates/symposion/emails/speaker_no_profile/message.html:3
+#, python-format
+msgid ""
+"\n"
+"<p>%(username)s attached you as an additional speaker to a\n"
+"    talk proposal for %(site_name)s entitled \"%(title)s\".</p>\n"
+"\n"
+"<p>Go to</p>\n"
+"\n"
+"<p><a href=\"http://%(current_site)s%(token_url)s\">http://%(current_site)s"
+"%(token_url)s</a></p>\n"
+"\n"
+"<p>to confirm and fill out your speaker profile.</p>\n"
+msgstr ""
+
+#: templates/symposion/emails/sponsor_signup/message.html:2
+#, python-format
+msgid ""
+"\n"
+"<p>%(sponsor_name)s has applied to be a sponsor.</p>\n"
+"\n"
+"<ul>\n"
+"    <li><b>Applicant</b>: %(applicant)s</li>\n"
+"    <li><b>Sponsor Name</b>: %(sponsor_name)s</li>\n"
+"    <li><b>Sponsor Contact</b>: %(contact)s</li>\n"
+"    <li><b>Sponsor Contact Email</b>: %(email)s</li>\n"
+"    <li><b>Sponsorship Level</b>: %(level)s</li>\n"
+"</ul>\n"
+msgstr ""
+
+#: templates/symposion/emails/sponsor_signup/subject.txt:1
+msgid "New Sponsor Application"
+msgstr ""
+
+#: templates/symposion/emails/teams_user_applied/message.html:3
+#, python-format
+msgid ""
+"\n"
+"    <p>\n"
+"        User \"%(username)s\" has applied to join <b>%(team_name)s</b> on "
+"%(site_name)s.\n"
+"    </p>\n"
+"\n"
+"    <p>\n"
+"        To accept this application and see any other pending applications, "
+"visit the following url:\n"
+"        <a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s"
+"%(team_url)s</a>\n"
+"    </p>\n"
+msgstr ""
+
+#: templates/symposion/emails/teams_user_applied/subject.txt:1
+#, python-format
+msgid "%(username)s has applied to to join \"%(team)s\""
+msgstr ""
+
+#: templates/symposion/emails/teams_user_invited/message.html:3
+#, python-format
+msgid ""
+"\n"
+"    <p>\n"
+"        You have been invited to join <b>%(team_name)s</b> on "
+"%(site_name)s.\n"
+"    </p>\n"
+"\n"
+"    <p>\n"
+"        To accept this invitation, visit the following url:\n"
+"        <a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s"
+"%(team_url)s</a>\n"
+"    </p>\n"
+msgstr ""
+
+#: templates/symposion/emails/teams_user_invited/subject.txt:1
+#, python-format
+msgid "You have been invited to join \"%(team)s\""
+msgstr ""
+
+#: templates/symposion/proposals/_pending_proposal_row.html:12
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#: templates/symposion/proposals/_pending_proposal_row.html:16
+msgid "Accepted"
+msgstr "Aceptado"
+
+#: templates/symposion/proposals/_pending_proposal_row.html:18
+msgid "Submitted"
+msgstr "Enviado"
+
+#: templates/symposion/proposals/_pending_proposal_row.html:21
+msgid "Invited"
+msgstr "Invitado"
+
+#: templates/symposion/proposals/_pending_proposal_row.html:30
+msgid "Choose Response"
+msgstr "Elegija la respuesta"
+
+#: templates/symposion/proposals/_pending_proposal_row.html:35
+msgid "Accept invitation"
+msgstr "Aceptar invitación"
+
+#: templates/symposion/proposals/_pending_proposal_row.html:37
+msgid "Decline invitation"
+msgstr "Declinar invitación"
+
+#: templates/symposion/proposals/_proposal_fields.html:4
+msgid "Submitted by"
+msgstr "Enviado por"
+
+#: templates/symposion/proposals/_proposal_fields.html:7
+msgid "Track"
+msgstr ""
+
+#: templates/symposion/proposals/_proposal_fields.html:10
+msgid "Audience Level"
+msgstr ""
+
+#: templates/symposion/proposals/_proposal_fields.html:14
+msgid "Additional Speakers"
+msgstr ""
+
+#: templates/symposion/proposals/_proposal_fields.html:21
+msgid "Invitation Sent"
+msgstr ""
+
+#: templates/symposion/proposals/_proposal_fields.html:28
+msgid "Description"
+msgstr "Descripción"
+
+#: templates/symposion/proposals/_proposal_fields.html:31
+msgid "Abstract"
+msgstr "Resumen"
+
+#: templates/symposion/proposals/_proposal_fields.html:34
+msgid "Notes"
+msgstr "Notas"
+
+#: templates/symposion/proposals/_proposal_fields.html:37
+msgid "Speaker Bio"
+msgstr "Biografía del Orador"
+
+#: templates/symposion/proposals/_proposal_fields.html:40
+msgid "Documents"
+msgstr "Documentos"
+
+#: templates/symposion/proposals/proposal_cancel.html:5
+msgid "Cancel Proposal"
+msgstr "Cancelar Propuesta"
+
+#: templates/symposion/proposals/proposal_cancel.html:14
+msgid "No, keep it for now"
+msgstr "No, mantenerlo por ahora"
+
+#: templates/symposion/proposals/proposal_detail.html:14
+msgid "Edit this proposal"
+msgstr "Editar esta propuesta"
+
+#: templates/symposion/proposals/proposal_detail.html:17
+msgid "Cancel this proposal"
+msgstr "Cancelar esta propuesta"
+
+#: templates/symposion/proposals/proposal_detail.html:21
+msgid "Remove me from this proposal"
+msgstr "Removerme de esta propuesta"
+
+#: templates/symposion/proposals/proposal_detail.html:33
+#: templates/symposion/reviews/review_detail.html:64
+msgid "Proposal Details"
+msgstr "Detalles de propuesta"
+
+#: templates/symposion/proposals/proposal_detail.html:35
+#: templates/symposion/proposals/proposal_detail.html:47
+msgid "Supporting Documents"
+msgstr "Documentos respaldatorios"
+
+#: templates/symposion/proposals/proposal_detail.html:38
+msgid "Reviewer Feedback"
+msgstr "Comentarios recibidos"
+
+#: templates/symposion/proposals/proposal_detail.html:57
+msgid "delete"
+msgstr "elimiar"
+
+#: templates/symposion/proposals/proposal_detail.html:64
+msgid "No supporting documents attached to this proposal."
+msgstr "No se adjuntaron documentos respaldatorios"
+
+#: templates/symposion/proposals/proposal_detail.html:66
+msgid "Add Document"
+msgstr "Agregar documento"
+
+#: templates/symposion/proposals/proposal_detail.html:73
+msgid "Conversation with Reviewers"
+msgstr "Conversación con evaluadores"
+
+#: templates/symposion/proposals/proposal_detail.html:83
+msgid "Leave a Message"
+msgstr "Dejar mensaje"
+
+#: templates/symposion/proposals/proposal_detail.html:85
+msgid "You can leave a message for the reviewers here."
+msgstr "Puede dejar un mensaje a los evaluadores aqui:"
+
+#: templates/symposion/proposals/proposal_detail.html:93
+msgid "Submit"
+msgstr "Enviar"
+
+#: templates/symposion/proposals/proposal_speaker_manage.html:7
+msgid "Proposal:"
+msgstr "Propuesta"
+
+#: templates/symposion/proposals/proposal_speaker_manage.html:10
+msgid "Edit proposal"
+msgstr "Editar propuesta"
+
+#: templates/symposion/proposals/proposal_speaker_manage.html:14
+msgid "Current Speakers"
+msgstr ""
+
+#: templates/symposion/proposals/proposal_speaker_manage.html:20
+msgid "pending invitation"
+msgstr ""
+
+#: templates/symposion/proposals/proposal_speaker_manage.html:24
+msgid "Add another speaker"
+msgstr ""
+
+#: templates/symposion/proposals/proposal_submit.html:6
+msgid "Submit A Proposal"
+msgstr ""
+
+#: templates/symposion/reviews/_review_table.html:6
+#: templates/symposion/reviews/result_notification.html:48
+msgid "Speaker / Title"
+msgstr ""
+
+#: templates/symposion/reviews/_review_table.html:7
+#: templates/symposion/reviews/result_notification.html:49
+msgid "Category"
+msgstr "Categoría"
+
+#: templates/symposion/reviews/_review_table.html:9
+msgid "+1"
+msgstr ""
+
+#: templates/symposion/reviews/_review_table.html:10
+msgid "+0"
+msgstr ""
+
+#: templates/symposion/reviews/_review_table.html:11
+msgid "-0"
+msgstr ""
+
+#: templates/symposion/reviews/_review_table.html:12
+msgid "-1"
+msgstr ""
+
+#: templates/symposion/reviews/_review_table.html:13
+msgid "Your Rating"
+msgstr ""
+
+#: templates/symposion/reviews/base.html:64
+msgid "All Reviews"
+msgstr ""
+
+#: templates/symposion/reviews/base.html:75
+msgid "Voting Status"
+msgstr ""
+
+#: templates/symposion/reviews/result_notification.html:50
+msgid "Status"
+msgstr ""
+
+#: templates/symposion/reviews/result_notification.html:51
+msgid "Notified?"
+msgstr ""
+
+#: templates/symposion/reviews/review_detail.html:66
+msgid "Speaker Feedback"
+msgstr ""
+
+#: templates/symposion/reviews/review_detail.html:74
+msgid "Current Results"
+msgstr ""
+
+#: templates/symposion/reviews/review_detail.html:81
+msgid "Total Responses"
+msgstr ""
+
+#: templates/symposion/reviews/review_detail.html:98
+msgid "Submit Review"
+msgstr ""
+
+#: templates/symposion/reviews/review_detail.html:136
+msgid "Conversation with the submitter"
+msgstr ""
+
+#: templates/symposion/reviews/review_detail.html:150
+msgid "Send a message"
+msgstr "Enviar un mensaje"
+
+#: templates/symposion/reviews/review_detail.html:152
+msgid ""
+"\n"
+"                            If you'd like to communicate with the submitter, "
+"use the following form and he or she will be\n"
+"                            notified and given the opportunity to respond.\n"
+"                        "
+msgstr ""
+
+#: templates/symposion/schedule/_slot_edit.html:5
+msgid "Edit Slot"
+msgstr ""
+
+#: templates/symposion/speakers/speaker_create.html:7
+#: templates/symposion/speakers/speaker_create.html:14
+msgid "Create Speaker Profile"
+msgstr "Crear perfil de orador"
+
+#: templates/symposion/speakers/speaker_edit.html:7
+#: templates/symposion/speakers/speaker_edit.html:14
+msgid "Edit Speaker Profile"
+msgstr "Editar perfil de orador"
+
+#: templates/symposion/sponsorship/add.html:7
+#: templates/symposion/sponsorship/add.html:14
+msgid "Add a Sponsor"
+msgstr "Agregar sponsor"
+
+#: templates/symposion/sponsorship/apply.html:7
+msgid "Apply to be a Sponsor"
+msgstr "Aplicar para ser Sponsor"
+
+#: templates/symposion/sponsorship/apply.html:17
+msgid "Apply to Be a Sponsor"
+msgstr "Aplicar para ser Sponsor"
+
+#: templates/symposion/sponsorship/list.html:7
+#: templates/symposion/sponsorship/list.html:12
+msgid "About Our Sponsors"
+msgstr "Acerca de nuestros sponsors"

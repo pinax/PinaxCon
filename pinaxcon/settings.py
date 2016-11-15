@@ -6,15 +6,24 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir
 PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 BASE_DIR = PACKAGE_ROOT
 
-DEBUG = bool(int(os.environ.get("DEBUG", "1")))
+DEBUG = True #bool(int(os.environ.get("DEBUG", "1")))
 
 DATABASES = {
-    "default": dj_database_url.config(default="postgres://localhost/pinaxcon")
+    'default': {
+          'ENGINE': 'django.db.backends.postgresql_psycopg2',
+          'NAME': os.environ.get("POSTGRES_ENV_POSTGRES_USER"),
+          'USER': os.environ.get("POSTGRES_ENV_POSTGRES_USER"),
+          'PASSWORD': os.environ.get("POSTGRES_ENV_POSTGRES_PASSWORD"),
+          'HOST': os.environ.get("POSTGRES_PORT_5432_TCP_ADDR"),
+          'PORT': os.environ.get("POSTGRES_PORT_5432_TCP_PORT"),
+    }
 }
 
+
+
+
 ALLOWED_HOSTS = [
-    os.environ.get("GONDOR_INSTANCE_DOMAIN"),
-    "conference.pinaxproject.com"
+    "*",
 ]
 
 # Local time zone for this installation. Choices can be found here:
@@ -24,11 +33,11 @@ ALLOWED_HOSTS = [
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Argentina/Buenos_Aires"
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "es-AR"
 
 SITE_ID = int(os.environ.get("SITE_ID", 1))
 
@@ -155,7 +164,27 @@ INSTALLED_APPS = [
 
     # project
     "pinaxcon",
-    "pinaxcon.proposals"
+    "pinaxcon.proposals",
+    "pinaxcon.attendees",
+    #extra
+    "django_extensions",
+    "captcha",
+    "markdownify",
+]
+
+MARKDOWNIFY_WHITELIST_TAGS = [
+    'a',
+    'abbr',
+    'acronym',
+    'b',
+    'blockquote',
+    'em',
+    'i',
+    'li',
+    'ol',
+    'p',
+    'strong',
+    'ul'
 ]
 
 # A sample logging configuration. The only tangible logging
@@ -191,11 +220,13 @@ FIXTURE_DIRS = [
     os.path.join(PROJECT_ROOT, "fixtures"),
 ]
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 
 ACCOUNT_OPEN_SIGNUP = True
 ACCOUNT_EMAIL_UNIQUE = True
-ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = False
+ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = True
 ACCOUNT_LOGIN_REDIRECT_URL = "home"
 ACCOUNT_LOGOUT_REDIRECT_URL = "home"
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 2
@@ -208,7 +239,15 @@ AUTHENTICATION_BACKENDS = [
 
 CONFERENCE_ID = 1
 PROPOSAL_FORMS = {
-    "talk": "pinaxcon.proposals.forms.TalkProposalForm",
+    "charla": "pinaxcon.proposals.forms.TalkProposalForm",
+    "taller": "pinaxcon.proposals.forms.TalkProposalForm",
 }
 PINAX_PAGES_HOOKSET = "pinaxcon.hooks.PinaxPagesHookSet"
 PINAX_BOXES_HOOKSET = "pinaxcon.hooks.PinaxBoxesHookSet"
+
+LOCALE_PATHS = (
+            PROJECT_ROOT + '/website/locale', )
+
+THEME_CONTACT_EMAIL = 'pyconar@python.org.ar'
+
+from local_settings import *

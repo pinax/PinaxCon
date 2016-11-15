@@ -13,42 +13,75 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <div class="pull-right">
+                {% if not user.attendee %}
+                    <a href="{% url "attendee_create" %}" class="btn btn-xs btn-default">
+                        <i class="fa fa-plus-sign"></i> Inscribirme a Pyconar2016
+                    </a>
+                {% else %}
+                    <a href="{% url "attendee_edit" %}" class="btn btn-xs btn-default">
+                        <i class="fa fa-pencil"></i> Editar mis datos de inscripción
+                    </a>
+                {% endif %}
+            </div>
+            <h3 class="panel-title">
+                <i class="fa fa-users"></i>
+                Inscripciones
+            </h3>
+        </div>
+
+        <div class="panel-body">
+            {% if not user.attendee %}
+            <p><b>Todavía no estás inscripto a PyconAr 2016</b></p>
+            {% else %}
+            <p>Ya estás inscripto. ¡Te esperamos!</p>
+            <p>Te recomendamos <b>reservar tu vianda</b> para los días sábado y
+            domingo,
+            ya que cerca del complejo las ofertas gastronómicas son
+            reducidas.</p>
+            <p>Podés comprar remeras y reservar tus viandas online en nuestra <a class='btn btn-default' href="https://tienda.bitson.com.ar/productos?f[0]=field_productos_pyconar%3A28" target="_blank">TIENDA ONLINE</a></p>
+            <p>Si viajas desde CABA muy pronto podrás reservas tu lugar en el pybus. Estate atent@ a las redes sociales</a></p>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="pull-right">
                 {% if not user.speaker_profile %}
                     <a href="{% url "speaker_create" %}" class="btn btn-xs btn-default">
-                        <i class="fa fa-plus-sign"></i> Create a speaker profile
+                        <i class="fa fa-plus-sign"></i> Crear un perfil de orador
                     </a>
                 {% else %}
                     <a href="{% url "speaker_edit" %}" class="btn btn-xs btn-default">
-                        <i class="fa fa-pencil"></i> Edit your speaker profile
-                    </a>
-                    <a href="{% url "proposal_submit" %}" class="btn btn-xs btn-default">
-                        <i class="fa fa-plus-sign"></i> Submit a new proposal
+                        <i class="fa fa-pencil"></i> Editar tu perfil de orador
                     </a>
                 {% endif %}
             </div>
             <h3 class="panel-title">
                 <i class="fa fa-bullhorn"></i>
-                {% trans "Speaking" %}
+                Orador/a
             </h3>
         </div>
 
         <div class="panel-body">
             {% if not user.speaker_profile %}
-                <p>To submit a proposal, you must first <a href="{% url "speaker_create" %}">create a speaker profile</a>.</p>
+                <p>Para enviar una propuesta, primero tenés que <a href="{% url "speaker_create" %}">crear un perfil de orador</a>.</p>
             {% else %}
-                <h4>Your Proposals</h4>
-                {% if not user.speaker_profile.proposals.exists %}
-                    <p>No proposals submitted yet.</p>
+                {% if user.speaker_profile.proposals.exists %}
+                <h4>Tus propuestas</h4>
+                {% else %}
+                    <p>El plazo para presentar charlas ha finalizado.</p>
                 {% endif %}
             {% endif %}
         </div>
+
         {% if user.speaker_profile.proposals.exists %}
             <table class="table">
                 <tr>
-                    <th>Title</th>
-                    <th>Session type</th>
-                    <th>Status</th>
-                    <th>Actions</th>
+                    <th>Título</th>
+                    <th>Tipo</th>
+                    <th>Estado</th>
+                    <th>Accciones</th>
                 </tr>
                 {% for proposal in user.speaker_profile.proposals.all %}
                     {% include "symposion/proposals/_proposal_row.html" %}
@@ -60,14 +93,14 @@
             {% associated_proposals as associated_proposals %}
             {% if associated_proposals %}
                 <div class="panel-body">
-                    <h4>Proposals you have joined as an additional speaker</h4>
+                    <h4>Propuestas a las que te has unido como orador adicional</h4>
                 </div>
                 <table class="table">
                     <tr>
-                        <th>Title</th>
-                        <th>Session type</th>
-                        <th>Status</th>
-                        <th>Actions</th>
+                        <th>Titulo</th>
+                        <th>Tipo</th>
+                        <th>Estado</th>
+                        <th>Accciones</th>
                     </tr>
                     {% for proposal in associated_proposals %}
                         {% include "symposion/proposals/_proposal_row.html" %}
@@ -77,13 +110,13 @@
 
             {% pending_proposals as pending_proposals %}
             {% if pending_proposals %}
-                <div class="panel-body"><h4>Proposals you have been invited to join</h4></div>
+                <div class="panel-body"><h4>Propuestas a las que se te ha invitado a unirte</h4></div>
                 <table class="table">
                     <tr>
-                        <th>Title</th>
-                        <th>Session type</th>
-                        <th>Status</th>
-                        <th>Actions</th>
+                        <th>Titulo</th>
+                        <th>Tipo</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
                     </tr>
                     {% for proposal in pending_proposals %}
                         {% include "symposion/proposals/_pending_proposal_row.html" %}
@@ -93,47 +126,6 @@
         {% endif %}
     </div>
 
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="pull-right header-actions">
-                {% if not user.sponsorships.exists %}
-                    <a href="{% url "sponsor_apply" %}" class="btn btn-xs btn-default">
-                        <i class="fa fa-plus-sign"></i>
-                        Apply to be a sponsor
-                    </a>
-                {% endif %}
-            </div>
-            <h3 class="panel-title">
-                <i class="fa fa-briefcase"></i>
-                {% trans "Sponsorship" %}
-            </h3>
-        </div>
-
-        <div class="panel-body">
-            {% if not user.sponsorships.exists %}
-                <p>If you or your organization would be interested in sponsorship opportunities, <a href="{% url "sponsor_apply" %}">use our online form to apply to be a sponsor</a>.
-            {% else %}
-                <h4>Your Sponsorship</h4>
-                <ul class="list-group">
-                    {% for sponsorship in user.sponsorships.all %}
-                        <li class="list-group-item">
-                            <a href="{% url "sponsor_detail" sponsorship.pk %}"><b>{{ sponsorship.name }}</b></a>
-                            ({{ sponsorship.level }})
-                            {% if not sponsorship.active %}
-                                <span class="label label-warning">awaiting approval</span>
-                            {% endif %}
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-            {% if user.is_staff %}
-                <p>
-                    As staff, you can directly <a href="{% url "sponsor_add" %}">add a sponsor</a> if the organization isn't
-                    applying themselves.
-                </p>
-            {% endif %}
-        </div>
-    </div>
 
     {% if review_sections %}
         <div class="panel panel-default">
@@ -144,13 +136,13 @@
                 </h3>
             </div>
             <div class="panel-body">
-                <h4>Reviews by Section</h4>
+                <h4>Revisiones por sección</h4>
                 <ul>
                     {% for section in review_sections %}
                         <h5>{{ section }}</h5>
-                        <li><a href="{% url "review_section" section.section.slug %}">All</a></li>
-                        <li><a href="{% url "user_reviewed" section.section.slug %}">Reviewed by you</a></li>
-                        <li><a href="{% url "user_not_reviewed" section.section.slug %}">Not Reviewed by you</a></li>
+                        <li><a href="{% url "review_section" section.section.slug %}">Todas</a></li>
+                        <li><a href="{% url "user_reviewed" section.section.slug %}">Revisadas por vos</a></li>
+                        <li><a href="{% url "user_not_reviewed" section.section.slug %}">No revisadas por vos</a></li>
                     {% endfor %}
                 </ul>
 
@@ -190,7 +182,7 @@
 
             {% if user.memberships.exists %}
                 <div class="panel-body">
-                    <h4>Your Teams</h4>
+                    <h4>Tus equipos</h4>
                 </div>
                 <table class="table table-striped">
                     {% for membership in user.memberships.all %}
@@ -213,7 +205,7 @@
             {% endif %}
             {% if available_teams %}
                 <div class="panel-body">
-                    <h4>Available Teams</h4>
+                    <h4>Equipos disponibles</h4>
                 </div>
                 <table class="table table-striped">
                     {% for team in available_teams %}

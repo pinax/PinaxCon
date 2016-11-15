@@ -31,6 +31,7 @@ exports = module.exports = {
         sources: [
             npmRoot + 'font-awesome/fonts/**.*',
             npmRoot + 'bootstrap/fonts/**.*',
+            staticSource + 'fonts/**/*',
         ],
         dist: staticDist + 'fonts/'
     },
@@ -52,7 +53,7 @@ exports = module.exports = {
     },
     images: {
         sources: [
-            staticSource + 'images/**.*'
+            staticSource + 'images/**/*'
         ],
         dist: staticDist + 'images/'
     },

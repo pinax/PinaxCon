@@ -1,0 +1,162 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load pinax_boxes_tags %}
+
+{% block head_title %}{% trans "Welcome" %}{% endblock %}
+
+{% block body_class %}about{% endblock %}
+
+{% block body_base %}
+  <section class="container-fluid secondary block-yellow">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>El evento</h2>
+          <p>PyconAr es la conferencia anual Argentina de Python, organizada y llevada a cabo por voluntarios
+            de la comunidad Python Argentina (<a href="http://www.python.org.ar/" target="_blank">PyAr</a>),
+            y en esta oportunidad co­organizada por <a href="http://www.facttic.org.ar" target="_blank">Facttic</a>,
+            la Federación de cooperativas de trabajo de tecnología innovación y conocimiento.
+          </p>
+          <p>De entrada libre y gratuita, se realizará los días 25, 26 y 27 de noviembre de 2016 en la ciudad de Bahía Blanca​, provincia de Buenos Aires.</p>
+        </div>
+        <div class="col-md-6"><img src="/site_media/static/images/facttic.jpg" class="img-responsive" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid secondary block-yellow">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6"><img src="/site_media/static/images/palihue.jpg" class="img-responsive" /></div>
+        <div class="col-md-6">
+          <p>El mismo se desarrollará en el Complejo Palihue perteneciente a la Universidad Nacional del Sur, ubicado en la calle San Andrés al 800.</p>
+          <p>El objetivo es reunir a desarrolladores, estudiantes, entusiastas y emprendedores del lenguaje de programación Python, para contribuir con su crecimiento y divulgación, fomentando y alentando el sentido de comunidad y cooperación.</p>
+          <p>Se estima una concurrencia de 600 personas en el total del evento, para lo cual se dispone del complejo Palihue en su totalidad, el que posee capacidad para más de 800 personas en aula además de un amplio hall central para stands y acreditación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid secondary block-yellow">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Ubicación</h2>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid secondary block-yellow">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>EDICIONES ANTERIORES</h2>
+          <p>La Primera PyconAR se realizó el año 2009 en Buenos Aires. A partir de allí se realizaron todos los años en diferentes lugares como Córdoba (2010), Junin (2011), Quilmes (2012), Rosario (2013), Rafaela (2014) y Mendoza (2015). A través de los años fue aumentando la convocatoria y la comunidad de Pyar fue creciendo. </p>
+	        <p>Los invitados internacionales de ediciones anteriores incluyeron a Jacob Kaplan Moss (Django), Wesley Chun y Collin Winter(Google), Steve Holden (PSF), Maciej Fijalkowski (PyPy), Jim Fulton (Zope) , Alan Runyan (Plone) y Daniel y Audrey RoyGreenfeld. Varios visitantes de la región y de otros continentes han asistido a conferencias previas, siendo este un gran lugar para promocionarse e intercambiar experiencias.</p>
+        </div>
+        <!-- div class="col-md-6"><img src="/site_media/static/images/mendoza2.jpg" class="img-responsive" /></div -->
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div id="carousel-anteriores" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-anteriores" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-anteriores" data-slide-to="1"></li>
+              <li data-target="#carousel-anteriores" data-slide-to="2"></li>
+              <li data-target="#carousel-anteriores" data-slide-to="3"></li>
+              <li data-target="#carousel-anteriores" data-slide-to="4"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img alt="PyConAr 2011 Junin" src="/site_media/static/images/slider-anteriores/pycon-junin.jpg">
+                <div class="carousel-caption">
+                  <h3>PyConAr 2011 Junin</h3>
+                </div>
+              </div>
+
+              <div class="item">
+                <img alt="PyConAr 2012 Quilmes" src="/site_media/static/images/slider-anteriores/pycon-quilmes.jpg">
+                <div class="carousel-caption">
+                  <h3>PyConAr 2012 Quilmes</h3>
+                </div>
+              </div>
+
+              <div class="item">
+                <img alt="PyConAr 2013 Rosario" src="/site_media/static/images/slider-anteriores/pycon-rosario.jpg">
+                <div class="carousel-caption">
+                  <h3>PyConAr 2013 Rosario</h3>
+                </div>
+              </div>
+
+              <div class="item">
+                <img alt="PyConAr 2014 Rafaela" src="/site_media/static/images/slider-anteriores/pycon-rafaela.jpg">
+                <div class="carousel-caption">
+                  <h3>PyConAr 2014 Rafaela</h3>
+                </div>
+              </div>
+
+              <div class="item">
+                <img alt="PyConAr 2015 Mendoza" src="/site_media/static/images/slider-anteriores/pycon-mendoza.jpg">
+                <div class="carousel-caption">
+                  <h3>PyConAr 2015 Mendoza</h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-anteriores" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-anteriores" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Siguiente</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% if ACCOUNT_OPEN_SIGNUP %}
+  <section class="container-fluid primary block-blue">
+    <div class="container">
+      <h2>Inscripciones abiertas!</h2>
+      <p>Durante todas las jornadas, podrás elegir entre 2 charlas que se darán al
+      mismo tiempo. Qué tenemos preparado para que vengas? Un pybus que
+      viaja de CABA a Bahía Blanca , convenios con hostels, premios y mucho
+      más..te mantenemos al tanto!</p>
+      <div class="center"><a href="{% url 'account_signup' %}" class="btn btn-warning">Inscribite!</a></div>
+    </div>
+  </section>
+  {% endif %}
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyG0dHUK_9vhz5neVjdUriBQm91eQppdQ&callback=initMap" async defer></script>
+    <script>
+    function initMap() {
+      var myLatLng = {lat: -38.695164, lng: -62.253801};
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: myLatLng,
+        scrollwheel: false,
+        zoom: 17
+      });
+
+      var marker = new google.maps.Marker({
+        map: map,
+        position: myLatLng,
+        title: 'UNS Campus Palihue'
+      });
+    }
+    </script>
+{% endblock %}

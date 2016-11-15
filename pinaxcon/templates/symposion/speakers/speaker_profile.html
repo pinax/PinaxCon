@@ -2,7 +2,7 @@
 
 {% load i18n %}
 {% load thumbnail %}
-
+{% load markdownify %}
 
 {% block head_title %}{{ speaker.name }}{% endblock %}
 
@@ -19,10 +19,10 @@
             {% if speaker.user == request.user or request.user.is_staff %}
                 <a class="btn btn-default pull-right" href="{% url "speaker_edit" speaker.pk %}">Edit</a>
             {% endif %}
-            <h1>{{ speaker.name }}</h1>
-            <div class="bio">{{ speaker.biography|safe }}</div>
+            <h2>{{ speaker.name }}</h2>
+            <div class="bio">{{ speaker.biography|markdownify|safe }}</div>
 
-            <h2>Presentations</h2>
+            <h2>Charlas/Talleres</h2>
             {% for presentation in presentations %}
                 <h3><a href="{% url "schedule_presentation_detail" presentation.pk %}">{{ presentation.title }}</a></h3>
                 {% if presentation.slot %}

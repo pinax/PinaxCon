@@ -1,0 +1,121 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load pinax_boxes_tags %}
+{% load static %}
+
+{% block head_title %}Alojamiento{% endblock %}
+
+{% block body_class %}alojamiento{% endblock %}
+
+{% block body_base %}
+  <section class="container-fluid secondary block-yellow">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Alojamiento</h2>
+          <p>Estas son algunas opciones recomendadas de alojamiento en Bahía Blanca, podés encontrar más información en el <a href="http://turismo.bahiablanca.gov.ar/" target="_blank">site de turismo de Bahía Blanca.</a></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Hotel Argos (4 estrellas)</h4>
+          <div id="map-argos" style="width: 100%; height: 200px; margin-bottom: 10px;"></div>
+          <p>
+            Dirección: España 149 <br />
+            Tel: 0291 – 4550404 <br />
+            Web: <a href="http://www.hotelargos.com" target="_blank">www.hotelargos.com</a> <br />
+            e-mail: <a href="mailto:reservas@hotelargos.com">reservas@hotelargos.com</a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h4>Hostería Santa Rosa (2 estrellas)</h4>
+          <div id="map-santa-rosa" style="width: 100%; height: 200px; margin-bottom: 10px;"></div>
+          <p>
+            Dirección: Sarmiento 373 <br />
+            Tel: 0291 – 4520013 <br />
+            Web: <a href="http://www.hotelsantarosaweb.com.ar" target="_blank">www.hotelsantarosaweb.com.ar</a> <br />
+            e-mail: <a href="mailto:hotelsantarosa@bvconline.com.ar">hotelsantarosa@bvconline.com.ar</a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h4>Bahía Blaca Hostel (1 estrella)</h4>
+          <div id="map-hostel" style="width: 100%; height: 200px; margin-bottom: 10px;"></div>
+          <p>
+            Dirección: Soler 701 (esquina Israel)<br />
+            Tel: 54-0291-4526802<br />
+            Web: <a href="http://www.hostelbahiablanca.com" target="_blank">www.hostelbahiablanca.com</a><br />
+            e-mail: <a href="mailto:info@hostelbahiablanca.com">info@hostelbahiablanca.com</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Movilidad</h2>
+          <p>Opciones para moverte por la ciudad.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Remis Universitario</h4>
+          <div style="margin-bottom: 10px;">
+            <img src="{% static "images/app-remises.png" %}" class="img-responsive" />
+          </div>
+          <p>Aplicación para solicitar remises en la Agencia Universitario de la ciudad de Bahía Blanca.</p>
+          <a href='https://play.google.com/store/apps/details?id=com.maker.universitario&hl=es_419&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+            <img alt='Disponible en Google Play' src='{% static "images/google-play.png" %}' class="img-responsive" style="max-width: 200px;" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+{% endblock %}
+
+
+{% block styles %}
+  {{ block.super }}
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js" defer></script>
+    <script>
+    function initMaps() {
+      var LatLngArgos = {lat: -38.7236584, lng: -62.2666586};
+      var LatLngSantaRosa = {lat: -38.713868, lng: -62.264865};
+      var LatLngHostel = {lat: -38.7222876, lng: -62.2581783};
+
+      function makeTileLayer() {
+        return L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="http://openstreetmap.org/copyright">Colaboradores de OpenStreetMap</a>',
+          maxZoom: 19
+        });
+      }
+
+      var mapArgos = L.map('map-argos').setView(LatLngArgos, 17);
+      makeTileLayer().addTo(mapArgos);
+
+      var mapSantaRosa = L.map('map-santa-rosa').setView(LatLngSantaRosa, 17);
+      makeTileLayer().addTo(mapSantaRosa);
+
+      var mapHostel = L.map('map-hostel').setView(LatLngHostel, 17);
+      makeTileLayer().addTo(mapHostel);
+
+      var marker = L.marker(LatLngArgos).addTo(mapArgos);
+      marker.bindPopup('Hotel Argos');
+
+      var marker = L.marker(LatLngSantaRosa).addTo(mapSantaRosa);
+      marker.bindPopup('Hostería Santa Rosa');
+
+      var marker = L.marker(LatLngHostel).addTo(mapHostel);
+      marker.bindPopup('Bahía Blaca Hostel');
+    }
+
+    $(document).ready(initMaps);
+    </script>
+{% endblock %}

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 
 from symposion.proposals.models import ProposalBase
@@ -10,16 +11,16 @@ class Proposal(ProposalBase):
     AUDIENCE_LEVEL_INTERMEDIATE = 3
 
     AUDIENCE_LEVELS = [
-        (AUDIENCE_LEVEL_NOVICE, "Novice"),
-        (AUDIENCE_LEVEL_INTERMEDIATE, "Intermediate"),
-        (AUDIENCE_LEVEL_EXPERIENCED, "Experienced"),
+        (AUDIENCE_LEVEL_NOVICE, "Principiante"),
+        (AUDIENCE_LEVEL_INTERMEDIATE, "Intermedia"),
+        (AUDIENCE_LEVEL_EXPERIENCED, "Avanzada"),
     ]
 
     audience_level = models.IntegerField(choices=AUDIENCE_LEVELS)
 
     recording_release = models.BooleanField(
         default=True,
-        help_text="By submitting your proposal, you agree to give permission to the conference organizers to record, edit, and release audio and/or video of your presentation. If you do not agree to this, please uncheck this box."
+        help_text="Al enviar tu propuesta, le estás dando permiso a los organizadores de la conferencia para grabar, editar y transmitir audio y/o video de tu presentación. Si no estas de acuerdo con esto, no chequees este recuadro."
     )
 
     class Meta:
@@ -29,4 +30,5 @@ class Proposal(ProposalBase):
 class TalkProposal(Proposal):
 
     class Meta:
-        verbose_name = "talk proposal"
+        verbose_name = "Propuesta de charla/taller"
+        verbose_name_plural = "Propuestas de charlas/talleres"

@@ -169,6 +169,22 @@ INSTALLED_APPS = [
     #extra
     "django_extensions",
     "captcha",
+    "markdownify",
+]
+
+MARKDOWNIFY_WHITELIST_TAGS = [
+    'a',
+    'abbr',
+    'acronym',
+    'b',
+    'blockquote',
+    'em',
+    'i',
+    'li',
+    'ol',
+    'p',
+    'strong',
+    'ul'
 ]
 
 # A sample logging configuration. The only tangible logging

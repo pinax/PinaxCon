@@ -1,6 +1,7 @@
 {% extends "site_base.html" %}
 
 {% load sitetree %}
+{% load markdownify %}
 
 {% block head_title %}Charla/Taller: {{ presentation.title }}{% endblock %}
 
@@ -29,9 +30,9 @@
 
 <h3>Descripción</h3>
 
-<div class="description">{{ presentation.description }}</div>
+<div class="description">{{ presentation.description|markdownify|safe }}</div>
 
 <h3>Resumen</h3>
 
-<div class="abstract">{{ presentation.abstract|safe }}</div>
+<div class="abstract">{{ presentation.abstract|markdownify|safe }}</div>
 {% endblock %}

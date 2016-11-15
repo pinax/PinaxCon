@@ -2,7 +2,7 @@
 
 {% load i18n %}
 {% load thumbnail %}
-
+{% load markdownify %}
 
 {% block head_title %}{{ speaker.name }}{% endblock %}
 
@@ -20,7 +20,7 @@
                 <a class="btn btn-default pull-right" href="{% url "speaker_edit" speaker.pk %}">Edit</a>
             {% endif %}
             <h2>{{ speaker.name }}</h2>
-            <div class="bio">{{ speaker.biography|safe }}</div>
+            <div class="bio">{{ speaker.biography|markdownify|safe }}</div>
 
             <h2>Charlas/Talleres</h2>
             {% for presentation in presentations %}
